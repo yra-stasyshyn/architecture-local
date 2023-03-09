@@ -39,6 +39,18 @@ export default class MyDocument extends Document {
 			// <Html lang="en">
 			<Html lang="pt-BR">
 				<Head />
+				<link rel="manifest" href="/manifest.json" />
+				<meta
+					name="Site Arquitetura Local"
+					content="Site de exibição de projetos da empresa Arquitetura Local"
+				/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+					rel="stylesheet"
+				/>
+				<meta name="theme-color" content="#FFFFFF" />
 				<body>
 					<Main />
 					<NextScript />
