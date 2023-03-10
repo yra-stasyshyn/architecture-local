@@ -1,5 +1,11 @@
-import Main from 'src/basicComponents/Main'
+import HeroSection from '@/components/Sections/HeroSection'
+import NavBar from '@/basicComponents/NavBar'
 
 export default function Home() {
-	return <Main />
+	return (
+		<>
+			<NavBar />
+			<HeroSection />
+		</>
+	)
 }
