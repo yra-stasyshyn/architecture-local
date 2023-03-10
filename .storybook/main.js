@@ -1,12 +1,13 @@
 module.exports = {
 	stories: [
-		'../src/basicComponents/**/stories.tsx',
-		'../src/components/**/stories.tsx'
+		'../src/basicComponents/**/stories.tsx'
+		//'../src/components/**/stories.tsx'
 	],
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
-		'@storybook/addon-interactions'
+		'@storybook/addon-interactions',
+		'storybook-dark-mode'
 	],
 	framework: {
 		name: '@storybook/nextjs',

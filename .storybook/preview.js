@@ -7,6 +7,11 @@ export const parameters = {
 			color: /(background|color)$/i,
 			date: /Date$/
 		}
+	},
+	layout: 'centered',
+	darkMode: {
+		current: 'dark',
+		stylePreview: true
 	}
 }
 
