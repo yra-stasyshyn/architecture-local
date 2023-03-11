@@ -1,8 +1,8 @@
 import { Meta, Args, StoryFn } from '@storybook/react'
-import Button from '.'
+import Button from './index'
 import React from 'react'
 import THEME from '@/styles/theme'
-import storiesThemedConfigArgs from '../../../.storybook/storiesThemedConfigArgs'
+import storiesThemedConfigArgs from '../../../../.storybook/storiesThemedConfigArgs'
 
 export default {
 	title: 'Button',
