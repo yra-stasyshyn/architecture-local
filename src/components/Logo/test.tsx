@@ -1,14 +1,22 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 import Logo from './index'
 import THEME from '@/styles/theme'
 
 describe('Logo', () => {
 	describe('with default props', () => {
 		let wrapper: HTMLElement
+		let circles: NodeListOf<Element>
+		let firstL: ChildNode | null
+		let finalL: ChildNode | null
 
 		beforeEach(() => {
 			wrapper = render(<Logo />).container.firstChild as HTMLElement
+			firstL = wrapper.firstChild
+			circles = wrapper.querySelectorAll(
+				'div:nth-of-type(n+2):nth-of-type(-n+4)'
+			)
+			finalL = wrapper.lastChild
 		})
 
 		test('renders 5 child elements', () => {
@@ -22,9 +30,9 @@ describe('Logo', () => {
 			// Arrange & Act are done in beforeEach
 
 			// Assert
-			expect(wrapper.firstChild).toHaveStyle('width: 26px')
-			expect(wrapper.firstChild).toHaveStyle('height: 100px')
-			expect(wrapper.firstChild).toHaveStyle(
+			expect(firstL).toHaveStyle('width: 26px')
+			expect(firstL).toHaveStyle('height: 100px')
+			expect(firstL).toHaveStyle(
 				`background-color: ${THEME.colors.secondaryColor}`
 			)
 		})
@@ -33,9 +41,6 @@ describe('Logo', () => {
 			// Arrange & Act are done in beforeEach
 
 			// Assert
-			const circles = wrapper.querySelectorAll(
-				'div:nth-of-type(n+2):nth-of-type(-n+4)'
-			)
 			expect(circles.length).toEqual(3)
 
 			circles.forEach((circle) => {
@@ -55,9 +60,9 @@ describe('Logo', () => {
 				// Arrange & Act are done in beforeEach
 
 				// Assert
-				expect(wrapper.lastChild).toHaveStyle('width: 26px')
-				expect(wrapper.lastChild).toHaveStyle('height: 100px')
-				expect(wrapper.firstChild).toHaveStyle(
+				expect(finalL).toHaveStyle('width: 26px')
+				expect(finalL).toHaveStyle('height: 100px')
+				expect(finalL).toHaveStyle(
 					`background-color: ${THEME.colors.secondaryColor}`
 				)
 			}
@@ -66,10 +71,49 @@ describe('Logo', () => {
 
 	describe('with custom props', () => {
 		let wrapper: HTMLElement
+		let circles: NodeListOf<Element>
+		let firstL: ChildNode | null
+		let finalL: ChildNode | null
+		const mockOnClick = jest.fn()
 
 		beforeEach(() => {
-			wrapper = render(<Logo sizeMultiplier={2} color="#ff0000" />).container
-				.firstChild as HTMLElement
+			wrapper = render(
+				<Logo
+					sizeMultiplier={2}
+					color="#ff0000"
+					highlightColorOnHover="black"
+					onClick={mockOnClick}
+				/>
+			).container.firstChild as HTMLElement
+			firstL = wrapper.firstChild
+			circles = wrapper.querySelectorAll(
+				'div:nth-of-type(n+2):nth-of-type(-n+4)'
+			)
+			finalL = wrapper.lastChild
+		})
+
+		test('change color on hover', () => {
+			// Arrange done in beforeEach
+
+			// Act - simulate mouse hover
+			fireEvent.mouseOver(wrapper)
+
+			// Assert
+			expect(firstL).toHaveStyleRule('background-color', 'black')
+			circles.forEach((circle) => {
+				expect(circle).toHaveStyleRule('background-color', 'black')
+			})
+			expect(finalL).toHaveStyleRule('background-color', 'black')
+		})
+
+		test('activate function on click', () => {
+			// Arrange done in beforeEach
+
+			// Act - simulate mouse hover
+			fireEvent.click(wrapper)
+
+			// Assert
+			expect(mockOnClick).toHaveBeenCalled()
 		})
 
 		test('renders 5 child elements', () => {
@@ -83,18 +127,15 @@ describe('Logo', () => {
 			// Arrange & Act are done in beforeEach
 
 			// Assert
-			expect(wrapper.firstChild).toHaveStyle('width: 52px')
-			expect(wrapper.firstChild).toHaveStyle('height: 200px')
-			expect(wrapper.firstChild).toHaveStyle('background-color: #ff0000')
+			expect(firstL).toHaveStyle('width: 52px')
+			expect(firstL).toHaveStyle('height: 200px')
+			expect(firstL).toHaveStyle('background-color: #ff0000')
 		})
 
 		test('renders 3 circles with custom properties as the second, third and fourth child elements', () => {
 			// Arrange & Act are done in beforeEach
 
 			// Assert
-			const circles = wrapper.querySelectorAll(
-				'div:nth-of-type(n+2):nth-of-type(-n+4)'
-			)
 			expect(circles.length).toEqual(3)
 
 			circles.forEach((circle) => {
@@ -109,9 +150,9 @@ describe('Logo', () => {
 			// Arrange & Act are done in beforeEach
 
 			// Assert
-			expect(wrapper.lastChild).toHaveStyle('width: 52px')
-			expect(wrapper.lastChild).toHaveStyle('height: 200px')
-			expect(wrapper.lastChild).toHaveStyle('background-color: #ff0000')
+			expect(finalL).toHaveStyle('width: 52px')
+			expect(finalL).toHaveStyle('height: 200px')
+			expect(finalL).toHaveStyle('background-color: #ff0000')
 		})
 	})
 })

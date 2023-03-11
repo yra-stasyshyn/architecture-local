@@ -1,11 +1,12 @@
 import * as S from './styles'
 import React from 'react'
 import THEME from '@/styles/theme'
-import Logo from '@/basicComponents/Logo'
-import Button from '@/basicComponents/Button'
-import { RxHamburgerMenu } from 'react-icons/rx'
+import Logo from '@/components/Logo'
+import Button from '@/components/Buttons/Button'
 import { useWindowWidth } from '@/utils/useWindowWidth'
 import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
+import { DropDownButton } from '@/components/Buttons/DropDownButton'
+import { RxHamburgerMenu } from 'react-icons/rx'
 
 export type NavBarProps = {
 	backgroundColor?: string
@@ -20,19 +21,20 @@ const NavBar = ({
 	backgroundColor = defaultNavBarProps.backgroundColor,
 	style
 }: NavBarProps) => {
-	let buttons = (
+	const buttons: JSX.Element = (
 		<>
 			<Button>sobre</Button>
 			<Button>projetos</Button>
 			<Button>contato</Button>
 		</>
 	)
+	let toRender = buttons
 	const windowWidth = useWindowWidth()
 	if (windowWidth < 600) {
-		buttons = (
-			<Button>
-				<RxHamburgerMenu size={40} />
-			</Button>
+		toRender = (
+			<DropDownButton buttonIcon={<RxHamburgerMenu size={40} />}>
+				{buttons}
+			</DropDownButton>
 		)
 	}
 
@@ -57,7 +59,7 @@ const NavBar = ({
 					highlightColorOnHover={THEME.colors.accentColor}
 					onClick={scrollsToBeginning}
 				/>
-				{buttons}
+				{toRender}
 			</S.ContentWrapper>
 		</S.Wrapper>
 	)
