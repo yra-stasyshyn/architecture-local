@@ -14,6 +14,7 @@ export const Wrapper = styled.div<{
 	padding: 0;
 	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 	position: absolute;
+	z-index: 1;
 	bottom: 0;
 	left: 0;
 	right: 0;
