@@ -3,7 +3,7 @@ import React from 'react'
 import THEME from '@/styles/theme'
 import Logo from '@/components/Logo'
 import Button from '@/components/Buttons/Button'
-import { useWindowWidth } from '@/utils/useWindowWidth'
+import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
 import { DropDownButton } from '@/components/Buttons/DropDownButton'
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -29,7 +29,7 @@ const NavBar = ({
 		</>
 	)
 	let toRender = buttons
-	const windowWidth = useWindowWidth()
+	const windowWidth = useWindowDimensions().windowWidth
 	if (windowWidth < 600) {
 		toRender = (
 			<DropDownButton buttonIcon={<RxHamburgerMenu size={40} />}>
