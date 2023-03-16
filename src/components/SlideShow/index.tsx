@@ -1,5 +1,6 @@
 import * as S from './styles'
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
+import { useWindowDimensions } from '@/utils/useWindowDimensions'
 
 const SlideShow = ({ children }: { children: ReactElement[] }) => {
 	const numberOfImages = children.length
@@ -8,10 +9,7 @@ const SlideShow = ({ children }: { children: ReactElement[] }) => {
 		naturalWidth: 0,
 		naturalHeight: 0
 	})
-	const [windowDimensions, setWindowDimensions] = useState({
-		windowWidth: 0,
-		windowHeight: 0
-	})
+	const windowDimensions = useWindowDimensions()
 	function nextImageIndex() {
 		if (currentImageIndex >= numberOfImages - 1) {
 			setCurrentImageIndex(0)
@@ -33,25 +31,12 @@ const SlideShow = ({ children }: { children: ReactElement[] }) => {
 		const onInterval = setInterval(() => {
 			nextImageIndex()
 		}, 3000)
-		function setDimensionsOfWindow() {
-			setWindowDimensions({
-				windowWidth: window.innerWidth,
-				windowHeight: window.innerHeight
-			})
-		}
-
-		const windowDimensionsInterval = setInterval(() => {
-			setDimensionsOfWindow()
-		}, 100)
-
-		window.addEventListener('resize', setDimensionsOfWindow)
 		return () => {
-			window.removeEventListener('resize', setDimensionsOfWindow)
 			clearInterval(onInterval)
-			clearInterval(windowDimensionsInterval)
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [children, currentImageIndex])
+
 	const windowProportion =
 		windowDimensions.windowWidth / windowDimensions.windowHeight
 	const imageProportion =

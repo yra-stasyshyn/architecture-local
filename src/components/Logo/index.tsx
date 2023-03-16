@@ -26,37 +26,47 @@ const Logo = ({
 	if (!highlightColorOnHover) {
 		highlightColorOnHover = color
 	}
-	const [chosenColor, setChosenColor] = React.useState(color)
 	const spacingBetweenLetters = 8 * sizeMultiplier
 	const circlesOffset = 36 * sizeMultiplier
 	return (
 		<S.Wrapper
 			style={style}
 			onClick={onClick}
-			onMouseEnter={() => setChosenColor(highlightColorOnHover || color)}
-			onMouseLeave={() => setChosenColor(color)}
+			color={color}
+			highlightColor={highlightColorOnHover}
 		>
-			<Rectangle sizeMultiplier={sizeMultiplier} color={chosenColor} />
-			<Circle
+			<Rectangle
 				sizeMultiplier={sizeMultiplier}
-				color={chosenColor}
-				style={{ marginLeft: spacingBetweenLetters, marginTop: circlesOffset }}
+				color={color}
+				className={'letters'}
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
-				color={chosenColor}
+				color={color}
+				style={{ marginLeft: spacingBetweenLetters, marginTop: circlesOffset }}
+				className={'letters'}
+			/>
+			<Circle
+				sizeMultiplier={sizeMultiplier}
+				color={color}
 				style={{
 					marginRight: spacingBetweenLetters,
 					marginLeft: spacingBetweenLetters,
 					marginTop: circlesOffset
 				}}
+				className={'letters'}
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
-				color={chosenColor}
+				color={color}
 				style={{ marginRight: spacingBetweenLetters, marginTop: circlesOffset }}
+				className={'letters'}
 			/>
-			<Rectangle sizeMultiplier={sizeMultiplier} color={chosenColor} />
+			<Rectangle
+				sizeMultiplier={sizeMultiplier}
+				color={color}
+				className={'letters'}
+			/>
 		</S.Wrapper>
 	)
 }

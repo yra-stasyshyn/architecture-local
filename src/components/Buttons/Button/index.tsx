@@ -13,7 +13,7 @@ export type ButtonProps = {
 }
 
 const defaultButtonProps = {
-	bgColor: THEME.colors.secondaryColor,
+	bgColor: 'transparent',
 	textColor: THEME.colors.primaryColor,
 	colorOnHover: THEME.colors.accentColor,
 	fontSize: THEME.fontSize.small
