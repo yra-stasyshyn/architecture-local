@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div<{
 	isOpen: boolean
 	backgroundColor: string
+	renderPosition: 'above' | 'below'
 }>`
 	display: ${(props) => (props.isOpen ? 'block' : 'none')};
 	background-color: ${(props) => props.backgroundColor};
@@ -11,4 +12,6 @@ export const Wrapper = styled.div<{
 	border: none;
 	position: absolute;
 	left: 0;
+	${(props) =>
+		props.renderPosition === 'below' ? 'top: 100%;' : 'bottom: 100%;'}
 `

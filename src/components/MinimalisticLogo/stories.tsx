@@ -1,11 +1,11 @@
-import Logo from './index'
+import MinimalisticLogo from './index'
 import { Meta, Args, StoryFn } from '@storybook/react'
 import THEME from '@/styles/theme'
 import storiesThemedConfigArgs from '../../../.storybook/storiesThemedConfigArgs'
 
 export default {
 	title: 'Logo',
-	component: Logo,
+	component: MinimalisticLogo,
 	args: {
 		sizeMultiplier: 1,
 		color: THEME.colors.primaryColor
@@ -17,5 +17,5 @@ export default {
 } as Meta
 
 export const Default: StoryFn = (args: Args) => (
-	<Logo sizeMultiplier={args.sizeMultiplier} color={args.color} />
+	<MinimalisticLogo sizeMultiplier={args.sizeMultiplier} color={args.color} />
 )

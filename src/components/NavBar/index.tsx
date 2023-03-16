@@ -1,12 +1,11 @@
 import * as S from './styles'
 import React from 'react'
 import THEME from '@/styles/theme'
-import Logo from '@/components/Logo'
+import MinimalisticLogo from '@/components/MinimalisticLogo'
 import Button from '@/components/Buttons/Button'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
-import { DropDownButton } from '@/components/Buttons/DropDownButton'
-import { RxHamburgerMenu } from 'react-icons/rx'
+import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 
 export type NavBarProps = {
 	style?: React.CSSProperties
@@ -21,22 +20,21 @@ const NavBar = ({ style }: NavBarProps) => {
 	const [navBarShadow, setNavBarShadow] = React.useState(
 		<S.GradientContainer />
 	)
-	const buttons: JSX.Element = (
+	let toRender: JSX.Element = (
 		<div>
 			<Button textColor={elementsColor}>sobre</Button>
 			<Button textColor={elementsColor}>projetos</Button>
 			<Button textColor={elementsColor}>contato</Button>
 		</div>
 	)
-	let toRender = buttons
 	const windowWidth = useWindowDimensions().windowWidth
 	if (windowWidth < 600) {
 		toRender = (
-			<DropDownButton
-				buttonIcon={<RxHamburgerMenu size={40} color={elementsColor} />}
-			>
-				{buttons}
-			</DropDownButton>
+			<DropDownBurgerButton iconColor={elementsColor}>
+				<Button>sobre</Button>
+				<Button>projetos</Button>
+				<Button>contato</Button>
+			</DropDownBurgerButton>
 		)
 	}
 	const isBellowHeroSection = useIsBellowNthSection()
@@ -67,7 +65,7 @@ const NavBar = ({ style }: NavBarProps) => {
 				style={{ ...style, ...navBarStyle }}
 			>
 				<S.ContentWrapper>
-					<Logo
+					<MinimalisticLogo
 						sizeMultiplier={0.35}
 						style={{ marginRight: 26 }}
 						color={elementsColor}
