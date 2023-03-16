@@ -5,8 +5,9 @@ export const Wrapper = styled.div`
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
+
 	img {
 		position: absolute;
 		opacity: 0;

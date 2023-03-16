@@ -1,13 +1,21 @@
 import Button from '@/components/Buttons/Button'
 import DropdownMenu from '@/components/DropdownMenu'
 import React, { useEffect, useRef, useState } from 'react'
+import THEME from '@/styles/theme'
+
+const defaultDropDownButtonProps = {
+	style: {},
+	iconColor: THEME.colors.primaryColor
+}
 
 export const DropDownButton = ({
-	style = {},
+	style = defaultDropDownButtonProps.style,
+	iconColor = defaultDropDownButtonProps.iconColor,
 	children,
 	buttonIcon
 }: {
 	style?: React.CSSProperties
+	iconColor?: string
 	buttonIcon: React.ReactNode
 	children: JSX.Element
 }) => {
@@ -34,7 +42,9 @@ export const DropDownButton = ({
 
 	return (
 		<div style={{ ...style, position: 'relative' }} ref={dropdownRef}>
-			<Button onClick={OnClickHandler}>{buttonIcon}</Button>
+			<Button onClick={OnClickHandler} textColor={iconColor}>
+				{buttonIcon}
+			</Button>
 			<DropdownMenu isOpen={isMenuOpen}>{children}</DropdownMenu>
 		</div>
 	)

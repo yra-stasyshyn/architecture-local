@@ -1,10 +1,19 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{
+	highlightColor?: string
+	color: string
+}>`
 	border: none;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	&:hover {
+		& .child {
+			background-color: ${(props) =>
+				props.highlightColor ? props.highlightColor : props.color};
+		}
+	}
 `
 
 export const Rectangle = styled.div<{
