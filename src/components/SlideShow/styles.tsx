@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 	img {
 		position: absolute;
 		opacity: 0;
-		transition: all 400ms ease;
+		transition: opacity 400ms ease;
 	}
 
 	img:first-child {

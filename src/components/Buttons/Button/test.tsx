@@ -20,10 +20,7 @@ describe('Button', () => {
 		// Assert
 		expect(button).toBeInTheDocument()
 		expect(button).toHaveTextContent('Click me!')
-		expect(button).toHaveStyleRule(
-			'background-color',
-			THEME.colors.secondaryColor
-		)
+		expect(button).toHaveStyleRule('background-color', 'transparent')
 		expect(button).toHaveStyleRule('color', THEME.colors.primaryColor)
 	})
 

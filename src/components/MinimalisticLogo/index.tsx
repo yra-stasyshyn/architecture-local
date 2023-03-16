@@ -16,35 +16,31 @@ const defaultLogoProps = {
 	color: THEME.colors.secondaryColor
 }
 
-const Logo = ({
+const MinimalisticLogo = ({
 	sizeMultiplier = defaultLogoProps.sizeMultiplier,
 	color = defaultLogoProps.color,
 	highlightColorOnHover,
 	style,
 	onClick
 }: LogoProps) => {
-	if (!highlightColorOnHover) {
-		highlightColorOnHover = color
-	}
+	highlightColorOnHover = highlightColorOnHover ? highlightColorOnHover : color
 	const spacingBetweenLetters = 8 * sizeMultiplier
 	const circlesOffset = 36 * sizeMultiplier
+	const [isHovered, setIsHovered] = React.useState(false)
+	color = isHovered ? highlightColorOnHover : color
 	return (
 		<S.Wrapper
 			style={style}
 			onClick={onClick}
 			color={color}
-			highlightColor={highlightColorOnHover}
+			onMouseOver={() => setIsHovered(true)}
+			onMouseOut={() => setIsHovered(false)}
 		>
-			<Rectangle
-				sizeMultiplier={sizeMultiplier}
-				color={color}
-				className={'letters'}
-			/>
+			<Rectangle sizeMultiplier={sizeMultiplier} color={color} />
 			<Circle
 				sizeMultiplier={sizeMultiplier}
 				color={color}
 				style={{ marginLeft: spacingBetweenLetters, marginTop: circlesOffset }}
-				className={'letters'}
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
@@ -54,21 +50,15 @@ const Logo = ({
 					marginLeft: spacingBetweenLetters,
 					marginTop: circlesOffset
 				}}
-				className={'letters'}
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
 				color={color}
 				style={{ marginRight: spacingBetweenLetters, marginTop: circlesOffset }}
-				className={'letters'}
 			/>
-			<Rectangle
-				sizeMultiplier={sizeMultiplier}
-				color={color}
-				className={'letters'}
-			/>
+			<Rectangle sizeMultiplier={sizeMultiplier} color={color} />
 		</S.Wrapper>
 	)
 }
 
-export default Logo
+export default MinimalisticLogo

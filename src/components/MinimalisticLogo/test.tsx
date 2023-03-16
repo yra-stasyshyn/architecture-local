@@ -1,6 +1,6 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-import Logo from './index'
+import MinimalisticLogo from './index'
 import THEME from '@/styles/theme'
 
 describe('Logo', () => {
@@ -11,7 +11,7 @@ describe('Logo', () => {
 		let finalL: ChildNode | null
 
 		beforeEach(() => {
-			wrapper = render(<Logo />).container.firstChild as HTMLElement
+			wrapper = render(<MinimalisticLogo />).container.firstChild as HTMLElement
 			firstL = wrapper.firstChild
 			circles = wrapper.querySelectorAll(
 				'div:nth-of-type(n+2):nth-of-type(-n+4)'
@@ -70,7 +70,7 @@ describe('Logo', () => {
 	})
 
 	describe('with custom props', () => {
-		let wrapper: HTMLElement
+		let wrapper: Element
 		let circles: NodeListOf<Element>
 		let firstL: ChildNode | null
 		let finalL: ChildNode | null
@@ -78,7 +78,7 @@ describe('Logo', () => {
 
 		beforeEach(() => {
 			wrapper = render(
-				<Logo
+				<MinimalisticLogo
 					sizeMultiplier={2}
 					color="#ff0000"
 					highlightColorOnHover="black"
@@ -99,11 +99,11 @@ describe('Logo', () => {
 			fireEvent.mouseOver(wrapper)
 
 			// Assert
-			expect(firstL).toHaveStyleRule('background-color', 'black')
+			expect(firstL).toHaveStyle('background-color: black;')
 			circles.forEach((circle) => {
-				expect(circle).toHaveStyleRule('background-color', 'black')
+				expect(circle).toHaveStyle('background-color: black;')
 			})
-			expect(finalL).toHaveStyleRule('background-color', 'black')
+			expect(finalL).toHaveStyle('background-color: black;')
 		})
 
 		test('activate function on click', () => {
