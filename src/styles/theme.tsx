@@ -1,8 +1,8 @@
 const THEME = {
 	colors: {
 		primaryColor: '#000000',
-		secondaryColor: '#fafafd',
-		accentColor: 'rgb(224, 79, 57)'
+		secondaryColor: '#ffffff',
+		accentColor: '#E04F2E'
 	},
 	fonts: {
 		primaryFont: "'Outfit', sans-serif"
