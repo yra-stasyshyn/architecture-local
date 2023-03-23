@@ -1,11 +1,12 @@
 import * as S from './styles'
 import React from 'react'
 import THEME from '@/styles/theme'
-import MinimalisticLogo from '@/components/MinimalisticLogo'
 import Button from '@/components/Buttons/Button'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
+import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
+import MinimalisticLogo from '@/components/Logos/MinimalisticLogo'
 
 export type NavBarProps = {
 	style?: React.CSSProperties
@@ -20,6 +21,9 @@ const NavBar = ({ style }: NavBarProps) => {
 	const [navBarShadow, setNavBarShadow] = React.useState(
 		<S.GradientContainer />
 	)
+	function scrollsToBeginning() {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
 	let toRender: JSX.Element = (
 		<div>
 			<Button textColor={elementsColor}>sobre</Button>
@@ -27,14 +31,32 @@ const NavBar = ({ style }: NavBarProps) => {
 			<Button textColor={elementsColor}>contato</Button>
 		</div>
 	)
+	let logo: JSX.Element = (
+		<InstitutionalLogo
+			color={elementsColor}
+			onClick={scrollsToBeginning}
+			highlightColorOnHover={THEME.colors.accentColor}
+		/>
+	)
 	const windowWidth = useWindowDimensions().windowWidth
-	if (windowWidth < 600) {
+	if (windowWidth < 800) {
 		toRender = (
 			<DropDownBurgerButton iconColor={elementsColor}>
 				<Button>sobre</Button>
 				<Button>projetos</Button>
 				<Button>contato</Button>
 			</DropDownBurgerButton>
+		)
+	}
+	if (windowWidth < 500) {
+		logo = (
+			<MinimalisticLogo
+				sizeMultiplier={0.35}
+				style={{ marginRight: 26 }}
+				color={elementsColor}
+				highlightColorOnHover={THEME.colors.accentColor}
+				onClick={scrollsToBeginning}
+			/>
 		)
 	}
 	const isBellowHeroSection = useIsBellowNthSection()
@@ -55,9 +77,6 @@ const NavBar = ({ style }: NavBarProps) => {
 		}
 		return handleScroll()
 	}, [isBellowHeroSection])
-	function scrollsToBeginning() {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
 	return (
 		<>
 			<S.Wrapper
@@ -65,13 +84,7 @@ const NavBar = ({ style }: NavBarProps) => {
 				style={{ ...style, ...navBarStyle }}
 			>
 				<S.ContentWrapper>
-					<MinimalisticLogo
-						sizeMultiplier={0.35}
-						style={{ marginRight: 26 }}
-						color={elementsColor}
-						highlightColorOnHover={THEME.colors.accentColor}
-						onClick={scrollsToBeginning}
-					/>
+					{logo}
 					{toRender}
 				</S.ContentWrapper>
 			</S.Wrapper>

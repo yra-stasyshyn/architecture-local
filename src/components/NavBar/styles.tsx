@@ -17,7 +17,7 @@ export const Wrapper = styled.div<{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.25);
 	transition: background-color 100ms ease-in-out;
 `
 
@@ -30,8 +30,9 @@ export const GradientContainer = styled.div`
 	height: 180px;
 	background: linear-gradient(
 		to top,
-		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 0, 0, 0.8) 0%,
 		rgba(0, 0, 0, 0.4) 50%,
+		rgba(0, 0, 0, 0.2) 75%,
 		rgba(0, 0, 0, 0) 100%
 	);
 	pointer-events: none; /* to prevent the element from being clickable */
@@ -41,6 +42,7 @@ export const ContentWrapper = styled.div`
 	border: none;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	padding-left: 50px;

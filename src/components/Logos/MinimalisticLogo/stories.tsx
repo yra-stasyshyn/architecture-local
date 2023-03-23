@@ -1,7 +1,7 @@
 import MinimalisticLogo from './index'
 import { Meta, Args, StoryFn } from '@storybook/react'
 import THEME from '@/styles/theme'
-import storiesThemedConfigArgs from '../../../.storybook/storiesThemedConfigArgs'
+import storiesThemedConfigArgs from '../../../../.storybook/storiesThemedConfigArgs'
 
 export default {
 	title: 'Logo',

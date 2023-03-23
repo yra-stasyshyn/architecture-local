@@ -68,7 +68,10 @@ export const DropDownBurgerButton = ({
 			<DropdownMenu isOpen={isMenuOpen} renderPosition={renderPosition}>
 				{React.Children.map(children, (child: ReactElement) => {
 					return React.cloneElement(child, {
-						textColor: elementsColor
+						textColor: elementsColor,
+						bgColor:
+							renderPosition == 'above' ? 'rgba(0, 0, 0, 0.2)' : 'transparent',
+						style: { width: '100%' }
 					})
 				})}
 			</DropdownMenu>
