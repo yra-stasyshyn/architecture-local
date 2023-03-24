@@ -6,21 +6,21 @@ import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
-import MinimalisticLogo from '@/components/Logos/MinimalisticLogo'
 
 export type NavBarProps = {
 	style?: React.CSSProperties
 }
 
 const NavBar = ({ style }: NavBarProps) => {
+	const windowWidth = useWindowDimensions().windowWidth
+	const shadowHeight = windowWidth < 500 ? 100 : 150
+	const shadowContainer = <S.GradientContainer height={shadowHeight} />
 	const [elementsColor, setElementsColor] = React.useState(
 		THEME.colors.secondaryColor
 	)
 	const [backgroundColor, setBackgroundColor] = React.useState('transparent')
 	const [navBarStyle, setNavBarStyle] = React.useState({})
-	const [navBarShadow, setNavBarShadow] = React.useState(
-		<S.GradientContainer />
-	)
+	const [navBarShadow, setNavBarShadow] = React.useState(shadowContainer)
 	function scrollsToBeginning() {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -31,32 +31,16 @@ const NavBar = ({ style }: NavBarProps) => {
 			<Button textColor={elementsColor}>contato</Button>
 		</div>
 	)
-	let logo: JSX.Element = (
-		<InstitutionalLogo
-			color={elementsColor}
-			onClick={scrollsToBeginning}
-			highlightColorOnHover={THEME.colors.accentColor}
-		/>
-	)
-	const windowWidth = useWindowDimensions().windowWidth
 	if (windowWidth < 800) {
 		toRender = (
-			<DropDownBurgerButton iconColor={elementsColor}>
+			<DropDownBurgerButton
+				iconColor={elementsColor}
+				iconSize={windowWidth < 500 ? 25 : 35}
+			>
 				<Button>sobre</Button>
 				<Button>projetos</Button>
 				<Button>contato</Button>
 			</DropDownBurgerButton>
-		)
-	}
-	if (windowWidth < 500) {
-		logo = (
-			<MinimalisticLogo
-				sizeMultiplier={0.35}
-				style={{ marginRight: 26 }}
-				color={elementsColor}
-				highlightColorOnHover={THEME.colors.accentColor}
-				onClick={scrollsToBeginning}
-			/>
 		)
 	}
 	const isBellowHeroSection = useIsBellowNthSection()
@@ -72,10 +56,11 @@ const NavBar = ({ style }: NavBarProps) => {
 				setElementsColor(THEME.colors.secondaryColor)
 				setNavBarStyle({})
 				setBackgroundColor('transparent')
-				setNavBarShadow(<S.GradientContainer />)
+				setNavBarShadow(shadowContainer)
 			}
 		}
 		return handleScroll()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isBellowHeroSection])
 	return (
 		<>
@@ -84,7 +69,12 @@ const NavBar = ({ style }: NavBarProps) => {
 				style={{ ...style, ...navBarStyle }}
 			>
 				<S.ContentWrapper>
-					{logo}
+					<InstitutionalLogo
+						color={elementsColor}
+						sizeMultiplier={windowWidth < 500 ? 0.6 : 1}
+						onClick={scrollsToBeginning}
+						highlightColorOnHover={THEME.colors.accentColor}
+					/>
 					{toRender}
 				</S.ContentWrapper>
 			</S.Wrapper>
