@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
 	display: flex;
 	align-items: flex-end;
