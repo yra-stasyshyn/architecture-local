@@ -17,17 +17,19 @@ export const Wrapper = styled.div<{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	box-shadow: 0 20px 15px 0 rgba(0, 0, 0, 0.25);
 	transition: background-color 100ms ease-in-out;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 `
 
-export const GradientContainer = styled.div`
+export const GradientContainer = styled.div<{
+	height: number
+}>`
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: 180px;
+	height: ${(props) => props.height}px;
 	background: linear-gradient(
 		to top,
 		rgba(0, 0, 0, 0.8) 0%,

@@ -8,7 +8,8 @@ const THEME = {
 		primaryFont: "'Outfit', sans-serif"
 	},
 	fontSize: {
-		small: 20,
+		tiny: 14,
+		small: 18,
 		regular: 30,
 		big: 60,
 		huge: 80

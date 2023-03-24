@@ -4,18 +4,15 @@ import React, { ReactElement, useEffect, useRef, useState } from 'react'
 import THEME from '@/styles/theme'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
-const defaultDropDownButtonProps = {
-	style: {},
-	iconColor: THEME.colors.primaryColor
-}
-
 export const DropDownBurgerButton = ({
-	style = defaultDropDownButtonProps.style,
-	iconColor = defaultDropDownButtonProps.iconColor,
+	style = {},
+	iconColor = THEME.colors.primaryColor,
+	iconSize = 35,
 	children
 }: {
 	style?: React.CSSProperties
 	iconColor?: string
+	iconSize?: number
 	children: React.ReactElement[]
 }) => {
 	const [isMenuOpen, setMenuOpen] = useState(false)
@@ -62,8 +59,12 @@ export const DropDownBurgerButton = ({
 
 	return (
 		<div style={{ ...style, position: 'relative' }} ref={dropdownRef}>
-			<Button onClick={OnClickHandler} textColor={iconColor}>
-				<RxHamburgerMenu size={40} color={iconColor} />
+			<Button
+				onClick={OnClickHandler}
+				textColor={iconColor}
+				style={{ paddingRight: 0 }}
+			>
+				<RxHamburgerMenu size={iconSize} color={iconColor} />
 			</Button>
 			<DropdownMenu isOpen={isMenuOpen} renderPosition={renderPosition}>
 				{React.Children.map(children, (child: ReactElement) => {

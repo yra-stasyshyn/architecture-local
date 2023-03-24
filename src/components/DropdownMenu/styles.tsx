@@ -7,11 +7,10 @@ export const Wrapper = styled.div<{
 }>`
 	display: ${(props) => (props.isOpen ? 'block' : 'none')};
 	background-color: ${(props) => props.backgroundColor};
-	margin-top: 14px;
-	z-index: 1;
+	margin-top: 30px;
+	left: -50px;
 	border: none;
 	position: absolute;
-	left: 0;
 	${(props) =>
 		props.renderPosition === 'below' ? 'top: 100%;' : 'bottom: 100%;'}
 `
