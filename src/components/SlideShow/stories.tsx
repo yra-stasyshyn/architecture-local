@@ -11,7 +11,6 @@ export const Default: StoryFn = () => (
 	<SlideShow>
 		{/*<img src={'/img/01.png'} alt={''} />*/}
 		{/*<img src={'/img/02.jpg'} alt={''} />*/}
-		<img src={'/img/03.png'} alt={''} />
 		<img src={'/img/04.png'} alt={''} />
 		<img src={'/img/05.png'} alt={''} />
 		<img src={'/img/06.png'} alt={''} />

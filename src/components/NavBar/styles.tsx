@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div<{
 	backgroundColor: string
+	shadowHeight: number
+	shadowActive: boolean
 }>`
 	background-color: ${(props) => props.backgroundColor};
 	border: none;
@@ -19,26 +21,26 @@ export const Wrapper = styled.div<{
 	right: 0;
 	transition: background-color 100ms ease-in-out;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-`
-
-export const GradientContainer = styled.div<{
-	height: number
-}>`
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: ${(props) => props.height}px;
-	background: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0.8) 0%,
-		rgba(0, 0, 0, 0.4) 50%,
-		rgba(0, 0, 0, 0.2) 75%,
-		rgba(0, 0, 0, 0) 100%
-	);
-	pointer-events: none; /* to prevent the element from being clickable */
-	z-index: 1;
+	&::after {
+		display: block;
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: ${(props) => props.shadowHeight}px;
+		width: 100%;
+		z-index: -1;
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.8) 0%,
+			rgba(0, 0, 0, 0.4) 50%,
+			rgba(0, 0, 0, 0.2) 75%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		pointer-events: none;
+		opacity: ${(props) => (props.shadowActive ? '1' : '0')};
+	}
 `
 export const ContentWrapper = styled.div`
 	border: none;
