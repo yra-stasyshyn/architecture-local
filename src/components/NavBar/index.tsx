@@ -13,14 +13,12 @@ export type NavBarProps = {
 
 const NavBar = ({ style }: NavBarProps) => {
 	const windowWidth = useWindowDimensions().windowWidth
-	const shadowHeight = windowWidth < 500 ? 100 : 150
-	const shadowContainer = <S.GradientContainer height={shadowHeight} />
 	const [elementsColor, setElementsColor] = React.useState(
 		THEME.colors.secondaryColor
 	)
 	const [backgroundColor, setBackgroundColor] = React.useState('transparent')
 	const [navBarStyle, setNavBarStyle] = React.useState({})
-	const [navBarShadow, setNavBarShadow] = React.useState(shadowContainer)
+	const [navBarShadow, setNavBarShadow] = React.useState(true)
 	function scrollsToBeginning() {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -51,35 +49,34 @@ const NavBar = ({ style }: NavBarProps) => {
 				setElementsColor(THEME.colors.primaryColor)
 				setBackgroundColor(THEME.colors.secondaryColor)
 				setNavBarStyle({ top: 0, position: 'fixed' })
-				setNavBarShadow(<></>)
+				setNavBarShadow(false)
 			} else {
 				setElementsColor(THEME.colors.secondaryColor)
 				setNavBarStyle({})
 				setBackgroundColor('transparent')
-				setNavBarShadow(shadowContainer)
+				setNavBarShadow(true)
 			}
 		}
 		return handleScroll()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isBellowHeroSection])
 	return (
-		<>
-			<S.Wrapper
-				backgroundColor={backgroundColor}
-				style={{ ...style, ...navBarStyle }}
-			>
-				<S.ContentWrapper>
-					<InstitutionalLogo
-						color={elementsColor}
-						sizeMultiplier={windowWidth < 500 ? 0.6 : 1}
-						onClick={scrollsToBeginning}
-						highlightColorOnHover={THEME.colors.accentColor}
-					/>
-					{toRender}
-				</S.ContentWrapper>
-			</S.Wrapper>
-			{navBarShadow}
-		</>
+		<S.Wrapper
+			backgroundColor={backgroundColor}
+			style={{ ...style, ...navBarStyle }}
+			shadowActive={navBarShadow}
+			shadowHeight={windowWidth < 500 ? 100 : 150}
+		>
+			<S.ContentWrapper>
+				<InstitutionalLogo
+					color={elementsColor}
+					sizeMultiplier={windowWidth < 500 ? 0.6 : 1}
+					onClick={scrollsToBeginning}
+					highlightColorOnHover={THEME.colors.accentColor}
+				/>
+				{toRender}
+			</S.ContentWrapper>
+		</S.Wrapper>
 	)
 }
 

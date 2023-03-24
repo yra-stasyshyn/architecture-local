@@ -5,7 +5,8 @@ const THEME = {
 		accentColor: '#E04F2E'
 	},
 	fonts: {
-		primaryFont: "'Outfit', sans-serif"
+		primaryFont: "'Source Sans Pro', sans-serif",
+		secondaryFont: "'Outfit', sans-serif"
 	},
 	fontSize: {
 		tiny: 14,
@@ -15,14 +16,11 @@ const THEME = {
 		huge: 80
 	},
 	fontWeight: {
-		thin: 100,
 		extraLight: 200,
 		light: 300,
 		regular: 400,
-		medium: 500,
 		semiBold: 600,
-		bold: 700,
-		extraBold: 800
+		bold: 700
 	}
 }
 

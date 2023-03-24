@@ -12,18 +12,11 @@ export type ButtonProps = {
 	style?: React.CSSProperties
 }
 
-const defaultButtonProps = {
-	bgColor: 'transparent',
-	textColor: THEME.colors.primaryColor,
-	colorOnHover: THEME.colors.accentColor,
-	fontSize: THEME.fontSize.small
-}
-
 const Button = ({
-	bgColor = defaultButtonProps.bgColor,
-	textColor = defaultButtonProps.textColor,
-	fontSize = defaultButtonProps.fontSize,
-	colorOnHover = defaultButtonProps.colorOnHover,
+	bgColor = 'transparent',
+	textColor = THEME.colors.primaryColor,
+	fontSize = THEME.fontSize.small,
+	colorOnHover = THEME.colors.accentColor,
 	onClick,
 	children,
 	style
