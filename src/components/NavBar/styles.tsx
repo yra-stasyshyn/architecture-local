@@ -6,7 +6,6 @@ export const Wrapper = styled.div<{
 	shadowActive: boolean
 }>`
 	background-color: ${(props) => props.backgroundColor};
-	border: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -16,9 +15,8 @@ export const Wrapper = styled.div<{
 	padding: 0;
 	position: absolute;
 	z-index: 2;
+	top: calc(100dvh - 100px);
 	bottom: 0;
-	left: 0;
-	right: 0;
 	transition: background-color 100ms ease-in-out;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 	&::after {
