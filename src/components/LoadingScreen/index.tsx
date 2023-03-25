@@ -27,7 +27,7 @@ const LoadingScreen = () => {
 
 	doOnInterval(updateProgress, 100)
 
-	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 7) + 1, 6)
+	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 5) + 1, 5)
 	return (
 		<S.Overlay loaded={loaded}>
 			<img

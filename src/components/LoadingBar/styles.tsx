@@ -17,7 +17,7 @@ export const Wrapper = styled.progress<{
 
 	&::-webkit-progress-value {
 		background: ${(props) => props.color};
-		transition: width 1s ease;
+		transition: width 0.2s ease;
 	}
 
 	&::-webkit-progress-bar {

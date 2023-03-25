@@ -9,7 +9,7 @@ export const Overlay = styled.div<{ loaded: boolean }>`
 	height: 100vh;
 	background-color: ${THEME.colors.secondaryColor};
 	z-index: 9999;
-	transition: top 0.6s ease 0.5s;
+	transition: top 0.75s ease 0.5s;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -5,9 +5,9 @@
 <style type="text/css">
 	.st0{display:none;}
 </style>
-<g id="Camada_1" class="st0">
+<g id="Camada_1">
 	
-		<image style="display:inline;overflow:visible;" width="3310" height="1201" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEEsASwAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
+		<image style="overflow:visible;" width="3310" height="1201" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEEsASwAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA
 EAMCAwYAAD2GAABYCAAAsKr/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX
 Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa
 JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIBNENBQMBIgACEQEDEQH/
@@ -1286,9 +1286,9 @@ tUQyy9E1RFj6u9uPO7c5WIew+hCuWgGILXigTT72n4w73QuwYR1Y+rPX25D7UfVpL6xcsQIQW1DE
 AAAAAAAAAEby/wIMAAcNVAOdamBqAAAAAElFTkSuQmCC" transform="matrix(7.143773e-18 -0.1167 0.1167 7.143773e-18 49.9045 72)">
 	</image>
 </g>
-<g id="Camada_6">
+<g id="Camada_6" class="st0">
 	
-		<image style="overflow:visible;" width="632" height="416" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAGtCAYAAACGF8VWAAAACXBIWXMAAGEKAABhCgHVxTsOAAAA
+		<image style="display:inline;overflow:visible;" width="632" height="416" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAGtCAYAAACGF8VWAAAACXBIWXMAAGEKAABhCgHVxTsOAAAA
 GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAHKpJREFUeNrs3X2snmV9B/ALKFCw
 QMECBaEcpAPpilRgvE/q2+ymbjDZxLesbmaDzE33EqfGOU2WzD+WDBeXmGV/1GR/mMVkxbAFF7cV
 hxsat5RNCZqqB6azZCpl1lkdZvv9ct/PPJSe9rw8L/d9X59P8s1psT2cc0mffp/ruq/rKgUAAAAA
