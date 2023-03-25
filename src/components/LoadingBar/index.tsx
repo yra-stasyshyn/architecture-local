@@ -3,7 +3,7 @@ import THEME from '@/styles/theme'
 
 const LoadingBar = ({
 	progress,
-	width = 250,
+	width = 100,
 	color = THEME.colors.primaryColor,
 	backColor = 'rgb(180, 180, 180)'
 }: {
