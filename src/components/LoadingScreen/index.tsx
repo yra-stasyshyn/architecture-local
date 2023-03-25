@@ -1,44 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import * as S from './styles'
-import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
-import THEME from '@/styles/theme'
-const LoadingScreen: React.FC = () => {
+import LoadingBar from '@/components/LoadingBar'
+import { doOnInterval } from '@/utils/doOnInterval'
+
+const LoadingScreen = () => {
 	const [loaded, setLoaded] = useState(false)
 	const [progress, setProgress] = useState(0)
-
-	useEffect(() => {
+	function updateProgress() {
+		if (loaded) return
 		const images = document.querySelectorAll('img')
 		const numImages = images.length
 		let loadedImages = 0
-
-		const updateProgress = () => {
-			loadedImages++
-			const newProgress = Math.floor((loadedImages / numImages) * 100)
-			setProgress(newProgress)
-			if (newProgress >= 100) {
-				setLoaded(true)
-			}
-		}
-
 		images.forEach((image) => {
 			if (image.complete) {
-				updateProgress()
-			} else {
-				image.addEventListener('load', updateProgress)
+				loadedImages++
 			}
 		})
-
-		return () => {
-			images.forEach((image) => {
-				image.removeEventListener('load', updateProgress)
-			})
+		const imagesLoadingProgress = Math.floor((loadedImages / numImages) * 100)
+		if (imagesLoadingProgress >= progress + 10) {
+			setProgress(progress + 10)
 		}
-	}, [])
+		if (progress >= 100) {
+			setLoaded(true)
+		}
+	}
 
+	doOnInterval(updateProgress, 100)
+
+	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 7) + 1, 6)
 	return (
 		<S.Overlay loaded={loaded}>
-			<InstitutionalLogo color={THEME.colors.primaryColor} />
-			<S.LoadingBar loaded={loaded} progress={progress} />
+			<img
+				src={`./img/al-logo-${indexOfImageToShow}.svg`}
+				alt={''}
+				height={100}
+				width={100}
+			/>
+			<LoadingBar progress={progress} />
 		</S.Overlay>
 	)
 }

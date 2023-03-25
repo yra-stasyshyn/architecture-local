@@ -14,12 +14,5 @@ export const Overlay = styled.div<{ loaded: boolean }>`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-`
-
-export const LoadingBar = styled.div<{ loaded: boolean; progress: number }>`
-	width: ${({ progress }) => 50 - (progress * 50) / 100}%;
-	height: 2px;
-	background-color: ${THEME.colors.primaryColor};
-	transition: width 0.5s ease-in-out;
-	transform: translateY(-50%);
+	gap: 20px;
 `
