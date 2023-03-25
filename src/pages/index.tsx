@@ -6,8 +6,8 @@ import * as S from '../components/Sections/styles'
 export default function Home() {
 	return (
 		<>
-			<NavBar />
 			<HeroSection />
+			<NavBar />
 			<S.SectionsContentWrapper></S.SectionsContentWrapper>
 		</>
 	)
