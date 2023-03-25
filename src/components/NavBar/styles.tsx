@@ -17,7 +17,7 @@ export const Wrapper = styled.div<{
 	z-index: 2;
 	top: calc(100dvh - 100px);
 	bottom: 0;
-	transition: background-color 100ms ease-in-out;
+	transition: background-color 300ms ease-in-out;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
 	&::after {
 		display: block;

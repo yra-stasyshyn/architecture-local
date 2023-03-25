@@ -17,6 +17,7 @@ export const Wrapper = styled.button<{
 	cursor: pointer;
 	display: inline-flex;
 	font-family: ${THEME.fonts.primaryFont};
+	-webkit-tap-highlight-color: transparent;
 	&:hover {
 		color: ${(props) => props.colorOnHover};
 	}
