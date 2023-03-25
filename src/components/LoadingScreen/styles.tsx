@@ -7,7 +7,7 @@ export const Overlay = styled.div<{ loaded: boolean }>`
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: ${THEME.colors.secondaryColor};
+	background-color: ${THEME.colors.primaryColor};
 	z-index: 9999;
 	transition: top 0.75s ease 0.5s;
 	display: flex;

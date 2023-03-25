@@ -31,10 +31,10 @@ const LoadingScreen = () => {
 	return (
 		<S.Overlay loaded={loaded}>
 			<img
-				src={`./img/al-logo-${indexOfImageToShow}.svg`}
+				src={`./img/al-logo-white-${indexOfImageToShow}.svg`}
 				alt={''}
-				height={100}
-				width={100}
+				height={90}
+				width={90}
 			/>
 			<LoadingBar progress={progress} />
 		</S.Overlay>
