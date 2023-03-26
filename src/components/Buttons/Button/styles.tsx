@@ -11,7 +11,7 @@ export const Wrapper = styled.button<{
 	color: ${(props) => props.textColor};
 	border: none;
 	font-size: ${(props) => props.fontSize}px;
-	padding: ${(props) => 1.2 * props.fontSize}px;
+	padding: ${(props) => 1 * props.fontSize}px;
 	text-align: center;
 	align-items: center;
 	cursor: pointer;

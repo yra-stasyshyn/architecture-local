@@ -10,12 +10,12 @@ export const Wrapper = styled.div<{
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 100px;
+	height: 64px;
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	z-index: 2;
-	top: calc(min(100vh, 100svh) - 100px);
+	top: calc(min(100vh, 100svh) - 64px);
 	bottom: 0;
 	transition: background-color 300ms ease-in-out;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
@@ -47,8 +47,14 @@ export const ContentWrapper = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 24px;
+	padding-right: 24px;
 	margin: 0;
 	padding-bottom: 0;
+`
+
+export const ButtonsBox = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `
