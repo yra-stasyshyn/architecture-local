@@ -31,18 +31,18 @@ const NavBar = ({ style }: NavBarProps) => {
 			<Button textColor={elementsColor}>sobre</Button>
 			<Button textColor={elementsColor}>contato</Button>
 			<Button
-				style={{ padding: 0 }}
-				textColor={elementsColor}
-				onClick={redirectToWhatsapp}
-			>
-				<FaWhatsapp size={20} />
-			</Button>
-			<Button
 				style={{ paddingRight: 0 }}
 				textColor={elementsColor}
 				onClick={redirectToInstagram}
 			>
-				<FaInstagram size={20} />
+				<FaInstagram size={18} />
+			</Button>
+			<Button
+				style={{ paddingRight: 0 }}
+				textColor={elementsColor}
+				onClick={redirectToWhatsapp}
+			>
+				<FaWhatsapp size={18} />
 			</Button>
 		</S.ButtonsBox>
 	)
