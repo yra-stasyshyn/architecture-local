@@ -70,7 +70,7 @@ const NavBar = ({ style }: NavBarProps) => {
 			<S.ContentWrapper>
 				<InstitutionalLogo
 					color={elementsColor}
-					sizeMultiplier={windowWidth < 500 ? 0.6 : 1}
+					sizeMultiplier={windowWidth < 500 ? 0.9 : 1}
 					onClick={scrollsToBeginning}
 					highlightColorOnHover={THEME.colors.accentColor}
 				/>
