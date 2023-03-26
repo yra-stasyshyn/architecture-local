@@ -5,7 +5,7 @@ export function useIsBellowHeroSection() {
 
 	React.useEffect(() => {
 		function handleScroll() {
-			setIsBelowHeroSection(window.scrollY > window.innerHeight - 100)
+			setIsBelowHeroSection(window.scrollY > window.innerHeight - 64)
 		}
 
 		window.addEventListener('scroll', handleScroll)

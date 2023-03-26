@@ -6,6 +6,8 @@ import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
 
 export type NavBarProps = {
 	style?: React.CSSProperties
@@ -23,18 +25,34 @@ const NavBar = ({ style }: NavBarProps) => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 	let toRender: JSX.Element = (
-		<div>
+		<S.ButtonsBox>
+			<Button textColor={elementsColor}>pesquisa</Button>
 			<Button textColor={elementsColor}>sobre</Button>
 			<Button textColor={elementsColor}>projetos</Button>
 			<Button textColor={elementsColor}>contato</Button>
-		</div>
+			<Button
+				style={{ padding: 0 }}
+				textColor={elementsColor}
+				onClick={redirectToWhatsapp}
+			>
+				<FaWhatsapp size={20} />
+			</Button>
+			<Button
+				style={{ paddingRight: 0 }}
+				textColor={elementsColor}
+				onClick={redirectToInstagram}
+			>
+				<FaInstagram size={20} />
+			</Button>
+		</S.ButtonsBox>
 	)
 	if (windowWidth < 800) {
 		toRender = (
 			<DropDownBurgerButton
 				iconColor={elementsColor}
-				iconSize={windowWidth < 500 ? 25 : 35}
+				iconSize={windowWidth < 500 ? 25 : 30}
 			>
+				<Button>pesquisa</Button>
 				<Button>sobre</Button>
 				<Button>projetos</Button>
 				<Button>contato</Button>

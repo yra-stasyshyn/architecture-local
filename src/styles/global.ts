@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
-		font-family: 'Outfit', sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 
 `
