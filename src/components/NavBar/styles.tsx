@@ -15,7 +15,7 @@ export const Wrapper = styled.div<{
 	padding: 0;
 	position: absolute;
 	z-index: 2;
-	top: calc(100dvh - 100px);
+	top: calc(min(100vh, 100svh) - 100px);
 	bottom: 0;
 	transition: background-color 300ms ease-in-out;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.6);

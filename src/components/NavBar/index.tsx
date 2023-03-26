@@ -3,7 +3,7 @@ import React from 'react'
 import THEME from '@/styles/theme'
 import Button from '@/components/Buttons/Button'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
-import { useIsBellowNthSection } from '@/utils/useIsBellowNthSection'
+import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 
@@ -41,7 +41,7 @@ const NavBar = ({ style }: NavBarProps) => {
 			</DropDownBurgerButton>
 		)
 	}
-	const isBellowHeroSection = useIsBellowNthSection()
+	const isBellowHeroSection = useIsBellowHeroSection()
 
 	React.useEffect(() => {
 		function handleScroll() {
