@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	height: 120dvh;
+	height: min(100vh, 100svh);
 	width: 100%;
 	overflow: hidden;
 	position: fixed;
-	bottom: 0;
+	top: 0;
 	z-index: -10;
 `

@@ -5,7 +5,7 @@ export const SectionsContentWrapper = styled.div`
 	height: 15000px;
 	background-color: ${THEME.colors.secondaryColor};
 	position: relative;
-	top: 100dvh;
+	top: min(100vh, 100svh);
 	width: 100%;
 	z-index: 1;
 `
