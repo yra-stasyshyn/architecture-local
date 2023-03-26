@@ -26,9 +26,9 @@ const NavBar = ({ style }: NavBarProps) => {
 	}
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
+			<Button textColor={elementsColor}>projetos</Button>
 			<Button textColor={elementsColor}>pesquisa</Button>
 			<Button textColor={elementsColor}>sobre</Button>
-			<Button textColor={elementsColor}>projetos</Button>
 			<Button textColor={elementsColor}>contato</Button>
 			<Button
 				style={{ padding: 0 }}
@@ -52,9 +52,9 @@ const NavBar = ({ style }: NavBarProps) => {
 				iconColor={elementsColor}
 				iconSize={windowWidth < 500 ? 25 : 30}
 			>
+				<Button>projetos</Button>
 				<Button>pesquisa</Button>
 				<Button>sobre</Button>
-				<Button>projetos</Button>
 				<Button>contato</Button>
 			</DropDownBurgerButton>
 		)
