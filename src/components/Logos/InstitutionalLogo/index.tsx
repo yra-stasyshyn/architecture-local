@@ -26,8 +26,8 @@ const InstitutionalLogo = ({
 			onMouseLeave={() => setIsHovered(false)}
 			src={`./img/${colorImageMapper[color]}`}
 			alt={'Logotipo institucional Aquitetura Local'}
-			height={sizeMultiplier * 45}
-			width={sizeMultiplier * 270}
+			height={sizeMultiplier * 35}
+			width={sizeMultiplier * 210}
 		/>
 	)
 }
