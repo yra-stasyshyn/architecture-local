@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
 			background-color: ${THEME.colors.accentColor};
 			color: ${THEME.colors.secondaryColor}
 		}
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
 	}
 
 	html {
