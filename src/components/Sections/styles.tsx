@@ -2,10 +2,14 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const SectionsContentWrapper = styled.div`
-	height: 10000px;
+	margin: 0;
+	height: 2000px;
 	background-color: ${THEME.colors.secondaryColor};
-	position: relative;
+	position: absolute;
 	top: min(100vh, 100svh);
 	width: 100%;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 `

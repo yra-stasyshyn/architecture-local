@@ -2,7 +2,11 @@ import * as S from './styles'
 import React, { ReactElement } from 'react'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 
-const SlideShow = ({ children }: { children: ReactElement[] }) => {
+const SlideShow = ({
+	children
+}: {
+	children: ReactElement<HTMLImageElement>[]
+}) => {
 	const numberOfImages = children.length
 	const [currentImageIndex, setCurrentImageIndex] = React.useState(0)
 	const [imageDimensions, setImageDimensions] = React.useState({
@@ -49,10 +53,15 @@ const SlideShow = ({ children }: { children: ReactElement[] }) => {
 	}
 	return (
 		<S.Wrapper>
-			{React.Children.map(children, (child: ReactElement, index) => {
-				return React.cloneElement(child, {
-					style: { ...style, opacity: index === currentImageIndex ? 1 : 0 }
-				})
+			{React.Children.map(children, (child, index) => {
+				const opacity = index === currentImageIndex ? '1' : '0'
+				const imageStyle: React.CSSProperties = {
+					...style,
+					opacity
+				}
+				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+				// @ts-ignore
+				return React.cloneElement(child, { style: imageStyle })
 			})}
 		</S.Wrapper>
 	)

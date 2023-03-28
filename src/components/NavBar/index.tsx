@@ -6,7 +6,7 @@ import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
+import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
 
 export type NavBarProps = {
@@ -35,14 +35,14 @@ const NavBar = ({ style }: NavBarProps) => {
 				textColor={elementsColor}
 				onClick={redirectToInstagram}
 			>
-				<FaInstagram size={18} />
+				<RiInstagramFill size={18} />
 			</Button>
 			<Button
-				style={{ paddingRight: 0 }}
+				style={{ paddingRight: 0, paddingLeft: 5 }}
 				textColor={elementsColor}
 				onClick={redirectToWhatsapp}
 			>
-				<FaWhatsapp size={18} />
+				<RiWhatsappFill size={18} />
 			</Button>
 		</S.ButtonsBox>
 	)
