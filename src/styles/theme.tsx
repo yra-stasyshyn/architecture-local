@@ -11,9 +11,9 @@ const THEME = {
 	fontSize: {
 		tiny: 14,
 		small: 18,
-		regular: 30,
-		big: 60,
-		huge: 80
+		regular: 24,
+		big: 36,
+		huge: 60
 	},
 	fontWeight: {
 		extraLight: 200,
