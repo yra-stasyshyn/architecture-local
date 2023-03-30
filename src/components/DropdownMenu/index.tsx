@@ -1,22 +1,19 @@
 import * as S from './styles'
 import React from 'react'
+import THEME from '@/styles/theme'
 
 export type DropdownMenuProps = {
 	isOpen: boolean
 	renderPosition: 'above' | 'below'
 	backgroundColor?: string
+	aboveBackgroundColor?: string
 	children: React.ReactElement | React.ReactElement[]
-}
-
-const defaultDropdownMenuProps = {
-	backgroundColor: 'rgb(0, 0, 0, 0.05)',
-	renderPosition: 'below' as 'above' | 'below'
 }
 
 export const DropdownMenu = ({
 	isOpen = false,
-	renderPosition = defaultDropdownMenuProps.renderPosition,
-	backgroundColor = defaultDropdownMenuProps.backgroundColor,
+	renderPosition = 'below' as 'above' | 'below',
+	backgroundColor = THEME.colors.lightGrey,
 	children
 }: DropdownMenuProps) => {
 	return (

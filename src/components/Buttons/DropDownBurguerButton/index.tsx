@@ -66,7 +66,15 @@ export const DropDownBurgerButton = ({
 			>
 				<RxHamburgerMenu size={iconSize} color={iconColor} />
 			</Button>
-			<DropdownMenu isOpen={isMenuOpen} renderPosition={renderPosition}>
+			<DropdownMenu
+				isOpen={isMenuOpen}
+				renderPosition={renderPosition}
+				backgroundColor={
+					renderPosition == 'above'
+						? 'rgba(0, 0, 0, 0.2)'
+						: THEME.colors.lightGrey
+				}
+			>
 				{React.Children.map(children, (child: ReactElement) => {
 					return React.cloneElement(child, {
 						textColor: elementsColor,

@@ -2,7 +2,8 @@ const THEME = {
 	colors: {
 		primaryColor: '#000000',
 		secondaryColor: '#ffffff',
-		accentColor: '#E04F2E'
+		accentColor: '#E04F2E',
+		lightGrey: 'rgb(235, 235, 235)'
 	},
 	fonts: {
 		primaryFont: "'Source Sans Pro', sans-serif",
