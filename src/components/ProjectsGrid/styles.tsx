@@ -1,25 +1,35 @@
 import styled from 'styled-components'
-import THEME from '@/styles/theme'
 
-export const GridContainer = styled.div`
+export const GridContainer = styled.div<{
+	gap: number
+	colum3breakPoint: number
+	colum2breakPoint: number
+}>`
 	display: grid;
-	grid-gap: 2px;
+	grid-gap: ${(props) => props.gap}px;
 	grid-template-rows: repeat(1, 1fr);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 
-	@media (max-width: 700px) {
-		grid-template-columns: repeat(2, 1fr);
+	@media (max-width: ${(props) => props.colum3breakPoint}px) {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@media (max-width: 480px) {
-		grid-template-columns: repeat(1, 1fr);
+	@media (max-width: ${(props) => props.colum2breakPoint}px) {
+		grid-template-columns: repeat(2, 1fr);
 	}
 `
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<{
+	windowWidth: number
+	gap: number
+	fontSize: number
+	colum3breakPoint: number
+	colum2breakPoint: number
+}>`
 	position: relative;
-	width: 400px;
-	height: 400px;
+	width: ${(props) => (props.windowWidth - 3 * 6 - 2 * props.gap) / 4}px;
+	height: ${(props) =>
+		((props.windowWidth - 3 * 6 - 2 * props.gap) / 4) * (3 / 4)}px;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -28,7 +38,7 @@ export const ImageContainer = styled.div`
 	p {
 		position: absolute;
 		opacity: 0;
-		font-size: ${THEME.fontSize.small}px;
+		font-size: ${(props) => props.fontSize}px;
 	}
 	&:hover {
 		p {
@@ -46,27 +56,14 @@ export const ImageContainer = styled.div`
 			opacity: 0.25;
 		}
 	}
-	@media (max-width: 1350px) {
-		width: 350px;
-		height: 350px;
+	@media (max-width: ${(props) => props.colum3breakPoint}px) {
+		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;
+		height: ${(props) =>
+			((props.windowWidth - 2 * 6 - 2 * props.gap) / 3) * (3 / 4)}px;
 	}
-	@media (max-width: 1180px) {
-		width: 300px;
-		height: 300px;
-	}
-
-	@media (max-width: 1000px) {
-		width: 250px;
-		height: 250px;
-	}
-
-	@media (max-width: 850px) {
-		width: 200px;
-		height: 200px;
-	}
-
-	@media (max-width: 480px) {
-		width: 280px;
-		height: 280px;
+	@media (max-width: ${(props) => props.colum2breakPoint}px) {
+		width: ${(props) => (props.windowWidth - 6 - 2 * props.gap) / 2}px;
+		height: ${(props) =>
+			((props.windowWidth - 6 - 2 * props.gap) / 2) * (3 / 4)}px;
 	}
 `
