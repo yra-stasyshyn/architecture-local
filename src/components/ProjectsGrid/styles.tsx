@@ -1,20 +1,19 @@
 import styled from 'styled-components'
+import THEME from '@/styles/theme'
 
 export const GridContainer = styled.div<{
 	gap: number
-	colum3breakPoint: number
-	colum2breakPoint: number
 }>`
 	display: grid;
 	grid-gap: ${(props) => props.gap}px;
 	grid-template-rows: repeat(1, 1fr);
 	grid-template-columns: repeat(4, 1fr);
 
-	@media (max-width: ${(props) => props.colum3breakPoint}px) {
+	@media (max-width: ${THEME.screenSize.tablet}px) {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@media (max-width: ${(props) => props.colum2breakPoint}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 `
@@ -23,8 +22,6 @@ export const ImageContainer = styled.div<{
 	windowWidth: number
 	gap: number
 	fontSize: number
-	colum3breakPoint: number
-	colum2breakPoint: number
 }>`
 	position: relative;
 	width: ${(props) => (props.windowWidth - 3 * 6 - 2 * props.gap) / 4}px;
@@ -56,12 +53,12 @@ export const ImageContainer = styled.div<{
 			opacity: 0.25;
 		}
 	}
-	@media (max-width: ${(props) => props.colum3breakPoint}px) {
+	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;
 		height: ${(props) =>
 			((props.windowWidth - 2 * 6 - 2 * props.gap) / 3) * (3 / 4)}px;
 	}
-	@media (max-width: ${(props) => props.colum2breakPoint}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		width: ${(props) => (props.windowWidth - 6 - 2 * props.gap) / 2}px;
 		height: ${(props) =>
 			((props.windowWidth - 6 - 2 * props.gap) / 2) * (3 / 4)}px;

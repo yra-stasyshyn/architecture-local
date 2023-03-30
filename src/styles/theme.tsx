@@ -22,6 +22,11 @@ const THEME = {
 		regular: 400,
 		semiBold: 600,
 		bold: 700
+	},
+	screenSize: {
+		mobile: 500,
+		tablet: 800,
+		desktop: 1200
 	}
 }
 
