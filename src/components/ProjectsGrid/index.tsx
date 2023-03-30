@@ -14,24 +14,16 @@ type ProjectsGridProps = {
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({
 	fontSize = THEME.fontSize.small,
 	gridGap = 3,
-	column3BreakPoint = 700,
-	column2BreakPoint = 480,
 	children
 }) => {
 	const windowDimensions = useWindowDimensions()
 
 	return (
-		<S.GridContainer
-			colum2breakPoint={column2BreakPoint}
-			colum3breakPoint={column3BreakPoint}
-			gap={gridGap}
-		>
+		<S.GridContainer gap={gridGap}>
 			{React.Children.map(children, (child: ReactElement<HTMLImageElement>) => {
 				return (
 					<S.ImageContainer
 						windowWidth={windowDimensions.windowWidth}
-						colum2breakPoint={column2BreakPoint}
-						colum3breakPoint={column3BreakPoint}
 						fontSize={fontSize}
 						gap={gridGap}
 					>
