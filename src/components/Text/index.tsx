@@ -14,7 +14,7 @@ const Text: React.FC<TextProps> = ({
 	fontSize = THEME.fontSize.small,
 	color = THEME.colors.primaryColor,
 	fontWeight = THEME.fontWeight.semiBold,
-	width = 400,
+	width = 600,
 	children
 }) => (
 	<S.Wrapper

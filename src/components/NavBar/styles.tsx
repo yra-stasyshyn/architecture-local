@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div<{
 	backgroundColor: string
@@ -18,7 +19,7 @@ export const Wrapper = styled.div<{
 	top: calc(min(100vh, 100svh) - 64px);
 	bottom: 0;
 	transition: background-color 300ms ease-in-out;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+	border-bottom: 3px solid ${THEME.colors.accentColor};
 	&::after {
 		display: block;
 		position: absolute;
