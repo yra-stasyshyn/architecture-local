@@ -61,8 +61,9 @@ export const DropDownBurgerButton = ({
 		<div style={{ ...style, position: 'relative' }} ref={dropdownRef}>
 			<Button
 				onClick={OnClickHandler}
-				textColor={iconColor}
+				textColor={elementsColor}
 				style={{ paddingRight: 0 }}
+				colorOnHover={THEME.colors.accentColor}
 			>
 				<RxHamburgerMenu size={iconSize} color={iconColor} />
 			</Button>
@@ -71,7 +72,7 @@ export const DropDownBurgerButton = ({
 				renderPosition={renderPosition}
 				backgroundColor={
 					renderPosition == 'above'
-						? 'rgba(0, 0, 0, 0.2)'
+						? 'rgba(100, 100, 100, 0.2)'
 						: THEME.colors.lightGrey
 				}
 			>
