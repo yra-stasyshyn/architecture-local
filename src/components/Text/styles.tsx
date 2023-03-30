@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div<{
 	fontSize: number
@@ -15,5 +16,13 @@ export const Wrapper = styled.div<{
 		color: ${(props) => props.color};
 		font-size: ${(props) => props.fontSize}px;
 		font-weight: ${(props) => props.fontWeight};
+
+		@media (min-width: ${THEME.screenSize.mobile}px) {
+			font-size: ${(props) => 1.2 * props.fontSize}px;
+		}
+
+		@media (min-width: ${THEME.screenSize.tablet}px) {
+			font-size: ${(props) => 1.4 * props.fontSize}px;
+		}
 	}
 `
