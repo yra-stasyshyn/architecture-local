@@ -12,6 +12,26 @@ const GlobalStyles = createGlobalStyle`
 		}
 		-webkit-background-clip: padding-box;
 		background-clip: padding-box;
+
+		//
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent;
+			box-shadow: inset 0 0 1px grey;
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: lightgray;
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: lightgray;
+		}
 	}
 
 	html {
@@ -24,6 +44,7 @@ const GlobalStyles = createGlobalStyle`
 
 	body {
 		font-family: 'Source Sans Pro', sans-serif;
+		overflow-x: hidden;
 	}
 
 `

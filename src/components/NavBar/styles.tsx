@@ -19,7 +19,7 @@ export const Wrapper = styled.div<{
 	top: calc(min(100vh, 100svh) - 64px);
 	bottom: 0;
 	transition: background-color 300ms ease-in-out;
-	border-bottom: 3px solid ${THEME.colors.accentColor};
+	border-bottom: 3px solid ${THEME.colors.secondaryColor};
 	&::after {
 		display: block;
 		position: absolute;
