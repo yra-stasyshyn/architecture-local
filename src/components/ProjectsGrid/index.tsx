@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react'
 import * as S from './styles'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
-import THEME from '@/styles/theme'
 
 type ProjectsGridProps = {
 	fontSize?: number
@@ -12,7 +11,7 @@ type ProjectsGridProps = {
 }
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({
-	fontSize = THEME.fontSize.small,
+	fontSize,
 	gridGap = 3,
 	children
 }) => {

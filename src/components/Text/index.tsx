@@ -7,14 +7,18 @@ type TextProps = {
 	fontWeight?: number
 	color?: string
 	width?: number
-	children: ReactElement<HTMLParagraphElement>
+	children:
+		| ReactElement<HTMLParagraphElement>
+		| ReactElement<HTMLParagraphElement>[]
+		| ReactElement<HTMLHeadingElement>
+		| ReactElement<HTMLHeadingElement>[]
 }
 
 const Text: React.FC<TextProps> = ({
-	fontSize = THEME.fontSize.small,
+	fontSize,
 	color = THEME.colors.primaryColor,
-	fontWeight = THEME.fontWeight.semiBold,
-	width = 600,
+	fontWeight,
+	width = 1000,
 	children
 }) => (
 	<S.Wrapper

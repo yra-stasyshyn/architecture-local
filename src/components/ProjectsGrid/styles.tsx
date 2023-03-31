@@ -21,7 +21,7 @@ export const GridContainer = styled.div<{
 export const ImageContainer = styled.div<{
 	windowWidth: number
 	gap: number
-	fontSize: number
+	fontSize?: number
 }>`
 	position: relative;
 	width: ${(props) => (props.windowWidth - 3 * 6 - 2 * props.gap) / 4}px;
@@ -35,7 +35,7 @@ export const ImageContainer = styled.div<{
 	p {
 		position: absolute;
 		opacity: 0;
-		font-size: ${(props) => props.fontSize}px;
+		font-size: ${(props) => props.fontSize || THEME.fontSize.buttons}px;
 	}
 	&:hover {
 		p {

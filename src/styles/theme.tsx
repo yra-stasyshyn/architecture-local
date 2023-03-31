@@ -10,11 +10,11 @@ const THEME = {
 		secondaryFont: "'Outfit', sans-serif"
 	},
 	fontSize: {
-		tiny: 14,
-		small: 18,
-		regular: 24,
-		big: 36,
-		huge: 60
+		xSmallText: 10,
+		text: 20,
+		buttons: 20,
+		title2: 30,
+		title1: 42
 	},
 	fontWeight: {
 		extraLight: 200,
