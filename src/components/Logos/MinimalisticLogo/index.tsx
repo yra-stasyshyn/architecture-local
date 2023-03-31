@@ -11,14 +11,9 @@ export type LogoProps = {
 	onClick?: React.MouseEventHandler
 }
 
-const defaultLogoProps = {
-	sizeMultiplier: 1,
-	color: THEME.colors.secondaryColor
-}
-
 const MinimalisticLogo = ({
-	sizeMultiplier = defaultLogoProps.sizeMultiplier,
-	color = defaultLogoProps.color,
+	sizeMultiplier = 1,
+	color = THEME.colors.primaryColor,
 	highlightColorOnHover,
 	style,
 	onClick

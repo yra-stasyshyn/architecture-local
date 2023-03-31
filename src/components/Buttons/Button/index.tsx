@@ -15,7 +15,7 @@ export type ButtonProps = {
 const Button = ({
 	bgColor = 'transparent',
 	textColor = THEME.colors.primaryColor,
-	fontSize = THEME.fontSize.small,
+	fontSize = THEME.fontSize.buttons,
 	colorOnHover = THEME.colors.accentColor,
 	onClick,
 	children,

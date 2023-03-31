@@ -6,6 +6,7 @@ import LoadingScreen from '@/components/LoadingScreen'
 import Footer from '@/components/Footer'
 import ProjectsSection from '@/components/Sections/ProjectsSection'
 import StatementSection from '@/components/Sections/StatementSection'
+import PhilosophySection from '@/components/Sections/PhilosophySection'
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 			<S.SectionsContentWrapper>
 				<StatementSection />
 				<ProjectsSection />
+				<PhilosophySection />
 				<Footer />
 			</S.SectionsContentWrapper>
 		</>

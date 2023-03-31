@@ -2,28 +2,26 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div<{
-	fontSize: number
+	fontSize?: number
 	color: string
 	width: number
-	fontWeight: number
+	fontWeight?: number
 }>`
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	max-width: ${(props) => props.width}px;
+	font-weight: ${(props) => props.fontWeight || THEME.fontWeight.regular};
+	color: ${(props) => props.color};
 
 	p {
-		color: ${(props) => props.color};
-		//font-size: ${(props) => props.fontSize}px;
-		font-size: 42px;
-		font-weight: ${(props) => props.fontWeight};
+		font-size: ${(props) => props.fontSize || THEME.fontSize.text}px;
+	}
 
-		// @media (min-width: ${THEME.screenSize.mobile}px) {
-		// 	font-size: ${(props) => 1.2 * props.fontSize}px;
-		// }
-		//
-		// @media (min-width: ${THEME.screenSize.tablet}px) {
-		// 	font-size: ${(props) => 1.4 * props.fontSize}px;
-		// }
+	h1 {
+		font-size: ${(props) => props.fontSize || THEME.fontSize.title1}px;
+		font-weight: ${(props) => props.fontWeight || THEME.fontWeight.semiBold};
+	}
+
+	h2 {
+		font-size: ${(props) => props.fontSize || THEME.fontSize.title2}px;
+		font-weight: ${(props) => props.fontWeight || THEME.fontWeight.semiBold};
 	}
 `
