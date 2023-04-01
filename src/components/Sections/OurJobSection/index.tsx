@@ -2,7 +2,8 @@ import React from 'react'
 import AccordionTab from 'src/components/AccordionTab'
 import * as S from './styles'
 import Text from '@/components/Text'
-import { SectionHeader } from './styles'
+import { ButtonWrapper, SectionHeader } from './styles'
+import WantMyProjectButton from '@/components/Buttons/WantMyProjectButton'
 
 const OurJobSection = () => {
 	return (
@@ -39,6 +40,9 @@ const OurJobSection = () => {
 					</AccordionTab>
 				</S.AccordionWrapper>
 			</S.Content>
+			<ButtonWrapper>
+				<WantMyProjectButton />
+			</ButtonWrapper>
 		</S.Wrapper>
 	)
 }
