@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 10px;
 `
 
 export const Content = styled.div`
@@ -55,6 +56,16 @@ export const TitleWrapper = styled.div`
 export const SectionHeader = styled.div`
 	position: relative;
 	margin-bottom: 40px;
+	left: 12.5%;
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		left: 16.6%;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		left: 12.5%;
+`
+
+export const ButtonWrapper = styled.div`
+	position: relative;
 	left: 12.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		left: 16.6%;

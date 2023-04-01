@@ -46,11 +46,11 @@ const NavBar = ({ style }: NavBarProps) => {
 			</Button>
 		</S.ButtonsBox>
 	)
-	if (windowWidth < 800) {
+	if (windowWidth < THEME.screenSize.tablet) {
 		toRender = (
 			<DropDownBurgerButton
 				iconColor={elementsColor}
-				iconSize={windowWidth < 500 ? 25 : 30}
+				iconSize={windowWidth < THEME.screenSize.mobile ? 25 : 30}
 			>
 				<Button>projetos</Button>
 				<Button>pesquisa</Button>
@@ -83,12 +83,12 @@ const NavBar = ({ style }: NavBarProps) => {
 			backgroundColor={backgroundColor}
 			style={{ ...style, ...navBarStyle }}
 			shadowActive={navBarShadow}
-			shadowHeight={windowWidth < 500 ? 100 : 150}
+			shadowHeight={windowWidth < THEME.screenSize.mobile ? 100 : 150}
 		>
 			<S.ContentWrapper>
 				<InstitutionalLogo
 					color={elementsColor}
-					sizeMultiplier={windowWidth < 500 ? 0.9 : 1}
+					sizeMultiplier={windowWidth < THEME.screenSize.mobile ? 0.9 : 1}
 					onClick={scrollsToBeginning}
 					highlightColorOnHover={THEME.colors.accentColor}
 				/>

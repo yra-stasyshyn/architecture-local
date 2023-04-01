@@ -64,15 +64,15 @@ export const AccordionTabContent = styled.div<{ isOpen: boolean }>`
 	animation: ${(props) =>
 		props.isOpen
 			? css`
-					${slideDown} 1.2s ease forwards,
-					${appearContent} 1.2s ease forwards 0.3s
+					${slideDown} 1.8s linear forwards,
+					${appearContent} 0.8s ease forwards 0.4s
 			  `
 			: css`
-					${slideUp} 1.2s ease forwards,
-					${disappearContent} 0.3s ease forwards
+					${slideUp} 1.2s ease-out forwards,
+					${disappearContent} 0.8s ease forwards
 			  `};
 	max-height: 0;
-	padding: 20px 10px 10px 10px;
+	padding: 20px 10px 20px 10px;
 	height: auto;
 	opacity: 0;
 	font-size: ${THEME.fontSize.textDesktop}px;
