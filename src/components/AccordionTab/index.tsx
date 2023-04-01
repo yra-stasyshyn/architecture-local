@@ -5,7 +5,7 @@ import THEME from '@/styles/theme'
 
 interface AccordionTabProps {
 	title: string
-	children: string
+	children: React.ReactNode
 }
 
 const AccordionTab: React.FC<AccordionTabProps> = ({ title, children }) => {

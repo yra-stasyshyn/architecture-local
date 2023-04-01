@@ -7,7 +7,7 @@ import ProjectsSection from '@/components/Sections/ProjectsSection'
 import StatementSection from '@/components/Sections/StatementSection'
 import PhilosophySection from '@/components/Sections/PhilosophySection'
 import TeamSection from '@/components/Sections/TeamSection'
-import Footer from '@/components/Footer'
+import OurJobSection from '@/components/Sections/OurJobSection'
 
 export default function Home() {
 	return (
@@ -20,6 +20,7 @@ export default function Home() {
 				<ProjectsSection />
 				<PhilosophySection />
 				<TeamSection />
+				<OurJobSection />
 			</S.SectionsContentWrapper>
 		</>
 	)
