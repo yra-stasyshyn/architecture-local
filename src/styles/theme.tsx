@@ -10,11 +10,17 @@ const THEME = {
 		secondaryFont: "'Outfit', sans-serif"
 	},
 	fontSize: {
-		xSmallText: 10,
-		text: 20,
+		smallText: 10,
+		textMobile: 16,
+		textTablet: 18,
+		textDesktop: 20,
 		buttons: 20,
-		title2: 30,
-		title1: 42
+		title2Mobile: 24,
+		title2Tablet: 27,
+		title2Desktop: 30,
+		title1Mobile: 34,
+		title1Tablet: 38,
+		title1Desktop: 42
 	},
 	fontWeight: {
 		extraLight: 200,
@@ -25,7 +31,7 @@ const THEME = {
 	},
 	screenSize: {
 		mobile: 500,
-		tablet: 800,
+		tablet: 1000,
 		desktop: 1200
 	}
 }
