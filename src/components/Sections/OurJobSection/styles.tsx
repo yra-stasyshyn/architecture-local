@@ -31,6 +31,7 @@ export const Content = styled.div`
 `
 
 export const AccordionWrapper = styled.div`
+	position: relative;
 	width: 60%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
@@ -42,6 +43,7 @@ export const AccordionWrapper = styled.div`
 
 export const TitleWrapper = styled.div`
 	width: 40%;
+	margin-bottom: 60px;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
 	}
