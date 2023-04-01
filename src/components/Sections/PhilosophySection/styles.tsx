@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	height: 100svh;
+	height: calc(100lvh + 200px);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -15,7 +15,7 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	gap: 50px;
+	gap: 40px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
@@ -54,4 +54,25 @@ export const ImageWrapper = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
+
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		margin-top: 40px;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		margin-top: 20px;
+	}
+
+	img {
+		height: 250px;
+		width: 250px;
+
+		@media (max-width: ${THEME.screenSize.tablet}px) {
+			height: 200px;
+			width: 200px;
+		}
+		@media (max-width: ${THEME.screenSize.mobile}px) {
+			height: 120px;
+			width: 120px;
+		}
+	}
 `

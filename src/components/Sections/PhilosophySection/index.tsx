@@ -36,12 +36,7 @@ const PhilosophySection = () => {
 				</S.ParagraphWrapper>
 			</S.Content>
 			<S.ImageWrapper>
-				<img
-					src={`./img/al-logo-${imageIndex}.svg`}
-					alt={''}
-					height={250}
-					width={250}
-				/>
+				<img src={`./img/al-logo-${imageIndex}.svg`} alt={''} />
 			</S.ImageWrapper>
 		</S.Wrapper>
 	)
