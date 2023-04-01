@@ -30,7 +30,7 @@ export const Content = styled.div`
 	}
 `
 
-export const ParagraphWrapper = styled.div`
+export const AccordionWrapper = styled.div`
 	width: 60%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
@@ -50,30 +50,13 @@ export const TitleWrapper = styled.div`
 	}
 `
 
-export const ImageWrapper = styled.div`
-	margin-top: 50px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-
+export const SectionHeader = styled.div`
+	position: relative;
+	margin-bottom: 20px;
+	left: 12.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		margin-top: 40px;
+		left: 16.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		margin-top: 20px;
-	}
-
-	img {
-		height: 300px;
-		width: 300px;
-
-		@media (max-width: ${THEME.screenSize.tablet}px) {
-			height: 250px;
-			width: 250px;
-		}
-		@media (max-width: ${THEME.screenSize.mobile}px) {
-			height: 200px;
-			width: 200px;
-		}
-	}
+		left: 12.5%;
 `
