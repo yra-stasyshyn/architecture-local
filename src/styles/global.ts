@@ -21,12 +21,10 @@ const GlobalStyles = createGlobalStyle`
 		::-webkit-scrollbar-track {
 			background: transparent;
 			box-shadow: inset 0 0 1px grey;
-			border-radius: 10px;
 		}
 
 		::-webkit-scrollbar-thumb {
 			background: lightgray;
-			border-radius: 10px;
 		}
 
 		::-webkit-scrollbar-thumb:hover {

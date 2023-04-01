@@ -3,7 +3,6 @@ import THEME from '@/styles/theme'
 
 export const SectionsContentWrapper = styled.div`
 	margin: 0;
-	height: 8000px;
 	background-color: ${THEME.colors.secondaryColor};
 	position: absolute;
 	top: min(100vh, 100svh);
