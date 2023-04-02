@@ -1,16 +1,16 @@
 import React from 'react'
 import * as S from './styles'
 import Text from '@/components/Text'
-import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
+import useScrollPosition from '@/utils/useScrollPosition'
 const StatementSection = () => {
 	const [isVisible, setIsVisible] = React.useState(false)
-	const isBellowHeroSection = useIsBellowHeroSection()
+	const scrollPosition = useScrollPosition()
 
 	React.useEffect(() => {
-		if (isBellowHeroSection) {
+		if (scrollPosition > (window.innerHeight * 2) / 3) {
 			setIsVisible(true)
 		}
-	}, [isBellowHeroSection])
+	}, [scrollPosition])
 
 	return (
 		<S.Wrapper isVisible={isVisible}>
