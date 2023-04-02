@@ -9,7 +9,7 @@ const TeamSection = () => {
 		<S.Wrapper>
 			<SectionHeader>
 				<Text>
-					<h2>/equipe</h2>
+					<h3>/equipe</h3>
 				</Text>
 			</SectionHeader>
 			<S.Content>

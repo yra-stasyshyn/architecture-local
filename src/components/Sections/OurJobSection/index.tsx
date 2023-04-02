@@ -10,7 +10,7 @@ const OurJobSection = () => {
 		<S.Wrapper>
 			<SectionHeader>
 				<Text>
-					<h2>/o que fazemos</h2>
+					<h3>/o que fazemos</h3>
 				</Text>
 			</SectionHeader>
 			<S.Content>
