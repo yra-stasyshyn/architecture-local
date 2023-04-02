@@ -3,7 +3,7 @@ import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
 	height: auto;
-	min-height: 100svh;
+	min-height: max(800px, 100svh);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -17,15 +17,18 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	gap: 40px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
+		justify-content: center;
 		width: 50%;
 		left: 16.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
+		justify-content: center;
 		left: 12.5%;
 		width: 75%;
 	}

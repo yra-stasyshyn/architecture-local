@@ -56,4 +56,18 @@ export const Wrapper = styled.div<{
 				props.fontSizeMobile || THEME.fontSize.title2Mobile}px;
 		}
 	}
+	h3 {
+		font-size: ${(props) => props.fontSize || THEME.fontSize.title3Desktop}px;
+		font-weight: ${(props) => props.fontWeight || THEME.fontWeight.semiBold};
+
+		@media (max-width: ${THEME.screenSize.tablet}px) {
+			font-size: ${(props) =>
+				props.fontSizeTablet || THEME.fontSize.title3Tablet}px;
+		}
+
+		@media (max-width: ${THEME.screenSize.mobile}px) {
+			font-size: ${(props) =>
+				props.fontSizeMobile || THEME.fontSize.title3Mobile}px;
+		}
+	}
 `

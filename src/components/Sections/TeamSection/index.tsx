@@ -15,10 +15,10 @@ const TeamSection = () => {
 			<S.Content>
 				<S.TitleWrapper>
 					<Text>
-						<h1>
+						<h2>
 							Somos pessoas trabalhando para viabilizar os desejos de outras
 							pessoas.
-						</h1>
+						</h2>
 					</Text>
 				</S.TitleWrapper>
 				<S.AccordionWrapper>

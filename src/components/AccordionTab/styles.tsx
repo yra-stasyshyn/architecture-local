@@ -9,18 +9,18 @@ export const AccordionTabHeader = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 8px;
+	padding: 8px 8px 0 8px;
 	border-bottom: 3px solid ${THEME.colors.accentColor};
-	font-size: ${THEME.fontSize.title2Desktop}px;
+	font-size: ${THEME.fontSize.title3Desktop}px;
 	font-weight: ${THEME.fontWeight.semiBold};
 	cursor: pointer;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		font-size: ${THEME.fontSize.title2Tablet}px;
+		font-size: ${THEME.fontSize.title3Tablet}px;
 	}
 
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		font-size: ${THEME.fontSize.title2Mobile}px;
+		font-size: ${THEME.fontSize.title3Mobile}px;
 	}
 `
 

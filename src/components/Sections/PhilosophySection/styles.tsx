@@ -2,12 +2,28 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	height: auto;
-	min-height: 100svh;
-	width: 100%;
+	height: 800px;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	gap: 40px;
+	position: relative;
+	width: 75%;
+
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		height: 1000px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: normal;
+		width: 66%;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		height: 1000px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: normal;
+		width: 75%;
+	}
 `
 
 export const Content = styled.div`
@@ -64,16 +80,16 @@ export const ImageWrapper = styled.div`
 	}
 
 	img {
-		height: 300px;
+		height: 220px;
 		width: 300px;
 
 		@media (max-width: ${THEME.screenSize.tablet}px) {
-			height: 250px;
+			height: 180px;
 			width: 250px;
 		}
 		@media (max-width: ${THEME.screenSize.mobile}px) {
-			height: 200px;
-			width: 200px;
+			height: 100px;
+			width: 150px;
 		}
 	}
 `

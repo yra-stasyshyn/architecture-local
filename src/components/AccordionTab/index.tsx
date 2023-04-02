@@ -9,11 +9,19 @@ interface AccordionTabProps {
 }
 
 const AccordionTab: React.FC<AccordionTabProps> = ({ title, children }) => {
-	const plus = <HiPlus size={25} />
-	const plusCircle = <HiPlusCircle color={THEME.colors.accentColor} size={38} />
-	const minus = <HiMinus size={25} />
+	const plus = <HiPlus size={0.8 * THEME.fontSize.title3Desktop} />
+	const plusCircle = (
+		<HiPlusCircle
+			color={THEME.colors.accentColor}
+			size={1.2 * THEME.fontSize.title3Desktop}
+		/>
+	)
+	const minus = <HiMinus size={0.8 * THEME.fontSize.title3Desktop} />
 	const minusCircle = (
-		<HiMinusCircle color={THEME.colors.accentColor} size={38} />
+		<HiMinusCircle
+			color={THEME.colors.accentColor}
+			size={1.2 * THEME.fontSize.title3Desktop}
+		/>
 	)
 
 	const [isOpen, setIsOpen] = React.useState(false)

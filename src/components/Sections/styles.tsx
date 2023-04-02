@@ -12,11 +12,4 @@ export const SectionsContentWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
-
-	@media (max-width: ${THEME.screenSize.tablet}px) {
-		gap: 100px;
-	}
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		gap: 200px;
-	}
 `

@@ -11,30 +11,24 @@ const PhilosophySection = () => {
 	)
 	return (
 		<S.Wrapper>
-			<S.Content>
-				<S.TitleWrapper>
-					<Text>
-						<h1>Prática criativa comprometida com o contexto</h1>
-					</Text>
-				</S.TitleWrapper>
-				<S.ParagraphWrapper>
-					<Text>
-						<p>
-							ARQUITETURA LOCAL é um estúdio de arquitetura e design baseado em
-							Belo Horizonte, Minas Gerais, que se dedica a projetos de
-							diferentes escalas e categorias, sempre desenvolvidos a partir do
-							entendimento profundo das demandas de seus clientes e do local em
-							torno de cada proposta.
-						</p>
-						<br />
-						<p>
-							Essa são os dois sentidos que orientam o trabalho do escritório:
-							uma lente focada na demanda específica e outra com vista
-							panorâmica do lugar, do contexto e da atualidade.
-						</p>
-					</Text>
-				</S.ParagraphWrapper>
-			</S.Content>
+			<Text>
+				<h2>Prática criativa comprometida com o contexto</h2>
+				<br />
+				<br />
+				<p>
+					ARQUITETURA LOCAL é um estúdio de arquitetura e design baseado em Belo
+					Horizonte, Minas Gerais, que se dedica a projetos de diferentes
+					escalas e categorias, sempre desenvolvidos a partir do entendimento
+					profundo das demandas de seus clientes e do local em torno de cada
+					proposta.
+				</p>
+				<br />
+				<p>
+					Essa são os dois sentidos que orientam o trabalho do escritório: uma
+					lente focada na demanda específica e outra com vista panorâmica do
+					lugar, do contexto e da atualidade.
+				</p>
+			</Text>
 			<S.ImageWrapper>
 				<img src={`./img/al-logo-${imageIndex}.svg`} alt={''} />
 			</S.ImageWrapper>

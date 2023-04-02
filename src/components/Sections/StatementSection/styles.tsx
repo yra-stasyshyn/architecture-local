@@ -14,4 +14,9 @@ export const Wrapper = styled.div`
 		padding-left: 16.6%;
 		padding-right: 16.6%;
 	}
+
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		padding-left: 12.5%;
+		padding-right: 12.5%;
+	}
 `
