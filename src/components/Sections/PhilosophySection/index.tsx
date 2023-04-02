@@ -3,14 +3,14 @@ import * as S from './styles'
 import Text from '@/components/Text'
 import { doOnInterval } from '@/utils/doOnInterval'
 
-const PhilosophySection = () => {
+const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [imageIndex, setImageIndex] = React.useState(1)
 	doOnInterval(
 		() => setImageIndex(imageIndex + 1 > 5 ? 1 : imageIndex + 1),
 		1000
 	)
 	return (
-		<S.Wrapper>
+		<S.Wrapper ref={ref}>
 			<S.TitleWrapper>
 				<Text>
 					<h1>Prática criativa comprometida com o contexto</h1>
@@ -38,6 +38,8 @@ const PhilosophySection = () => {
 			</S.Content>
 		</S.Wrapper>
 	)
-}
+})
+
+PhilosophySection.displayName = 'About Us Section'
 
 export default PhilosophySection
