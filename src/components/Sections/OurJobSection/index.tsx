@@ -16,11 +16,11 @@ const OurJobSection = () => {
 			<S.Content>
 				<S.TitleWrapper>
 					<Text>
-						<h1>
+						<h2>
 							Somos um estúdio de arquitetura e design, serviços que podem ser
 							contratados individualmente ou em conjunto, para potencializar
 							resultados.
-						</h1>
+						</h2>
 					</Text>
 				</S.TitleWrapper>
 				<S.AccordionWrapper>
