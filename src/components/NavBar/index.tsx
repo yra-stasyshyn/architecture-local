@@ -8,12 +8,15 @@ import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
+import scrollToRef from '@/utils/scrollToRef'
 
 export type NavBarProps = {
+	projectsRef: React.RefObject<never>
+	aboutUsRef: React.RefObject<never>
 	style?: React.CSSProperties
 }
 
-const NavBar = ({ style }: NavBarProps) => {
+const NavBar = ({ style, projectsRef, aboutUsRef }: NavBarProps) => {
 	const windowWidth = useWindowDimensions().windowWidth
 	const [elementsColor, setElementsColor] = React.useState(
 		THEME.colors.secondaryColor
@@ -26,9 +29,16 @@ const NavBar = ({ style }: NavBarProps) => {
 	}
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
-			<Button textColor={elementsColor}>projetos</Button>
+			<Button
+				textColor={elementsColor}
+				onClick={() => scrollToRef(projectsRef)}
+			>
+				projetos
+			</Button>
 			<Button textColor={elementsColor}>pesquisa</Button>
-			<Button textColor={elementsColor}>sobre</Button>
+			<Button textColor={elementsColor} onClick={() => scrollToRef(aboutUsRef)}>
+				sobre
+			</Button>
 			<Button textColor={elementsColor}>contato</Button>
 			<Button
 				style={{ paddingRight: 0 }}
@@ -52,9 +62,9 @@ const NavBar = ({ style }: NavBarProps) => {
 				iconColor={elementsColor}
 				iconSize={windowWidth < THEME.screenSize.mobile ? 25 : 30}
 			>
-				<Button>projetos</Button>
+				<Button onClick={() => scrollToRef(projectsRef)}>projetos</Button>
 				<Button>pesquisa</Button>
-				<Button>sobre</Button>
+				<Button onClick={() => scrollToRef(aboutUsRef)}>sobre</Button>
 				<Button>contato</Button>
 			</DropDownBurgerButton>
 		)

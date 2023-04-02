@@ -11,15 +11,18 @@ import OurJobSection from '@/components/Sections/OurJobSection'
 import Footer from '@/components/Footer'
 
 export default function Home() {
+	const projectsRef = React.useRef(null)
+	const aboutUsRef = React.useRef(null)
+
 	return (
 		<>
 			<LoadingScreen />
 			<HeroSection />
-			<NavBar />
+			<NavBar projectsRef={projectsRef} aboutUsRef={aboutUsRef} />
 			<S.SectionsContentWrapper>
 				<StatementSection />
-				<ProjectsSection />
-				<PhilosophySection />
+				<ProjectsSection ref={projectsRef} />
+				<PhilosophySection ref={aboutUsRef} />
 				<TeamSection />
 				<OurJobSection />
 				<Footer />
