@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	height: auto;
-	min-height: max(800px, 100svh);
 	width: 100%;
 	display: flex;
 	flex-direction: column;

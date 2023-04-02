@@ -10,7 +10,7 @@ export const AccordionTabHeader = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	padding: 8px 8px 0 8px;
-	border-bottom: 3px solid ${THEME.colors.accentColor};
+	border-bottom: 2px solid ${THEME.colors.accentColor};
 	font-size: ${THEME.fontSize.title3Desktop}px;
 	font-weight: ${THEME.fontWeight.semiBold};
 	cursor: pointer;

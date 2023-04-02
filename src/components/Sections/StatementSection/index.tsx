@@ -6,8 +6,9 @@ const StatementSection = () => {
 		<S.Wrapper>
 			<Text>
 				<h1>
-					Criamos projetos autênticos para pessoas e empresas que buscam
-					melhorar vidas e cidades.
+					Criamos projetos autênticos para pessoas e empresas
+					<br />
+					que buscam melhorar vidas e cidades.
 				</h1>
 			</Text>
 		</S.Wrapper>

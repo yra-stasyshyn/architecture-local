@@ -12,4 +12,5 @@ export const SectionsContentWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	overflow: hidden;
+	gap: 200px;
 `
