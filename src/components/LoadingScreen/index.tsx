@@ -9,6 +9,7 @@ const LoadingScreen = () => {
 	function updateProgress() {
 		if (loaded) return
 		const images = document.querySelectorAll('img')
+		document.body.style.overflow = progress < 100 ? 'hidden' : ''
 		const numImages = images.length
 		let loadedImages = 0
 		images.forEach((image) => {
