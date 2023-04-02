@@ -7,6 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			<Head>
 				<title>Arquitetura Local</title>
+				<link rel="icon" href="/img/favicon.ico" />
 			</Head>
 			<GlobalStyles />
 			<Component {...pageProps} />
