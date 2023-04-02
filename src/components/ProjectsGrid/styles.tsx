@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const GridContainer = styled.div<{
@@ -18,6 +18,11 @@ export const GridContainer = styled.div<{
 	}
 `
 
+const showText = keyframes`
+	0% { transform: translate3d(0, 100%, 0); }
+	100% { transform: translate3d(0, 0, 0); }
+`
+
 export const ImageContainer = styled.div<{
 	windowWidth: number
 	gap: number
@@ -31,15 +36,28 @@ export const ImageContainer = styled.div<{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 
-	p {
+	> div {
 		position: absolute;
-		opacity: 0;
-		font-size: ${(props) => props.fontSize || THEME.fontSize.buttons}px;
+		overflow: hidden;
+		> p {
+			opacity: 0;
+			transition: opacity 0.6s ease;
+			font-size: ${(props) => props.fontSize || THEME.fontSize.buttons}px;
+			pointer-events: none;
+		}
 	}
+
 	&:hover {
-		p {
-			opacity: 1;
+		> div {
+			> p {
+				animation: ${showText} 0.3s ease-out forwards;
+				opacity: 1;
+			}
+		}
+		> img {
+			opacity: 0.25;
 		}
 	}
 	img {
@@ -49,9 +67,7 @@ export const ImageContainer = styled.div<{
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		&:hover {
-			opacity: 0.25;
-		}
+		transition: opacity 0.2s ease;
 	}
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;

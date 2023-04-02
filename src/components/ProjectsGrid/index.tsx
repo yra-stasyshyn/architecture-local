@@ -27,7 +27,9 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({
 						gap={gridGap}
 					>
 						{child}
-						<p>{child.props.alt}</p>
+						<div>
+							<p>{child.props.alt}</p>
+						</div>
 					</S.ImageContainer>
 				)
 			})}
