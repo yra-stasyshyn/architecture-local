@@ -16,7 +16,6 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	gap: 40px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
