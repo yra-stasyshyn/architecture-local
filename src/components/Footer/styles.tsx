@@ -5,8 +5,6 @@ export const Wrapper = styled.div`
 	height: 200px;
 	width: 100%;
 	background-color: ${THEME.colors.accentColor};
-	position: absolute;
-	bottom: 0;
 `
 
 export const WavyCurve = styled.div`

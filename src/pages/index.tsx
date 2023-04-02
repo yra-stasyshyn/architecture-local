@@ -8,6 +8,7 @@ import StatementSection from '@/components/Sections/StatementSection'
 import PhilosophySection from '@/components/Sections/PhilosophySection'
 import TeamSection from '@/components/Sections/TeamSection'
 import OurJobSection from '@/components/Sections/OurJobSection'
+import Footer from '@/components/Footer'
 
 export default function Home() {
 	return (
@@ -21,6 +22,7 @@ export default function Home() {
 				<PhilosophySection />
 				<TeamSection />
 				<OurJobSection />
+				<Footer />
 			</S.SectionsContentWrapper>
 		</>
 	)
