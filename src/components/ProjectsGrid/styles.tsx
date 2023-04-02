@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const GridContainer = styled.div<{
@@ -16,11 +16,6 @@ export const GridContainer = styled.div<{
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-`
-
-const showText = keyframes`
-	0% { transform: translate3d(0, 100%, 0); }
-	100% { transform: translate3d(0, 0, 0); }
 `
 
 export const ImageContainer = styled.div<{
@@ -43,7 +38,7 @@ export const ImageContainer = styled.div<{
 		overflow: hidden;
 		> p {
 			opacity: 0;
-			transition: opacity 0.6s ease;
+			color: ${THEME.colors.primaryColor};
 			font-size: ${(props) => props.fontSize || THEME.fontSize.buttons}px;
 			pointer-events: none;
 		}
@@ -52,7 +47,6 @@ export const ImageContainer = styled.div<{
 	&:hover {
 		> div {
 			> p {
-				animation: ${showText} 0.3s ease-out forwards;
 				opacity: 1;
 			}
 		}
@@ -67,7 +61,6 @@ export const ImageContainer = styled.div<{
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: opacity 0.2s ease;
 	}
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;
