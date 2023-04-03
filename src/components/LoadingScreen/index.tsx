@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import * as S from './styles'
 import LoadingBar from '@/components/LoadingBar'
 import { doOnInterval } from '@/utils/doOnInterval'
+import NextImage from 'next/image'
 
 const LoadingScreen = () => {
 	const [loaded, setLoaded] = useState(false)
@@ -29,7 +30,7 @@ const LoadingScreen = () => {
 	doOnInterval(updateProgress, 100)
 	const invisibleImagesInOrderToLoadFirst = [1, 2, 3, 4, 5].map((num) => {
 		return (
-			<img
+			<NextImage
 				key={num}
 				src={`./img/al-logo-white-${num}.svg`}
 				alt={''}
@@ -42,7 +43,7 @@ const LoadingScreen = () => {
 	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 5) + 1, 5)
 	return (
 		<S.Overlay loaded={loaded}>
-			<img
+			<NextImage
 				src={`./img/al-logo-white-${indexOfImageToShow}.svg`}
 				alt={''}
 				height={90}
