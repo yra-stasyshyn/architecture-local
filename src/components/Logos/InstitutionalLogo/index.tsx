@@ -1,5 +1,6 @@
 import THEME from '@/styles/theme'
 import React from 'react'
+import NextImage from 'next/image'
 
 const InstitutionalLogo = ({
 	sizeMultiplier = 1,
@@ -20,7 +21,7 @@ const InstitutionalLogo = ({
 	}
 	color = isHovered ? highlightColorOnHover : color
 	return (
-		<img
+		<NextImage
 			onClick={onClick}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
