@@ -15,12 +15,11 @@ const StatementSection = () => {
 	return (
 		<S.Wrapper isVisible={isVisible}>
 			<Text>
-				<div>
-					<h1>Criamos projetos autênticos para pessoas e empresas</h1>
-				</div>
-				<div>
-					<h1>que buscam melhorar vidas e cidades.</h1>
-				</div>
+				<h1>
+					Criamos projetos autênticos para pessoas e empresas
+					<br />
+					que buscam melhorar vidas e cidades.
+				</h1>
 			</Text>
 		</S.Wrapper>
 	)
