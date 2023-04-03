@@ -12,8 +12,9 @@ const WantMyProjectButton = () => {
 			style={{
 				display: 'flex',
 				justifyContent: 'space-between',
-				border: `3px solid ${THEME.colors.accentColor}`,
-				width: 220,
+				alignItems: 'center',
+				gap: 15,
+				border: `1px solid ${THEME.colors.accentColor}`,
 				padding: '5px 10px 7px 10px'
 			}}
 		>

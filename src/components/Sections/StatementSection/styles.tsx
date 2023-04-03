@@ -16,17 +16,17 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 	padding-left: 12.5%;
 	padding-right: 12.5%;
 	> div {
-		opacity: ${(props) => (props.isVisible ? 1 : 0)};
-		> div {
-			overflow: hidden;
-			> h1 {
-				animation: ${(props) =>
-					props.isVisible
-						? css`
-								${showText} 0.5s linear forwards
-						  `
-						: 'none'};
-			}
+		overflow: hidden;
+
+		> h1 {
+			opacity: ${(props) => (props.isVisible ? 1 : 0)};
+			transition: opacity 1.8s ease-in;
+			animation: ${(props) =>
+				props.isVisible
+					? css`
+							${showText} 1.2s ease-out forwards
+					  `
+					: 'none'};
 		}
 	}
 
