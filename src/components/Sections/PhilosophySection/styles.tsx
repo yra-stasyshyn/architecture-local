@@ -4,22 +4,20 @@ import THEME from '@/styles/theme'
 export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	gap: 40px;
+	gap: 20px;
 	position: relative;
-	left: 12.5%;
-
+	width: 75%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		left: 16.6%;
+		width: 66.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		left: 12.5%;
+		width: 75%;
 	}
 `
 
 export const Content = styled.div`
 	position: relative;
-	width: 75%;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -27,11 +25,9 @@ export const Content = styled.div`
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
-		width: 66.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
-		width: 75%;
 	}
 `
 
@@ -47,7 +43,7 @@ export const TitleWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
 	margin-top: 50px;
-	width: 100%;
+	width: 50%;
 	display: flex;
 	justify-content: center;
 
