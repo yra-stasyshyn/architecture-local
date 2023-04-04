@@ -14,11 +14,10 @@ const StatementSection = () => {
 
 	return (
 		<S.Wrapper isVisible={isVisible}>
-			<Text>
-				<h1>
-					Criamos projetos autênticos para pessoas e empresas
-					<br />
-					que buscam melhorar vidas e cidades.
+			<Text style={{ display: 'flex', justifyContent: 'center' }}>
+				<h1 style={{ maxWidth: 1000 }}>
+					Criamos projetos autênticos para pessoas e empresas que buscam
+					melhorar vidas e cidades.
 				</h1>
 			</Text>
 		</S.Wrapper>
