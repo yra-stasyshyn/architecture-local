@@ -28,29 +28,18 @@ const LoadingScreen = () => {
 	}
 
 	doOnInterval(updateProgress, 100)
-	const invisibleImagesInOrderToLoadFirst = [1, 2, 3, 4, 5].map((num) => {
-		return (
-			<NextImage
-				key={num}
-				src={`./img/al-logo-white-${num}.svg`}
-				alt={''}
-				height={90}
-				width={90}
-				style={{ opacity: 0, position: 'absolute' }}
-			/>
-		)
-	})
+
 	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 5) + 1, 5)
 	return (
 		<S.Overlay loaded={loaded}>
 			<NextImage
 				src={`./img/al-logo-white-${indexOfImageToShow}.svg`}
-				alt={''}
+				alt={`Loading Logo ${indexOfImageToShow}`}
 				height={90}
 				width={90}
+				priority={true}
 			/>
 			<LoadingBar progress={progress} />
-			{invisibleImagesInOrderToLoadFirst}
 		</S.Overlay>
 	)
 }
