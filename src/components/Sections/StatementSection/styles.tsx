@@ -20,11 +20,11 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 
 		> h1 {
 			opacity: ${(props) => (props.isVisible ? 1 : 0)};
-			transition: opacity 1.8s ease-in;
+			transition: opacity 1s ease-in;
 			animation: ${(props) =>
 				props.isVisible
 					? css`
-							${showText} 1.2s ease-out forwards
+							${showText} 0.6s ease-out forwards
 					  `
 					: 'none'};
 		}
