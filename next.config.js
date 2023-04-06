@@ -11,5 +11,8 @@ module.exports = withPWA({
 	reactStrictMode: true,
 	experimental: {
 		forceSwcTransforms: true
+	},
+	images: {
+		minimumCacheTTL: 600
 	}
 })
