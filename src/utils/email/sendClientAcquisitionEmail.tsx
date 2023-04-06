@@ -1,4 +1,4 @@
-import { ClientAcquisitionFormData } from '@/components/EmailForm'
+import { ClientAcquisitionFormData } from '@/components/EmailForm/validationLogic/types'
 
 const sendClientAcquisitionEmail = async (
 	formData: ClientAcquisitionFormData
