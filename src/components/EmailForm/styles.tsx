@@ -6,8 +6,8 @@ export const FormContainer = styled.form`
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
-	width: clamp(300px, 100%, 500px);
-
+	max-width: 700px;
+	min-width: 120px;
 	::selection {
 		background-color: ${THEME.colors.accentColor} !important;
 		color: ${THEME.colors.secondaryColor} !important;
@@ -61,4 +61,13 @@ export const AlertMessage = styled.span`
 
 export const Button = styled.button`
 	padding: 8px;
+	width: 100%;
+	display: flex;
+	justify-content: left;
+	border: none;
+	color: ${THEME.colors.secondaryColor};
+	background-color: ${THEME.colors.darkGrey};
+	font-size: ${THEME.fontSize.textDesktop}px;
+	font-family: ${THEME.fonts.primaryFont};
+	cursor: pointer;
 `
