@@ -33,7 +33,15 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	html {
-		font-size: 62.5%;
+		font-size: ${THEME.fontSize.textDesktop}px;
+
+		@media (max-width: ${THEME.screenSize.tablet}px) {
+			font-size: ${THEME.fontSize.textTablet}px;
+		}
+
+		@media (max-width: ${THEME.screenSize.mobile}px) {
+			font-size: ${THEME.fontSize.textMobile}px;
+		}
 	}
 
 	html, body, #__next {

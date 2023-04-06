@@ -9,7 +9,8 @@ export const AccordionTabHeader = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 8px 8px 0 8px;
+	box-sizing: border-box;
+	padding: 8px;
 	border-bottom: 1px solid ${THEME.colors.accentColor};
 	font-size: ${THEME.fontSize.title3Desktop}px;
 	font-weight: ${THEME.fontWeight.semiBold};
@@ -92,5 +93,4 @@ export const IconWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 38px;
-	height: 38px;
 `
