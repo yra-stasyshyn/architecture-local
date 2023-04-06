@@ -13,10 +13,16 @@ import scrollToRef from '@/utils/scrollToRef'
 export type NavBarProps = {
 	projectsRef: React.RefObject<never>
 	aboutUsRef: React.RefObject<never>
+	contactUsRef: React.RefObject<never>
 	style?: React.CSSProperties
 }
 
-const NavBar = ({ style, projectsRef, aboutUsRef }: NavBarProps) => {
+const NavBar = ({
+	style,
+	projectsRef,
+	aboutUsRef,
+	contactUsRef
+}: NavBarProps) => {
 	const windowWidth = useWindowDimensions().windowWidth
 	const [elementsColor, setElementsColor] = React.useState(
 		THEME.colors.secondaryColor
@@ -39,7 +45,12 @@ const NavBar = ({ style, projectsRef, aboutUsRef }: NavBarProps) => {
 			<Button textColor={elementsColor} onClick={() => scrollToRef(aboutUsRef)}>
 				sobre
 			</Button>
-			<Button textColor={elementsColor}>contato</Button>
+			<Button
+				textColor={elementsColor}
+				onClick={() => scrollToRef(contactUsRef)}
+			>
+				contato
+			</Button>
 			<Button
 				style={{ paddingRight: 0 }}
 				textColor={elementsColor}
@@ -65,7 +76,7 @@ const NavBar = ({ style, projectsRef, aboutUsRef }: NavBarProps) => {
 				<Button onClick={() => scrollToRef(projectsRef)}>projetos</Button>
 				<Button>pesquisa</Button>
 				<Button onClick={() => scrollToRef(aboutUsRef)}>sobre</Button>
-				<Button>contato</Button>
+				<Button onClick={() => scrollToRef(contactUsRef)}>contato</Button>
 			</DropDownBurgerButton>
 		)
 	}

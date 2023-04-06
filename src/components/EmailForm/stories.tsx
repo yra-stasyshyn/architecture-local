@@ -1,4 +1,4 @@
-import { Meta, Args, StoryFn } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 import EmailForm from './index'
 
@@ -7,7 +7,7 @@ export default {
 	component: EmailForm
 } as Meta
 
-export const Default: StoryFn = (args: Args) => (
+export const Default: StoryFn = () => (
 	<div style={{ backgroundColor: 'white', padding: 20 }}>
 		<EmailForm />
 	</div>

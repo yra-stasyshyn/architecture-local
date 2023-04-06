@@ -16,7 +16,7 @@ import {
 	ValidationMapper
 } from '@/components/EmailForm/validationLogic/validationMapper'
 
-const EmailForm = () => {
+const EmailForm = ({ style }: { style?: React.CSSProperties }) => {
 	const [formData, setFormData] =
 		React.useState<ClientAcquisitionFormData>(noValue)
 	const [validationMessage, setValidationMessage] =
@@ -68,7 +68,7 @@ const EmailForm = () => {
 		}
 	}
 	return (
-		<S.FormContainer onSubmit={handleSubmit}>
+		<S.FormContainer onSubmit={handleSubmit} style={style}>
 			<S.Input
 				type="text"
 				id="name"
@@ -109,7 +109,7 @@ const EmailForm = () => {
 				onBlur={handleOnBlur}
 			/>
 			<AlertMessage>{validationMessage.message}</AlertMessage>
-			<S.Button type="submit">Enviar mensagem</S.Button>
+			<S.Button type="submit">{'enviar >'}</S.Button>
 		</S.FormContainer>
 	)
 }

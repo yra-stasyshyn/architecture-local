@@ -2,17 +2,16 @@ import React from 'react'
 import AccordionTab from 'src/components/AccordionTab'
 import * as S from './styles'
 import Text from '@/components/Text'
-import { ButtonWrapper, SectionHeader } from './styles'
 import WantMyProjectButton from '@/components/Buttons/WantMyProjectButton'
 
 const OurJobSection = () => {
 	return (
 		<S.Wrapper>
-			<SectionHeader>
+			<S.SectionHeader>
 				<Text>
 					<h3>/o que fazemos</h3>
 				</Text>
-			</SectionHeader>
+			</S.SectionHeader>
 			<S.Content>
 				<S.TitleWrapper>
 					<Text>
@@ -40,9 +39,9 @@ const OurJobSection = () => {
 					</AccordionTab>
 				</S.AccordionWrapper>
 			</S.Content>
-			<ButtonWrapper>
+			<S.ButtonWrapper>
 				<WantMyProjectButton />
-			</ButtonWrapper>
+			</S.ButtonWrapper>
 		</S.Wrapper>
 	)
 }

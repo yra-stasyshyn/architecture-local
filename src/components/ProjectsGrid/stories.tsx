@@ -1,4 +1,4 @@
-import { Meta, Args, StoryFn } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 import ProjectsGrid from './index'
 import NextImage from 'next/image'
@@ -17,7 +17,7 @@ export default {
 	component: ProjectsGrid
 } as Meta
 
-export const Default: StoryFn = (args: Args) => {
+export const Default: StoryFn = () => {
 	const quality = 50
 	return (
 		<div style={{ backgroundColor: '#ffffff', padding: 4 }}>

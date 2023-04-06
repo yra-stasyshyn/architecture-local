@@ -3,7 +3,8 @@ const THEME = {
 		primaryColor: '#000000',
 		secondaryColor: '#ffffff',
 		accentColor: '#E04F2E',
-		lightGrey: 'rgb(235, 235, 235)'
+		lightGrey: 'rgb(235, 235, 235)',
+		darkGrey: '#231F20'
 	},
 	fonts: {
 		primaryFont: "'Source Sans Pro', sans-serif",
