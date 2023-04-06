@@ -10,7 +10,7 @@ const THEME = {
 		secondaryFont: "'Outfit', sans-serif"
 	},
 	fontSize: {
-		smallText: 10,
+		smallText: 12,
 		textMobile: 16,
 		textTablet: 16,
 		textDesktop: 16,

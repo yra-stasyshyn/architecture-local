@@ -9,6 +9,7 @@ import PhilosophySection from '@/components/Sections/PhilosophySection'
 import TeamSection from '@/components/Sections/TeamSection'
 import OurJobSection from '@/components/Sections/OurJobSection'
 import Footer from '@/components/Footer'
+import ContactUsSection from 'src/components/Sections/ContactUsSection'
 
 export default function Home() {
 	const projectsRef = React.useRef(null)
@@ -25,6 +26,7 @@ export default function Home() {
 				<PhilosophySection ref={aboutUsRef} />
 				<TeamSection />
 				<OurJobSection />
+				<ContactUsSection />
 				<Footer />
 			</S.SectionsContentWrapper>
 		</>
