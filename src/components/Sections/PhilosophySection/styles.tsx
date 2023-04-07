@@ -21,11 +21,9 @@ export const Content = styled.div`
 	flex-direction: row;
 	align-items: center;
 	margin-top: 80px;
-	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
-		gap: 100px;
 		width: 66.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
@@ -35,7 +33,11 @@ export const Content = styled.div`
 `
 
 export const TitleWrapper = styled.div`
-	width: 62.5%;
+	display: flex;
+	align-items: center;
+	height: calc(100svh - 200px);
+	width: 75%;
+
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 63.3%;
 	}
@@ -45,7 +47,6 @@ export const TitleWrapper = styled.div`
 `
 
 export const ParagraphWrapper = styled.div`
-	padding-right: 20px;
 	width: 40%;
 	display: flex;
 	justify-content: center;
@@ -60,6 +61,9 @@ export const ParagraphWrapper = styled.div`
 `
 
 export const ImagesWrapper = styled.div`
+	margin-top: 150px;
+	margin-bottom: 60px;
+	padding-left: 80px;
 	position: relative;
 	width: 60%;
 	display: flex;
@@ -67,6 +71,7 @@ export const ImagesWrapper = styled.div`
 	justify-content: center;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		padding: 0;
 		width: 100%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
@@ -77,7 +82,7 @@ export const ImagesWrapper = styled.div`
 		position: absolute;
 
 		@media (max-width: ${THEME.screenSize.tablet}px) {
-			width: 66.6%;
+			width: 50%;
 		}
 		@media (max-width: ${THEME.screenSize.mobile}px) {
 			width: 75%;

@@ -22,9 +22,9 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		gap: 60px;
 		flex-direction: column;
 		justify-content: center;
 		width: 66.6%;
@@ -37,9 +37,11 @@ export const Content = styled.div`
 `
 
 export const AccordionWrapper = styled.div`
+	padding-left: 80px;
 	position: relative;
 	width: 60%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		padding: 0;
 		width: 100%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {

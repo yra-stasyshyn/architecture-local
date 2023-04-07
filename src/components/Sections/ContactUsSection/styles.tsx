@@ -13,9 +13,9 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		gap: 60px;
 		flex-direction: column;
 		justify-content: center;
 		width: 63.3%;
@@ -51,11 +51,13 @@ export const FormContainer = styled.div`
 `
 
 export const ContactContainer = styled.div`
+	padding-left: 80px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	width: 60%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		padding: 0;
 		width: 100%;
 	}
 `
