@@ -8,7 +8,7 @@ import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
-import scrollToRef from '@/utils/scrollToRef'
+import { scrollToRef, scrollToStart } from '@/utils/scrollToRef'
 
 export type NavBarProps = {
 	projectsRef: React.RefObject<never>
@@ -30,9 +30,6 @@ const NavBar = ({
 	const [backgroundColor, setBackgroundColor] = React.useState('transparent')
 	const [navBarStyle, setNavBarStyle] = React.useState({})
 	const [navBarShadow, setNavBarShadow] = React.useState(true)
-	function scrollsToBeginning() {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
 			<Button
@@ -110,7 +107,7 @@ const NavBar = ({
 				<InstitutionalLogo
 					color={elementsColor}
 					sizeMultiplier={windowWidth < THEME.screenSize.mobile ? 0.9 : 1}
-					onClick={scrollsToBeginning}
+					onClick={scrollToStart}
 					highlightColorOnHover={THEME.colors.accentColor}
 				/>
 				{toRender}
