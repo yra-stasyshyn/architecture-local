@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './styles'
 import Text from '@/components/Text'
 import { doOnInterval } from '@/utils/doOnInterval'
+import NextImage from 'next/image'
 
 const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [imageIndex, setImageIndex] = React.useState(1)
@@ -32,9 +33,43 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 						lugar, do contexto e da atualidade.
 					</p>
 				</Text>
-				<S.ImageWrapper>
-					<img src={`./img/al-logo-${imageIndex}.svg`} alt={''} />
-				</S.ImageWrapper>
+				<S.ImagesWrapper>
+					<NextImage
+						src={`/img/al-logo-1.svg`}
+						alt={''}
+						height={150}
+						width={300}
+						style={{ opacity: imageIndex == 1 ? '1' : '0' }}
+					/>
+					<NextImage
+						src={`/img/al-logo-2.svg`}
+						alt={''}
+						height={150}
+						width={300}
+						style={{ opacity: imageIndex == 2 ? '1' : '0' }}
+					/>
+					<NextImage
+						src={`/img/al-logo-3.svg`}
+						alt={''}
+						height={150}
+						width={300}
+						style={{ opacity: imageIndex == 3 ? '1' : '0' }}
+					/>
+					<NextImage
+						src={`/img/al-logo-4.svg`}
+						alt={''}
+						height={150}
+						width={300}
+						style={{ opacity: imageIndex == 4 ? '1' : '0' }}
+					/>
+					<NextImage
+						src={`/img/al-logo-5.svg`}
+						alt={''}
+						height={150}
+						width={300}
+						style={{ opacity: imageIndex == 5 ? '1' : '0' }}
+					/>
+				</S.ImagesWrapper>
 			</S.Content>
 		</S.Wrapper>
 	)

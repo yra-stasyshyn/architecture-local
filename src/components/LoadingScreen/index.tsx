@@ -9,8 +9,9 @@ const LoadingScreen = () => {
 	const [progress, setProgress] = useState(0)
 	function updateProgress() {
 		if (loaded) return
-		const images = document.querySelectorAll('img')
-		document.body.style.overflow = progress < 100 ? 'hidden' : ''
+		const images: NodeListOf<HTMLImageElement> = document.querySelectorAll(
+			'img:not([src$=".svg"])'
+		)
 		const numImages = images.length
 		let loadedImages = 0
 		images.forEach((image) => {

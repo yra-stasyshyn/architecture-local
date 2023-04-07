@@ -25,6 +25,7 @@ export const Content = styled.div`
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
+		gap: 100px;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
@@ -41,11 +42,11 @@ export const TitleWrapper = styled.div`
 	}
 `
 
-export const ImageWrapper = styled.div`
-	margin-top: 50px;
+export const ImagesWrapper = styled.div`
+	position: relative;
 	width: 50%;
 	display: flex;
-	justify-content: center;
+	align-items: center;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		margin-top: 40px;
@@ -55,6 +56,7 @@ export const ImageWrapper = styled.div`
 	}
 
 	img {
+		position: absolute;
 		height: 150px;
 		width: 300px;
 
