@@ -5,7 +5,7 @@ export const FormContainer = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 16px;
+	gap: 2px;
 	max-width: 700px;
 	min-width: 120px;
 	::selection {
@@ -60,6 +60,7 @@ export const AlertMessage = styled.span`
 `
 
 export const Button = styled.button`
+	margin-top: 10px;
 	padding: 8px;
 	width: 100%;
 	display: flex;

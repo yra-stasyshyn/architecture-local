@@ -2,6 +2,7 @@ import React from 'react'
 import * as S from './styles'
 import Text from '@/components/Text'
 import EmailForm from '@/components/EmailForm'
+import ContactUsIconBox from '@/components/ContactUsIconBox'
 
 const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
@@ -24,7 +25,7 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<EmailForm />
 				</S.FormContainer>
 				<S.ContactContainer>
-					<Text>
+					<Text style={{ paddingLeft: 8 }}>
 						<p>
 							Arquitetura Local
 							<br />
@@ -39,6 +40,7 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 							+55 31 972670550
 						</p>
 					</Text>
+					<ContactUsIconBox />
 				</S.ContactContainer>
 			</S.Content>
 		</S.Wrapper>
