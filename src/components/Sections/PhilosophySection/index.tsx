@@ -15,8 +15,11 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			<S.TitleWrapper>
 				<Text>
 					<h1>Prática criativa comprometida com o contexto</h1>
+					<br />
+					<br />
 				</Text>
 			</S.TitleWrapper>
+
 			<S.Content>
 				<Text>
 					<p>

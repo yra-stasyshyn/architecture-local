@@ -2,40 +2,41 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 	position: relative;
-	width: 75%;
+	width: 100%;
+	left: 12.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		width: 66.6%;
+		left: 16.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		width: 75%;
+		left: 12.5%;
 	}
 `
 
 export const Content = styled.div`
 	position: relative;
-	width: 100%;
+	width: 62.5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
 	gap: 40px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
 		gap: 100px;
+		width: 66.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
+		width: 75%;
 	}
 `
 
 export const TitleWrapper = styled.div`
-	width: 75%;
+	width: 62.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		width: 66.7%;
+		width: 63.3%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		width: 75%;
@@ -44,9 +45,10 @@ export const TitleWrapper = styled.div`
 
 export const ImagesWrapper = styled.div`
 	position: relative;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		margin-top: 40px;
@@ -57,16 +59,13 @@ export const ImagesWrapper = styled.div`
 
 	img {
 		position: absolute;
-		height: 150px;
-		width: 300px;
+		width: 100%;
 
 		@media (max-width: ${THEME.screenSize.tablet}px) {
-			height: 125px;
-			width: 250px;
+			width: 66.6%;
 		}
 		@media (max-width: ${THEME.screenSize.mobile}px) {
-			height: 75px;
-			width: 150px;
+			width: 75%;
 		}
 	}
 `

@@ -10,10 +10,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
 	position: relative;
 	left: 12.5%;
-	width: 75%;
+	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
@@ -34,7 +34,7 @@ export const TitleWrapper = styled.div`
 	position: relative;
 	margin-bottom: 40px;
 	left: 12.5%;
-	width: 75%;
+	width: 62.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		left: 16.6%;
 		width: 63.3%;
