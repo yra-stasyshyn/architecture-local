@@ -4,9 +4,10 @@ function scrollToRef(ref: React.RefObject<any>) {
 	const element = ref.current // target element
 	const targetOffset = element.offsetTop + window.innerHeight - 230
 	const start = window.scrollY
-	const scrollDistance = Math.abs(targetOffset - start)
-	const maxScrollDistance = 1000
-	const duration = Math.min(2000, (scrollDistance / maxScrollDistance) * 1000)
+	const scrollDistance = Math.abs(targetOffset - start) // calculate scroll distance
+	const maxScrollDistance = 1000 // specify the maximum scroll distance (you can adjust this value)
+	const duration = Math.max(2000, (scrollDistance / maxScrollDistance) * 1000) // duration based on scroll distance
+
 	const startTime =
 		'now' in window.performance ? performance.now() : new Date().getTime()
 
@@ -23,8 +24,9 @@ function scrollToRef(ref: React.RefObject<any>) {
 			requestAnimationFrame(scroll)
 		}
 	}
-
-	scroll()
+	if (scrollDistance > 5) {
+		scroll()
+	}
 }
 
 export default scrollToRef
