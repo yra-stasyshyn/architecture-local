@@ -3,6 +3,7 @@ import * as S from './styles'
 import Text from '@/components/Text'
 import { doOnInterval } from '@/utils/doOnInterval'
 import NextImage from 'next/image'
+import Statement from '@/components/Statement'
 
 const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [imageIndex, setImageIndex] = React.useState(1)
@@ -13,9 +14,10 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
 			<S.TitleWrapper>
-				<Text>
-					<h1>Prática criativa comprometida com o contexto</h1>
-				</Text>
+				<Statement>
+					Criamos projetos autênticos para pessoas e empresas que buscam
+					melhorar vidas e cidades.
+				</Statement>
 			</S.TitleWrapper>
 
 			<S.Content>

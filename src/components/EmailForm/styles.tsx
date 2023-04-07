@@ -66,7 +66,6 @@ export const Button = styled.button`
 	display: flex;
 	justify-content: left;
 	border: none;
-	max-width: 400px;
 	color: ${THEME.colors.secondaryColor};
 	background-color: ${THEME.colors.primaryColor};
 	font-size: ${THEME.fontSize.textDesktop}px;
