@@ -13,7 +13,7 @@ import { ClientAcquisitionFormData } from '@/components/EmailForm/validationLogi
 export default function ClientAcquisitionEmail(
 	formData: ClientAcquisitionFormData
 ) {
-	const deploy_url = process.env.VERCEL_URL || 'http://localhost:3000'
+	const deploy_url = 'https://arquiteturalocal.vercel.app/'
 
 	return (
 		<Html>
