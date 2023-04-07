@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
+	margin-top: 100px;
 	position: relative;
 	width: 100%;
 	left: 12.5%;
@@ -19,8 +20,8 @@ export const Content = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-
-	gap: 40px;
+	margin-top: 80px;
+	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
@@ -43,23 +44,37 @@ export const TitleWrapper = styled.div`
 	}
 `
 
+export const ParagraphWrapper = styled.div`
+	padding-right: 20px;
+	width: 40%;
+	display: flex;
+	justify-content: center;
+
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		padding: 0;
+		width: 100%;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		width: 100%;
+	}
+`
+
 export const ImagesWrapper = styled.div`
 	position: relative;
-	width: 100%;
+	width: 60%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		margin-top: 40px;
+		width: 100%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		margin-top: 20px;
+		width: 100%;
 	}
 
 	img {
 		position: absolute;
-		width: 100%;
 
 		@media (max-width: ${THEME.screenSize.tablet}px) {
 			width: 66.6%;

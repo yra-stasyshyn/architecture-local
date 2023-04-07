@@ -7,7 +7,7 @@ const StatementSection = () => {
 	const scrollPosition = useScrollPosition()
 
 	React.useEffect(() => {
-		if (scrollPosition > (window.innerHeight * 2) / 3) {
+		if (scrollPosition > window.innerHeight / 2) {
 			setIsVisible(true)
 		}
 	}, [scrollPosition])

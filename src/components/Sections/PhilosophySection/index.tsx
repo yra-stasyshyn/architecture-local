@@ -15,27 +15,27 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			<S.TitleWrapper>
 				<Text>
 					<h1>Prática criativa comprometida com o contexto</h1>
-					<br />
-					<br />
 				</Text>
 			</S.TitleWrapper>
 
 			<S.Content>
-				<Text>
-					<p>
-						ARQUITETURA LOCAL é um estúdio de arquitetura e design baseado em
-						Belo Horizonte, Minas Gerais, que se dedica a projetos de diferentes
-						escalas e categorias, sempre desenvolvidos a partir do entendimento
-						profundo das demandas de seus clientes e do local em torno de cada
-						proposta.
-					</p>
-					<br />
-					<p>
-						Essa são os dois sentidos que orientam o trabalho do escritório: uma
-						lente focada na demanda específica e outra com vista panorâmica do
-						lugar, do contexto e da atualidade.
-					</p>
-				</Text>
+				<S.ParagraphWrapper>
+					<Text>
+						<p>
+							ARQUITETURA LOCAL é um estúdio de arquitetura e design baseado em
+							Belo Horizonte, Minas Gerais, que se dedica a projetos de
+							diferentes escalas e categorias, sempre desenvolvidos a partir do
+							entendimento profundo das demandas de seus clientes e do local em
+							torno de cada proposta.
+						</p>
+						<br />
+						<p>
+							Essa são os dois sentidos que orientam o trabalho do escritório:
+							uma lente focada na demanda específica e outra com vista
+							panorâmica do lugar, do contexto e da atualidade.
+						</p>
+					</Text>
+				</S.ParagraphWrapper>
 				<S.ImagesWrapper>
 					<NextImage
 						src={`/img/al-logo-1.svg`}

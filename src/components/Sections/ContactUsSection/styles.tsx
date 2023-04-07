@@ -13,7 +13,6 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
@@ -44,7 +43,7 @@ export const TitleWrapper = styled.div`
 		width: 75%;
 `
 export const FormContainer = styled.div`
-	width: 65%;
+	width: 40%;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
@@ -52,7 +51,10 @@ export const FormContainer = styled.div`
 `
 
 export const ContactContainer = styled.div`
-	width: 25%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 60%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
 	}

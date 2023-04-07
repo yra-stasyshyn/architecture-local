@@ -22,7 +22,7 @@ export const Content = styled.div`
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
-	gap: 40px;
+	gap: 80px;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;

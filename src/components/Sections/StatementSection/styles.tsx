@@ -8,7 +8,7 @@ const showText = keyframes`
 
 export const Wrapper = styled.div<{ isVisible: boolean }>`
 	margin-top: 200px;
-	height: calc(100svh - 400px);
+	height: calc(100svh - 250px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
