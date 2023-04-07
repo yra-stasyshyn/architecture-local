@@ -40,7 +40,9 @@ export default function ClientAcquisitionEmail(
 					</Container>
 					<Text style={S.Heading}>Aquisição de Clientes - Site Arq Local</Text>
 					<br />
-					<Text style={S.Paragraph}>Um cliente enviou um email!</Text>
+					<Text style={S.Paragraph}>
+						{deploy_url} Um cliente enviou um email!
+					</Text>
 					<br />
 					<BiUserCheck size={32} style={{ marginTop: 20 }} />
 					<Text style={S.FormItem}>
