@@ -1,5 +1,6 @@
 import THEME from '@/styles/theme'
 import React from 'react'
+import * as S from './styles'
 import NextImage from 'next/image'
 
 const InstitutionalLogo = ({
@@ -14,22 +15,37 @@ const InstitutionalLogo = ({
 	onClick?: React.MouseEventHandler
 }) => {
 	const [isHovered, setIsHovered] = React.useState(false)
-	const colorImageMapper = {
-		[THEME.colors.primaryColor]: 'AL_Logo_R02_preta.svg',
-		[THEME.colors.secondaryColor]: 'AL_Logo_R02_branca.svg',
-		[THEME.colors.accentColor]: 'AL_Logo_R02_laranja.svg'
-	}
 	color = isHovered ? highlightColorOnHover : color
 	return (
-		<NextImage
-			onClick={onClick}
+		<S.LogoWrapper
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			src={`/img/${colorImageMapper[color]}`}
-			alt={'Logotipo institucional Aquitetura Local'}
-			height={sizeMultiplier * 35}
-			width={sizeMultiplier * 210}
-		/>
+		>
+			<NextImage
+				onClick={onClick}
+				src={`/img/AL_Logo_R02_preta.svg`}
+				alt={'Logotipo institucional Aquitetura Local'}
+				height={sizeMultiplier * 35}
+				width={sizeMultiplier * 210}
+				style={{ opacity: color == THEME.colors.primaryColor ? '1' : '0' }}
+			/>
+			<NextImage
+				onClick={onClick}
+				src={`/img/AL_Logo_R02_branca.svg`}
+				alt={'Logotipo institucional Aquitetura Local'}
+				height={sizeMultiplier * 35}
+				width={sizeMultiplier * 210}
+				style={{ opacity: color == THEME.colors.secondaryColor ? '1' : '0' }}
+			/>
+			<NextImage
+				onClick={onClick}
+				src={`/img/AL_Logo_R02_laranja.svg`}
+				alt={'Logotipo institucional Aquitetura Local'}
+				height={sizeMultiplier * 35}
+				width={sizeMultiplier * 210}
+				style={{ opacity: color == THEME.colors.accentColor ? '1' : '0' }}
+			/>
+		</S.LogoWrapper>
 	)
 }
 
