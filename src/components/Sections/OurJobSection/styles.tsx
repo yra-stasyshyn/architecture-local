@@ -2,16 +2,23 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
+	position: relative;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 10px;
+	left: 12.5%;
+
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		left: 16.6%;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		left: 12.5%;
+	}
 `
 
 export const Content = styled.div`
-	position: relative;
-	left: 12.5%;
 	width: 62.5%;
 	display: flex;
 	flex-direction: row;
@@ -20,13 +27,11 @@ export const Content = styled.div`
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		flex-direction: column;
 		justify-content: center;
-		width: 50%;
-		left: 16.6%;
+		width: 66.6%;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
 		justify-content: center;
-		left: 12.5%;
 		width: 75%;
 	}
 `
@@ -56,20 +61,8 @@ export const TitleWrapper = styled.div`
 export const SectionHeader = styled.div`
 	position: relative;
 	margin-bottom: 40px;
-	left: 12.5%;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
-		left: 16.6%;
-	}
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		left: 12.5%;
 `
 
 export const ButtonWrapper = styled.div`
 	position: relative;
-	left: 12.5%;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
-		left: 16.6%;
-	}
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		left: 12.5%;
 `
