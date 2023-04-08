@@ -1,5 +1,5 @@
 import React from 'react'
-import AccordionTab from 'src/components/AccordionTab'
+import AccordionTab from '@/components/AccordionTab'
 import * as S from './styles'
 import Text from '@/components/Text'
 import WantMyProjectButton from '@/components/Buttons/WantMyProjectButton'

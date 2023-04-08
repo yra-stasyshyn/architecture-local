@@ -9,11 +9,13 @@ import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
 import { scrollToRef, scrollToStart } from '@/utils/scrollToRef'
+import useOnScreen from '@/utils/useOnScreen'
 
 export type NavBarProps = {
 	projectsRef: React.RefObject<never>
 	aboutUsRef: React.RefObject<never>
 	contactUsRef: React.RefObject<never>
+	researchRef: React.RefObject<never>
 	style?: React.CSSProperties
 }
 
@@ -21,7 +23,8 @@ const NavBar = ({
 	style,
 	projectsRef,
 	aboutUsRef,
-	contactUsRef
+	contactUsRef,
+	researchRef
 }: NavBarProps) => {
 	const windowWidth = useWindowDimensions().windowWidth
 	const [elementsColor, setElementsColor] = React.useState(
@@ -30,21 +33,40 @@ const NavBar = ({
 	const [backgroundColor, setBackgroundColor] = React.useState('transparent')
 	const [navBarStyle, setNavBarStyle] = React.useState({})
 	const [navBarShadow, setNavBarShadow] = React.useState(true)
+
+	const isOnProjects = useOnScreen(projectsRef, 600)
+	const isOnResearch = useOnScreen(researchRef)
+	const isOnAboutUs = useOnScreen(aboutUsRef, -600)
+	const isOnContactUs = useOnScreen(contactUsRef, -600)
+	const addUnderBorderIf = (isOnSection: boolean) =>
+		isOnSection ? `1px solid ${THEME.colors.accentColor}` : 'none'
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
 			<Button
 				textColor={elementsColor}
-				onClick={() => scrollToRef(projectsRef)}
+				onClick={() => scrollToRef(projectsRef, -120)}
+				style={{ borderBottom: addUnderBorderIf(isOnProjects) }}
 			>
 				projetos
 			</Button>
-			<Button textColor={elementsColor}>pesquisa</Button>
-			<Button textColor={elementsColor} onClick={() => scrollToRef(aboutUsRef)}>
+			<Button
+				textColor={elementsColor}
+				onClick={() => scrollToRef(researchRef, -120)}
+				style={{ borderBottom: addUnderBorderIf(isOnResearch) }}
+			>
+				pesquisa
+			</Button>
+			<Button
+				textColor={elementsColor}
+				onClick={() => scrollToRef(aboutUsRef)}
+				style={{ borderBottom: addUnderBorderIf(isOnAboutUs) }}
+			>
 				sobre
 			</Button>
 			<Button
 				textColor={elementsColor}
 				onClick={() => scrollToRef(contactUsRef)}
+				style={{ borderBottom: addUnderBorderIf(isOnContactUs) }}
 			>
 				contato
 			</Button>
@@ -70,8 +92,8 @@ const NavBar = ({
 				iconColor={elementsColor}
 				iconSize={windowWidth < THEME.screenSize.mobile ? 25 : 30}
 			>
-				<Button onClick={() => scrollToRef(projectsRef)}>projetos</Button>
-				<Button>pesquisa</Button>
+				<Button onClick={() => scrollToRef(projectsRef, -120)}>projetos</Button>
+				<Button onClick={() => scrollToRef(researchRef, -120)}>pesquisa</Button>
 				<Button onClick={() => scrollToRef(aboutUsRef)}>sobre</Button>
 				<Button onClick={() => scrollToRef(contactUsRef)}>contato</Button>
 			</DropDownBurgerButton>

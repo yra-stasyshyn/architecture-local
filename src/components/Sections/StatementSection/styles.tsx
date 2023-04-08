@@ -2,32 +2,26 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	margin-top: 100px;
-	margin-bottom: 100px;
-	height: calc(100svh - 200px);
+	height: 100svh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	padding-left: 12.5%;
-
-	@media (max-width: ${THEME.screenSize.tablet}px) {
-		padding-left: 16.6%;
-	}
-
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		padding-left: 12.5%;
-	}
+	position: relative;
 
 	> div {
+		position: relative;
+		left: 12.5%;
 		max-width: 1000px;
 		width: 75%;
 		@media (max-width: ${THEME.screenSize.tablet}px) {
 			width: 63.3%;
+			left: 16.6%;
 		}
 
 		@media (max-width: ${THEME.screenSize.mobile}px) {
-			padding-left: 75%;
+			width: 75%;
+			left: 12.5%;
 		}
 	}
 `
