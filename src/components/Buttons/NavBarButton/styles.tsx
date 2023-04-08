@@ -2,16 +2,18 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.button<{
-	bgColor: string
-	colorOnHover: string
 	textColor: string
-	fontSize: number
+	underline: boolean
 }>`
-	background-color: ${(props) => props.bgColor};
+	background-color: transparent;
 	color: ${(props) => props.textColor};
-	border: none;
-	font-size: ${(props) => props.fontSize}px;
-	padding: ${(props) => 1 * props.fontSize}px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: ${(props) =>
+		props.underline ? `1px solid ${THEME.colors.accentColor}` : 'none'};
+	font-size: ${THEME.fontSize.buttons}px;
+	padding: 8px 8px 3px 8px;
 	text-align: center;
 	align-items: center;
 	cursor: pointer;
@@ -19,6 +21,6 @@ export const Wrapper = styled.button<{
 	font-family: ${THEME.fonts.primaryFont};
 	-webkit-tap-highlight-color: transparent;
 	&:hover {
-		color: ${(props) => props.colorOnHover};
+		color: ${THEME.colors.accentColor};
 	}
 `

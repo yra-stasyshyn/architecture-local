@@ -1,15 +1,14 @@
 import * as S from './styles'
 import React from 'react'
 import THEME from '@/styles/theme'
-import Button from '@/components/Buttons/Button'
+import NavBarButton from 'src/components/Buttons/NavBarButton'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
 import { DropDownBurgerButton } from '@/components/Buttons/DropDownBurguerButton'
 import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
-import { scrollToRef, scrollToStart } from '@/utils/scrollToRef'
-import useOnMiddleOfScreen from '@/utils/useOnMiddleOfScreen'
+import { scrollToStart } from '@/utils/scrollToRef'
 
 export type NavBarProps = {
 	projectsRef: React.RefObject<never>
@@ -34,68 +33,60 @@ const NavBar = ({
 	const [navBarStyle, setNavBarStyle] = React.useState({})
 	const [navBarShadow, setNavBarShadow] = React.useState(true)
 
-	const isOnProjects = useOnMiddleOfScreen(projectsRef)
-	const isOnResearch = useOnMiddleOfScreen(researchRef)
-	const isOnAboutUs = useOnMiddleOfScreen(aboutUsRef, -600)
-	const isOnContactUs = useOnMiddleOfScreen(contactUsRef)
-	const addUnderBorderIf = (isOnSection: boolean): React.CSSProperties => {
-		return isOnSection
-			? {
-					borderBottom: `1px solid ${THEME.colors.accentColor}`,
-					marginBottom: 3
-			  }
-			: {}
-	}
+	const navBarButtons = (
+		<>
+			<NavBarButton
+				textColor={elementsColor}
+				sectionRef={projectsRef}
+				scrollOffset={-120}
+				addUnderLineIfOnSection={true}
+			>
+				projetos
+			</NavBarButton>
+			<NavBarButton
+				textColor={elementsColor}
+				sectionRef={researchRef}
+				scrollOffset={-120}
+				addUnderLineIfOnSection={true}
+			>
+				pesquisa
+			</NavBarButton>
+			<NavBarButton
+				textColor={elementsColor}
+				sectionRef={aboutUsRef}
+				addUnderLineIfOnSection={true}
+			>
+				sobre
+			</NavBarButton>
+			<NavBarButton
+				textColor={elementsColor}
+				sectionRef={contactUsRef}
+				addUnderLineIfOnSection={true}
+			>
+				contato
+			</NavBarButton>
+		</>
+	)
+
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
-			<Button
-				textColor={elementsColor}
-				onClick={() => scrollToRef(projectsRef, -120)}
-			>
-				<span style={addUnderBorderIf(isOnProjects)}>projetos</span>
-			</Button>
-			<Button
-				textColor={elementsColor}
-				onClick={() => scrollToRef(researchRef, -120)}
-			>
-				<span style={addUnderBorderIf(isOnResearch)}>pesquisa</span>
-			</Button>
-			<Button textColor={elementsColor} onClick={() => scrollToRef(aboutUsRef)}>
-				<span style={addUnderBorderIf(isOnAboutUs)}>sobre</span>
-			</Button>
-			<Button
-				textColor={elementsColor}
-				onClick={() => scrollToRef(contactUsRef)}
-			>
-				<span style={addUnderBorderIf(isOnContactUs)}>contato</span>
-			</Button>
-			<Button
-				style={{ paddingRight: 0 }}
-				textColor={elementsColor}
-				onClick={redirectToInstagram}
-			>
-				<RiInstagramFill size={18} />
-			</Button>
-			<Button
-				style={{ paddingRight: 0, paddingLeft: 5 }}
-				textColor={elementsColor}
-				onClick={redirectToWhatsapp}
-			>
-				<RiWhatsappFill size={18} />
-			</Button>
+			{navBarButtons}
+			<S.IconsBox color={elementsColor}>
+				<RiInstagramFill size={18} onClick={redirectToInstagram} />
+				<RiWhatsappFill size={18} onClick={redirectToWhatsapp} />
+			</S.IconsBox>
 		</S.ButtonsBox>
 	)
 	if (windowWidth < THEME.screenSize.tablet) {
 		toRender = (
 			<DropDownBurgerButton
+				projectsRef={projectsRef}
+				aboutUsRef={aboutUsRef}
+				contactUsRef={contactUsRef}
+				researchRef={researchRef}
 				iconColor={elementsColor}
 				iconSize={windowWidth < THEME.screenSize.mobile ? 25 : 30}
-			>
-				<Button onClick={() => scrollToRef(projectsRef, -120)}>projetos</Button>
-				<Button onClick={() => scrollToRef(researchRef, -120)}>pesquisa</Button>
-				<Button onClick={() => scrollToRef(aboutUsRef)}>sobre</Button>
-				<Button onClick={() => scrollToRef(contactUsRef)}>contato</Button>
-			</DropDownBurgerButton>
+			/>
 		)
 	}
 	const isBellowHeroSection = useIsBellowHeroSection()

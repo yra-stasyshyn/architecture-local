@@ -5,9 +5,13 @@ export const Wrapper = styled.div<{
 	backgroundColor: string
 	renderPosition: 'above' | 'below'
 }>`
-	display: ${(props) => (props.isOpen ? 'block' : 'none')};
+	display: ${(props) => (props.isOpen ? 'flex' : 'none')};
 	background-color: ${(props) => props.backgroundColor};
+	flex-direction: column;
+	gap: 12px;
+	padding: 12px;
 	margin-top: 30px;
+	margin-bottom: 30px;
 	left: -50px;
 	border: none;
 	position: absolute;

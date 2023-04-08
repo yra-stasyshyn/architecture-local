@@ -1,23 +1,30 @@
-import Button from '@/components/Buttons/Button'
 import DropdownMenu from '@/components/DropdownMenu'
-import React, { ReactElement, useEffect, useRef, useState } from 'react'
+import React from 'react'
 import THEME from '@/styles/theme'
+import * as S from './styles'
 import { RxHamburgerMenu } from 'react-icons/rx'
+import NavBarButton from '@/components/Buttons/NavBarButton'
 
 export const DropDownBurgerButton = ({
-	style = {},
+	style,
+	projectsRef,
+	aboutUsRef,
+	contactUsRef,
+	researchRef,
 	iconColor = THEME.colors.primaryColor,
-	iconSize = 35,
-	children
+	iconSize = 35
 }: {
 	style?: React.CSSProperties
+	projectsRef: React.RefObject<any>
+	aboutUsRef: React.RefObject<any>
+	contactUsRef: React.RefObject<any>
+	researchRef: React.RefObject<any>
 	iconColor?: string
 	iconSize?: number
-	children: React.ReactElement[]
 }) => {
-	const [isMenuOpen, setMenuOpen] = useState(false)
-	const dropdownRef = useRef<HTMLDivElement>(null)
-	const [renderPosition, setRenderPosition] = useState<'above' | 'below'>(
+	const [isMenuOpen, setMenuOpen] = React.useState(false)
+	const dropdownRef = React.useRef<HTMLDivElement>(null)
+	const [renderPosition, setRenderPosition] = React.useState<'above' | 'below'>(
 		'above'
 	)
 	const [elementsColor, setElementsColor] = React.useState(
@@ -27,7 +34,7 @@ export const DropDownBurgerButton = ({
 		setMenuOpen(!isMenuOpen)
 	}
 
-	useEffect(() => {
+	React.useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const target = event.target
 			if (!(target instanceof Node)) return
@@ -59,31 +66,38 @@ export const DropDownBurgerButton = ({
 
 	return (
 		<div style={{ ...style, position: 'relative' }} ref={dropdownRef}>
-			<Button
-				onClick={OnClickHandler}
-				textColor={elementsColor}
-				style={{ paddingRight: 0 }}
-				colorOnHover={THEME.colors.accentColor}
-			>
+			<S.BurgerIconWrapper onClick={OnClickHandler} textColor={elementsColor}>
 				<RxHamburgerMenu size={iconSize} color={iconColor} />
-			</Button>
+			</S.BurgerIconWrapper>
 			<DropdownMenu
 				isOpen={isMenuOpen}
 				renderPosition={renderPosition}
 				backgroundColor={
 					renderPosition == 'above'
-						? 'rgba(100, 100, 100, 0.2)'
+						? THEME.colors.shadow
 						: THEME.colors.lightGrey
 				}
 			>
-				{React.Children.map(children, (child: ReactElement) => {
-					return React.cloneElement(child, {
-						textColor: elementsColor,
-						bgColor:
-							renderPosition == 'above' ? 'rgba(0, 0, 0, 0.2)' : 'transparent',
-						style: { width: '100%' }
-					})
-				})}
+				<NavBarButton
+					textColor={elementsColor}
+					sectionRef={projectsRef}
+					scrollOffset={-120}
+				>
+					projetos
+				</NavBarButton>
+				<NavBarButton
+					textColor={elementsColor}
+					sectionRef={researchRef}
+					scrollOffset={-120}
+				>
+					pesquisa
+				</NavBarButton>
+				<NavBarButton textColor={elementsColor} sectionRef={aboutUsRef}>
+					sobre
+				</NavBarButton>
+				<NavBarButton textColor={elementsColor} sectionRef={contactUsRef}>
+					contato
+				</NavBarButton>
 			</DropdownMenu>
 		</div>
 	)

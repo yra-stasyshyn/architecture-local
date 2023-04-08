@@ -4,7 +4,8 @@ const THEME = {
 		secondaryColor: '#ffffff',
 		accentColor: '#E04F2E',
 		lightGrey: 'rgb(235, 235, 235)',
-		darkGrey: '#19171f'
+		darkGrey: '#19171f',
+		shadow: 'rgba(0,0,0,0.2)'
 	},
 	fonts: {
 		primaryFont: "'Source Sans Pro', sans-serif",
@@ -23,8 +24,8 @@ const THEME = {
 		title2Tablet: 26,
 		title2Desktop: 26,
 		title1Mobile: 34,
-		title1Tablet: 38,
-		title1Desktop: 42
+		title1Tablet: 40,
+		title1Desktop: 48
 	},
 	fontWeight: {
 		extraLight: 200,
