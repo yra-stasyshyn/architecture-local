@@ -2,8 +2,8 @@ import React from 'react'
 import * as S from './styles'
 import Text from '@/components/Text'
 import EmailForm from '@/components/EmailForm'
-import ContactUsIconBox from '@/components/ContactUsIconBox'
 import Statement from '@/components/Statement'
+import ContactButton from '@/components/Buttons/ContactButton'
 
 const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
@@ -14,38 +14,22 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				</Statement>
 			</S.StatementWrapper>
 
-			<S.TitleWrapper>
-				<Text>
-					<h3>/contato</h3>
-					<br />
-					<br />
-				</Text>
-				<Text>
-					<h3>O que você deseja hoje?</h3>
-				</Text>
-			</S.TitleWrapper>
 			<S.Content>
+				<S.ActionContainer>
+					<Text style={{ margin: 0 }}>
+						<h2>Vamos juntos realizar o seu projeto?</h2>
+					</Text>
+					<ContactButton style={{ marginTop: 20 }} />
+				</S.ActionContainer>
 				<S.FormContainer>
-					<EmailForm />
-				</S.FormContainer>
-				<S.ContactContainer>
-					<Text style={{ paddingLeft: 8 }}>
+					<Text>
 						<p>
-							Arquitetura Local
-							<br />
-							<br />
-							Belo Horizonte, Minas Gerais - Brasil
-							<br />
-							Arquitetura e Design
-							<br />
-							<br />
-							contato@local.arq.br
-							<br />
-							+55 31 972670550
+							Se preferir, preencha os campos abaixo e entraremos em contato com
+							você.
 						</p>
 					</Text>
-					<ContactUsIconBox />
-				</S.ContactContainer>
+					<EmailForm />
+				</S.FormContainer>
 			</S.Content>
 		</S.Wrapper>
 	)

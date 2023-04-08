@@ -14,6 +14,7 @@ export const AccordionTabHeader = styled.div`
 	border-bottom: 1px solid ${THEME.colors.accentColor};
 	font-size: ${THEME.fontSize.title3Desktop}px;
 	font-weight: ${THEME.fontWeight.semiBold};
+	color: ${THEME.colors.primaryColor}
 	cursor: pointer;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {

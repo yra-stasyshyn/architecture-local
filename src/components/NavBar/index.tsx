@@ -9,7 +9,7 @@ import InstitutionalLogo from '@/components/Logos/InstitutionalLogo'
 import { RiWhatsappFill, RiInstagramFill } from 'react-icons/ri'
 import { redirectToInstagram, redirectToWhatsapp } from '@/utils/redirectToPage'
 import { scrollToRef, scrollToStart } from '@/utils/scrollToRef'
-import useOnScreen from '@/utils/useOnScreen'
+import useOnMiddleOfScreen from '@/utils/useOnMiddleOfScreen'
 
 export type NavBarProps = {
 	projectsRef: React.RefObject<never>
@@ -34,41 +34,40 @@ const NavBar = ({
 	const [navBarStyle, setNavBarStyle] = React.useState({})
 	const [navBarShadow, setNavBarShadow] = React.useState(true)
 
-	const isOnProjects = useOnScreen(projectsRef, 600)
-	const isOnResearch = useOnScreen(researchRef)
-	const isOnAboutUs = useOnScreen(aboutUsRef, -600)
-	const isOnContactUs = useOnScreen(contactUsRef, -600)
-	const addUnderBorderIf = (isOnSection: boolean) =>
-		isOnSection ? `1px solid ${THEME.colors.accentColor}` : 'none'
+	const isOnProjects = useOnMiddleOfScreen(projectsRef)
+	const isOnResearch = useOnMiddleOfScreen(researchRef)
+	const isOnAboutUs = useOnMiddleOfScreen(aboutUsRef, -600)
+	const isOnContactUs = useOnMiddleOfScreen(contactUsRef)
+	const addUnderBorderIf = (isOnSection: boolean): React.CSSProperties => {
+		return isOnSection
+			? {
+					borderBottom: `1px solid ${THEME.colors.accentColor}`,
+					marginBottom: 3
+			  }
+			: {}
+	}
 	let toRender: JSX.Element = (
 		<S.ButtonsBox>
 			<Button
 				textColor={elementsColor}
 				onClick={() => scrollToRef(projectsRef, -120)}
-				style={{ borderBottom: addUnderBorderIf(isOnProjects) }}
 			>
-				projetos
+				<span style={addUnderBorderIf(isOnProjects)}>projetos</span>
 			</Button>
 			<Button
 				textColor={elementsColor}
 				onClick={() => scrollToRef(researchRef, -120)}
-				style={{ borderBottom: addUnderBorderIf(isOnResearch) }}
 			>
-				pesquisa
+				<span style={addUnderBorderIf(isOnResearch)}>pesquisa</span>
 			</Button>
-			<Button
-				textColor={elementsColor}
-				onClick={() => scrollToRef(aboutUsRef)}
-				style={{ borderBottom: addUnderBorderIf(isOnAboutUs) }}
-			>
-				sobre
+			<Button textColor={elementsColor} onClick={() => scrollToRef(aboutUsRef)}>
+				<span style={addUnderBorderIf(isOnAboutUs)}>sobre</span>
 			</Button>
 			<Button
 				textColor={elementsColor}
 				onClick={() => scrollToRef(contactUsRef)}
-				style={{ borderBottom: addUnderBorderIf(isOnContactUs) }}
 			>
-				contato
+				<span style={addUnderBorderIf(isOnContactUs)}>contato</span>
 			</Button>
 			<Button
 				style={{ paddingRight: 0 }}

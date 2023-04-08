@@ -7,8 +7,6 @@ import img01 from '../../../../public/img/01.png'
 import img02 from '../../../../public/img/02.jpg'
 import img04 from '../../../../public/img/04.png'
 import img05 from '../../../../public/img/05.png'
-import img06 from '../../../../public/img/06.png'
-import img07 from '../../../../public/img/07.png'
 import img08 from '../../../../public/img/08.jpg'
 import img09 from '../../../../public/img/09.png'
 import img10 from '../../../../public/img/10.png'
@@ -49,24 +47,10 @@ const HeroSection = () => {
 					quality={quality}
 				/>
 				<NextImage
-					src={img06}
-					alt={''}
-					width={3838}
-					height={2158}
-					quality={quality}
-				/>
-				<NextImage
 					src={img12}
 					alt={''}
 					width={3840}
 					height={2160}
-					quality={quality}
-				/>
-				<NextImage
-					src={img07}
-					alt={''}
-					width={3839}
-					height={2158}
 					quality={quality}
 				/>
 				<NextImage

@@ -4,7 +4,7 @@ const THEME = {
 		secondaryColor: '#ffffff',
 		accentColor: '#E04F2E',
 		lightGrey: 'rgb(235, 235, 235)',
-		darkGrey: '#231F20'
+		darkGrey: '#19171f'
 	},
 	fonts: {
 		primaryFont: "'Source Sans Pro', sans-serif",

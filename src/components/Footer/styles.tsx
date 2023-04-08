@@ -3,17 +3,11 @@ import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
 	margin-top: 200px;
-	height: 200px;
+	height: 250px;
 	width: 100%;
-	background-color: ${THEME.colors.accentColor};
+	background-color: ${THEME.colors.primaryColor};
+	display: flex;
+	flex-direction: column;
 `
 
-export const WavyCurve = styled.div`
-	position: absolute;
-	bottom: 200px;
-	left: 0;
-	width: 100%;
-	overflow: hidden;
-	line-height: 0;
-	color: ${THEME.colors.accentColor};
-`
+export const Logo = styled.div``

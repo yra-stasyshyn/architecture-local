@@ -19,35 +19,35 @@ const PhilosophySection = () => {
 			<S.Content>
 				<S.ImagesWrapper>
 					<NextImage
-						src={`/img/al-logo-1.svg`}
+						src={`/img/al-logo-orange-1.svg`}
 						alt={''}
 						height={150}
 						width={300}
 						style={{ opacity: imageIndex == 1 ? '1' : '0' }}
 					/>
 					<NextImage
-						src={`/img/al-logo-2.svg`}
+						src={`/img/al-logo-orange-2.svg`}
 						alt={''}
 						height={150}
 						width={300}
 						style={{ opacity: imageIndex == 2 ? '1' : '0' }}
 					/>
 					<NextImage
-						src={`/img/al-logo-3.svg`}
+						src={`/img/al-logo-orange-3.svg`}
 						alt={''}
 						height={150}
 						width={300}
 						style={{ opacity: imageIndex == 3 ? '1' : '0' }}
 					/>
 					<NextImage
-						src={`/img/al-logo-4.svg`}
+						src={`/img/al-logo-orange-4.svg`}
 						alt={''}
 						height={150}
 						width={300}
 						style={{ opacity: imageIndex == 4 ? '1' : '0' }}
 					/>
 					<NextImage
-						src={`/img/al-logo-5.svg`}
+						src={`/img/al-logo-orange-5.svg`}
 						alt={''}
 						height={150}
 						width={300}
