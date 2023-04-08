@@ -18,4 +18,16 @@ export const Wrapper = styled.div`
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		padding-left: 12.5%;
 	}
+
+	> div {
+		max-width: 1000px;
+		width: 75%;
+		@media (max-width: ${THEME.screenSize.tablet}px) {
+			width: 63.3%;
+		}
+
+		@media (max-width: ${THEME.screenSize.mobile}px) {
+			padding-left: 75%;
+		}
+	}
 `
