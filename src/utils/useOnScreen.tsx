@@ -3,7 +3,6 @@ import throttle from 'lodash.throttle'
 
 export default function useOnScreen(
 	ref: React.RefObject<any>,
-	topOffset = 0,
 	throttleMilliseconds = 100
 ): boolean {
 	const [isVisible, setIsVisible] = React.useState(false)
@@ -13,9 +12,12 @@ export default function useOnScreen(
 			setIsVisible(false)
 			return
 		}
-		const top = ref.current.getBoundingClientRect().top
-		const bottom = ref.current.getBoundingClientRect().bottom
-		setIsVisible(top + bottom >= 0 && top - topOffset <= window.innerHeight)
+		const rect = ref.current.getBoundingClientRect()
+		const isTopVisible = rect.top >= 0 && rect.top <= window.innerHeight
+		const isBottomVisible =
+			rect.bottom >= 0 && rect.bottom <= window.innerHeight
+		const isMiddleVisible = rect.top < 0 && rect.bottom > window.innerHeight
+		setIsVisible(isTopVisible || isBottomVisible || isMiddleVisible)
 	}, throttleMilliseconds)
 
 	React.useEffect(() => {

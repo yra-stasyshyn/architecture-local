@@ -37,7 +37,7 @@ export const TitleWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	height: 100svh;
-	width: 75%;
+	width: 62.5%;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 63.3%;
@@ -67,7 +67,6 @@ export const ImagesWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		padding: 0;
 		width: 100%;
@@ -80,7 +79,7 @@ export const ImagesWrapper = styled.div`
 
 	img {
 		position: absolute;
-
+		height: 120px;
 		@media (max-width: ${THEME.screenSize.tablet}px) {
 			width: 60%;
 		}

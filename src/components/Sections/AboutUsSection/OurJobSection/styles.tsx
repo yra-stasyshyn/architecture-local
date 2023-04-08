@@ -64,7 +64,3 @@ export const SectionHeader = styled.div`
 	position: relative;
 	margin-bottom: 40px;
 `
-
-export const ButtonWrapper = styled.div`
-	position: relative;
-`

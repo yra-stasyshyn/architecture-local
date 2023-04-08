@@ -23,7 +23,7 @@ export const StatementWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	height: 100svh;
-	width: 75%;
+	width: 62.5%;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 63.3%;
@@ -42,7 +42,7 @@ export const TitleWrapper = styled.div`
 export const Content = styled.div`
 	display: flex;
 	flex-direction: row;
-	width: 75%;
+	width: 62.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 63.3%;
 		gap: 60px;
@@ -57,19 +57,23 @@ export const Content = styled.div`
 	}
 `
 export const FormContainer = styled.div`
-	width: 40%;
-
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	gap: 20px;
+	width: 60%;
+	padding-left: 80px;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
+		padding: 0;
 		width: 100%;
 	}
 `
 
-export const ContactContainer = styled.div`
-	padding-left: 80px;
+export const ActionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	width: 60%;
+	width: 40%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		padding: 0;
 		width: 100%;
