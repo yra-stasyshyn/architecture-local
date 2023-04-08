@@ -14,10 +14,7 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
 			<S.TitleWrapper>
-				<Statement>
-					Criamos projetos autênticos para pessoas e empresas que buscam
-					melhorar vidas e cidades.
-				</Statement>
+				<Statement>Prática criativa comprometida com o contexto.</Statement>
 			</S.TitleWrapper>
 
 			<S.Content>
