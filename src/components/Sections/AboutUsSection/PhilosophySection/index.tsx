@@ -1,13 +1,13 @@
 import React from 'react'
 import * as S from './styles'
 import Text from '@/components/Text'
-import { doOnInterval } from '@/utils/doOnInterval'
+import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 import Statement from '@/components/Statement'
 
 const PhilosophySection = () => {
 	const [imageIndex, setImageIndex] = React.useState(1)
-	doOnInterval(
+	useOnInterval(
 		() => setImageIndex(imageIndex + 1 > 5 ? 1 : imageIndex + 1),
 		1000
 	)

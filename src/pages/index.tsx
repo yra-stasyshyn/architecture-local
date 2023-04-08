@@ -9,8 +9,11 @@ import Footer from '@/components/Footer'
 import ContactUsSection from 'src/components/Sections/ContactUsSection'
 import ResearchSection from '@/components/Sections/ResearchSection'
 import AboutUsSection from '@/components/Sections/AboutUsSection'
+import useBeforeRefresh from '@/utils/useBeforeRefresh'
+import { scrollToStart } from '@/utils/scrollToRef'
 
 export default function Home() {
+	useBeforeRefresh(scrollToStart)
 	const projectsRef = React.useRef(null)
 	const aboutUsRef = React.useRef(null)
 	const contactUsRef = React.useRef(null)
