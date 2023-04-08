@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import * as S from './styles'
 import LoadingBar from '@/components/LoadingBar'
-import { doOnInterval } from '@/utils/doOnInterval'
+import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 
 const LoadingScreen = () => {
@@ -28,7 +28,7 @@ const LoadingScreen = () => {
 		}
 	}
 
-	doOnInterval(updateProgress, 100)
+	useOnInterval(updateProgress, 100)
 
 	const indexOfImageToShow = Math.min(Math.floor((progress / 100) * 5) + 1, 5)
 	return (
