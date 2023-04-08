@@ -7,7 +7,7 @@ type ProjectsGridProps = {
 	gridGap?: number
 	column3BreakPoint?: number
 	column2BreakPoint?: number
-	children: ReactElement<HTMLImageElement>[]
+	children: ReactElement<HTMLImageElement>[] | ReactElement<HTMLImageElement>
 }
 
 const ProjectsGrid: React.FC<ProjectsGridProps> = ({

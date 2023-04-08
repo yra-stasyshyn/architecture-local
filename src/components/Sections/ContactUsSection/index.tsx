@@ -3,10 +3,17 @@ import * as S from './styles'
 import Text from '@/components/Text'
 import EmailForm from '@/components/EmailForm'
 import ContactUsIconBox from '@/components/ContactUsIconBox'
+import Statement from '@/components/Statement'
 
 const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
+			<S.StatementWrapper>
+				<Statement>
+					Estamos aqui para te ajudar a concretizar uma ideia.
+				</Statement>
+			</S.StatementWrapper>
+
 			<S.TitleWrapper>
 				<Text>
 					<h3>/contato</h3>
@@ -14,9 +21,6 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<br />
 				</Text>
 				<Text>
-					<h2>Estamos aqui para te ajudar a concretizar uma ideia.</h2>
-					<br />
-					<br />
 					<h3>O que você deseja hoje?</h3>
 				</Text>
 			</S.TitleWrapper>
