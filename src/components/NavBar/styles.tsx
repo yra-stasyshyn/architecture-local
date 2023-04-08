@@ -56,6 +56,24 @@ export const ContentWrapper = styled.div`
 
 export const ButtonsBox = styled.div`
 	display: flex;
+	flex-direction: row;
+	gap: 12px;
 	align-items: center;
 	justify-content: center;
+`
+
+export const IconsBox = styled.div<{ color: string }>`
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	padding-top: 4px;
+	align-items: center;
+	justify-content: center;
+	color: ${(props) => props.color};
+
+	> svg {
+		&:hover {
+			color: ${THEME.colors.accentColor};
+		}
+	}
 `
