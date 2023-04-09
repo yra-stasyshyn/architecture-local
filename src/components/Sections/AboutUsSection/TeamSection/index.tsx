@@ -2,19 +2,16 @@ import React from 'react'
 import AccordionTab from '@/components/AccordionTab'
 import * as S from './styles'
 import Text from '@/components/Text'
-import { SectionHeader } from './styles'
 
 const TeamSection = () => {
 	return (
 		<S.Wrapper>
-			<SectionHeader>
-				<Text>
-					<h3>/equipe</h3>
-				</Text>
-			</SectionHeader>
 			<S.Content>
 				<S.TitleWrapper>
 					<Text>
+						<h3>/ equipe</h3>
+						<br />
+						<br />
 						<h2>
 							Somos pessoas trabalhando para viabilizar os desejos de outras
 							pessoas.

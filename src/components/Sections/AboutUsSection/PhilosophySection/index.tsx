@@ -56,22 +56,34 @@ const PhilosophySection = () => {
 				</S.ImagesWrapper>
 				<S.ParagraphWrapper>
 					<Text>
+						<h2>
+							Somos um estúdio de arquitetura e design que coloca as pessoas no
+							centro das decisões.
+						</h2>
+						<br />
+						<br />
 						<p>
-							ARQUITETURA LOCAL é um estúdio de arquitetura e design baseado em
-							Belo Horizonte, Minas Gerais, que se dedica a projetos de
-							diferentes escalas e categorias, sempre desenvolvidos a partir do
-							entendimento profundo das demandas de seus clientes e do local em
-							torno de cada proposta.
+							Nossos projetos, de diferentes escalas e categorias, são sempre
+							desenvolvidos a partir do entedimento profundo das demandas de
+							cada cliente e do local em torno de cada demanda. Dessa forma,
+							geramos impacto positivo para nossos clientes e para o mundo,
+							criando conexões entre pessoas, lugares, cidade e natureza.
 						</p>
 						<br />
 						<p>
-							Essa são os dois sentidos que orientam o trabalho do escritório:
-							uma lente focada na demanda específica e outra com vista
-							panorâmica do lugar, do contexto e da atualidade.
+							Para nós, a boa arquitetura é capaz de acolher e melhorar a vida
+							cotidiana. Focamos no bem estar das pessoas, na harmonia das
+							construções com o contexto e na transparência das decisões.
 						</p>
 					</Text>
 				</S.ParagraphWrapper>
 			</S.Content>
+			<S.TitleWrapper>
+				<Statement>
+					Uma lente focada na demanda específica e outra com vista panorâmica do
+					lugar, do contexto e da atualidade.
+				</Statement>
+			</S.TitleWrapper>
 		</S.Wrapper>
 	)
 }
