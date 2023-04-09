@@ -15,6 +15,7 @@ import {
 	fieldToValidator,
 	ValidationMapper
 } from '@/components/EmailForm/validationLogic/validationMapper'
+import THEME from '@/styles/theme'
 
 const EmailForm = ({ style }: { style?: React.CSSProperties }) => {
 	const [formData, setFormData] =
@@ -110,6 +111,10 @@ const EmailForm = ({ style }: { style?: React.CSSProperties }) => {
 			/>
 			<AlertMessage>{validationMessage.message}</AlertMessage>
 			<S.Button type="submit">{'enviar >'}</S.Button>
+			<span style={{ fontSize: THEME.fontSize.smallText, padding: 4 }}>
+				Ao preencher, você nos autoriza utilizar estes dados para entrarmos em
+				contato.
+			</span>
 		</S.FormContainer>
 	)
 }

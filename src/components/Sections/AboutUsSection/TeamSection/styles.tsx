@@ -58,8 +58,3 @@ export const TitleWrapper = styled.div`
 		width: 100%;
 	}
 `
-
-export const SectionHeader = styled.div`
-	position: relative;
-	margin-bottom: 40px;
-`

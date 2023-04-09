@@ -6,14 +6,12 @@ import Text from '@/components/Text'
 const OurJobSection = () => {
 	return (
 		<S.Wrapper>
-			<S.SectionHeader>
-				<Text>
-					<h3>/o que fazemos</h3>
-				</Text>
-			</S.SectionHeader>
 			<S.Content>
 				<S.TitleWrapper>
 					<Text>
+						<h3>/ o que fazemos</h3>
+						<br />
+						<br />
 						<h2>
 							Somos um estúdio de arquitetura e design, serviços que podem ser
 							contratados individualmente ou em conjunto, para potencializar
@@ -22,11 +20,13 @@ const OurJobSection = () => {
 					</Text>
 				</S.TitleWrapper>
 				<S.AccordionWrapper>
-					<Text style={{ position: 'absolute', top: -70 }}>
+					<Text>
 						<p>
 							Com criatividade e estratégia, atuamos principalmente nas áreas
 							de:
 						</p>
+						<br />
+						<br />
 					</Text>
 					<AccordionTab title={'Arquitetura'}>Top arquiteturas.</AccordionTab>
 					<AccordionTab title={'Design'}>
