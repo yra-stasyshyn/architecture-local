@@ -65,10 +65,22 @@ export const Button = styled.button`
 	width: 100%;
 	display: flex;
 	justify-content: left;
-	border: none;
-	color: ${THEME.colors.secondaryColor};
-	background-color: ${THEME.colors.primaryColor};
+	border: 1px solid ${THEME.colors.primaryColor};
+	color: ${THEME.colors.primaryColor};
+	background-image: linear-gradient(
+		${THEME.colors.primaryColor},
+		${THEME.colors.primaryColor}
+	);
+	background-size: 0 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	transition: 0.6s;
 	font-size: ${THEME.fontSize.textDesktop}px;
 	font-family: ${THEME.fonts.primaryFont};
 	cursor: pointer;
+
+	&:hover {
+		background-size: 100% 100%;
+		color: ${THEME.colors.secondaryColor};
+	}
 `

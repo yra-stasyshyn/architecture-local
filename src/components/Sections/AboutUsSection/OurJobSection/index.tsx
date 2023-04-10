@@ -2,6 +2,7 @@ import React from 'react'
 import AccordionTab from '@/components/AccordionTab'
 import * as S from './styles'
 import Text from '@/components/Text'
+import ContactButton from '@/components/Buttons/ContactButton'
 
 const OurJobSection = () => {
 	return (
@@ -18,6 +19,7 @@ const OurJobSection = () => {
 							resultados.
 						</h2>
 					</Text>
+					<ContactButton>Quero meu projeto</ContactButton>
 				</S.TitleWrapper>
 				<S.AccordionWrapper>
 					<Text>

@@ -63,11 +63,12 @@ export const ImagesWrapper = styled.div`
 	width: 40%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		padding: 0;
 		width: 100%;
 		margin-top: 120px;
+		justify-content: center;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		width: 100%;
