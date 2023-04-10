@@ -1,6 +1,5 @@
 import React from 'react'
 import * as S from './styles'
-import Text from '@/components/Text'
 import EmailForm from '@/components/EmailForm'
 import Statement from '@/components/Statement'
 import ContactButton from '@/components/Buttons/ContactButton'
@@ -16,20 +15,16 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 
 			<S.Content>
 				<S.ActionContainer>
-					<Text style={{ margin: 0 }}>
-						<h2>Vamos juntos realizar o seu projeto?</h2>
-					</Text>
+					<h2>Vamos juntos realizar o seu projeto?</h2>
 					<ContactButton style={{ marginTop: 20 }}>
 						Fale com a gente!
 					</ContactButton>
 				</S.ActionContainer>
 				<S.FormContainer>
-					<Text>
-						<p>
-							Se preferir, preencha os campos abaixo e entraremos em contato com
-							você.
-						</p>
-					</Text>
+					<p>
+						Se preferir, preencha os campos abaixo e entraremos em contato com
+						você.
+					</p>
 					<EmailForm />
 				</S.FormContainer>
 			</S.Content>

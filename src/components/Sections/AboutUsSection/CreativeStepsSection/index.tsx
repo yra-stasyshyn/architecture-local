@@ -1,14 +1,11 @@
 import React from 'react'
 import CreativeStep from '@/components/CreativeStep'
 import * as S from './styles'
-import Text from '@/components/Text'
 const CreativeStepsSection = () => {
 	return (
 		<S.Wrapper>
 			<S.SectionTitleDiv>
-				<Text>
-					<h3>/ como fazemos </h3>
-				</Text>
+				<h3>/ como fazemos </h3>
 			</S.SectionTitleDiv>
 			<S.StepsGrid>
 				<CreativeStep

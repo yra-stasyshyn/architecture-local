@@ -1,8 +1,6 @@
 import * as S from './styles'
 import NextImage from 'next/image'
 import ContactUsIconBox from '@/components/ContactUsIconBox'
-import Text from '@/components/Text'
-import THEME from '@/styles/theme'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 import {
 	redirectToDevGitHub,
@@ -21,36 +19,17 @@ const Footer = () => (
 				/>
 			</S.LeftElement>
 			<S.CenterElement>
-				<Text
-					color={THEME.colors.secondaryColor}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						textAlign: 'center',
-						flexDirection: 'column'
-					}}
-				>
-					<ContactUsIconBox />
-					<p>Prática comprometida com o contexto</p>
-				</Text>
+				<ContactUsIconBox />
+				<p>Prática comprometida com o contexto</p>
 			</S.CenterElement>
 			<S.RightElement>
-				<Text
-					color={THEME.colors.secondaryColor}
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						textAlign: 'right'
-					}}
-				>
-					<p>
-						contato@local.arq.br
-						<br />
-						+55 31 972670550
-						<br />
-						Belo Horizonte, Minas Gerais - Brasil
-					</p>
-				</Text>
+				<p>
+					contato@local.arq.br
+					<br />
+					+55 31 972670550
+					<br />
+					Belo Horizonte, Minas Gerais - Brasil
+				</p>
 			</S.RightElement>
 		</S.ContentWrapper>
 		<S.SignatureWrapper>

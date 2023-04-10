@@ -45,12 +45,12 @@ const AccordionTab: React.FC<AccordionTabProps> = ({ title, children }) => {
 				onMouseOver={OnMouseOverTab}
 				onMouseLeave={OnMouseLeaveTab}
 			>
-				<span onClick={handleToggleAccordion}>{title}</span>
-				<span>
-					<S.IconWrapper>{icon}</S.IconWrapper>
-				</span>
+				<h3 onClick={handleToggleAccordion}>{title}</h3>
+				<S.IconWrapper>{icon}</S.IconWrapper>
 			</S.AccordionTabHeader>
-			<S.AccordionTabContent isOpen={isOpen}>{children}</S.AccordionTabContent>
+			<S.AccordionTabContent isOpen={isOpen}>
+				<p>{children}</p>
+			</S.AccordionTabContent>
 		</S.AccordionTabContainer>
 	)
 }

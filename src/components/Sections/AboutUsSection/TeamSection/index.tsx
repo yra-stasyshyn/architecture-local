@@ -1,22 +1,19 @@
 import React from 'react'
 import AccordionTab from '@/components/AccordionTab'
 import * as S from './styles'
-import Text from '@/components/Text'
 
 const TeamSection = () => {
 	return (
 		<S.Wrapper>
 			<S.Content>
 				<S.TitleWrapper>
-					<Text>
-						<h3>/ equipe</h3>
-						<br />
-						<br />
-						<h2>
-							Somos pessoas trabalhando para viabilizar os desejos de outras
-							pessoas.
-						</h2>
-					</Text>
+					<h3>/ equipe</h3>
+					<br />
+					<br />
+					<h2>
+						Somos pessoas trabalhando para viabilizar os desejos de outras
+						pessoas.
+					</h2>
 				</S.TitleWrapper>
 				<S.AccordionWrapper>
 					<AccordionTab title={'Mariana Lima . Fundadora, Diretora'}>

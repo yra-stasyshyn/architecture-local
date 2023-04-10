@@ -1,6 +1,5 @@
 import React from 'react'
 import * as S from './styles'
-import Text from '@/components/Text'
 import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 import Statement from '@/components/Statement'
@@ -55,27 +54,25 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					/>
 				</S.ImagesWrapper>
 				<S.ParagraphWrapper>
-					<Text>
-						<h2>
-							Somos um estúdio de arquitetura e design que coloca as pessoas no
-							centro das decisões.
-						</h2>
-						<br />
-						<br />
-						<p>
-							Nossos projetos, de diferentes escalas e categorias, são sempre
-							desenvolvidos a partir do entedimento profundo das demandas de
-							cada cliente e do local em torno de cada demanda. Dessa forma,
-							geramos impacto positivo para nossos clientes e para o mundo,
-							criando conexões entre pessoas, lugares, cidade e natureza.
-						</p>
-						<br />
-						<p>
-							Para nós, a boa arquitetura é capaz de acolher e melhorar a vida
-							cotidiana. Focamos no bem estar das pessoas, na harmonia das
-							construções com o contexto e na transparência das decisões.
-						</p>
-					</Text>
+					<h2>
+						Somos um estúdio de arquitetura e design que coloca as pessoas no
+						centro das decisões.
+					</h2>
+					<br />
+					<br />
+					<p>
+						Nossos projetos, de diferentes escalas e categorias, são sempre
+						desenvolvidos a partir do entedimento profundo das demandas de cada
+						cliente e do local em torno de cada demanda. Dessa forma, geramos
+						impacto positivo para nossos clientes e para o mundo, criando
+						conexões entre pessoas, lugares, cidade e natureza.
+					</p>
+					<br />
+					<p>
+						Para nós, a boa arquitetura é capaz de acolher e melhorar a vida
+						cotidiana. Focamos no bem estar das pessoas, na harmonia das
+						construções com o contexto e na transparência das decisões.
+					</p>
 				</S.ParagraphWrapper>
 			</S.Content>
 			<S.StatementDiv>
