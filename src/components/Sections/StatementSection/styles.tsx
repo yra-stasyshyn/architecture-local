@@ -2,10 +2,6 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	height: 100svh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	width: 100%;
 	position: relative;
 

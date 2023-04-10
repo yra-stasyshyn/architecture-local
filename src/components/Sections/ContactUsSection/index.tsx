@@ -8,11 +8,11 @@ import ContactButton from '@/components/Buttons/ContactButton'
 const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
-			<S.StatementWrapper>
+			<S.StatementDiv>
 				<Statement>
 					Estamos aqui para te ajudar a concretizar uma ideia.
 				</Statement>
-			</S.StatementWrapper>
+			</S.StatementDiv>
 
 			<S.Content>
 				<S.ActionContainer>

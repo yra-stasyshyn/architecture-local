@@ -1,5 +1,5 @@
 import React from 'react'
-import { animateScroll as scroll } from 'react-scroll'
+import { animateScroll } from 'react-scroll'
 
 export function scrollToRef(ref: React.RefObject<any>, topOffset = 0) {
 	if (ref.current) {
@@ -8,7 +8,7 @@ export function scrollToRef(ref: React.RefObject<any>, topOffset = 0) {
 		const scrollDistance = Math.abs(targetOffset - start)
 		const duration = Math.max(1000, scrollDistance)
 		const scrollPosition = targetOffset + window.innerHeight + topOffset
-		scroll.scrollTo(scrollPosition, {
+		animateScroll.scrollTo(scrollPosition, {
 			duration: duration,
 			smooth: true
 		})
@@ -16,8 +16,16 @@ export function scrollToRef(ref: React.RefObject<any>, topOffset = 0) {
 }
 
 export function scrollToStart() {
-	scroll.scrollToTop({
+	animateScroll.scrollToTop({
 		duration: 2000,
+		smooth: true
+	})
+}
+
+export function scrollOneScreenHeight() {
+	const scrollDistance = window.innerHeight + window.scrollY - 64
+	animateScroll.scrollTo(scrollDistance, {
+		duration: Math.max(1000, scrollDistance),
 		smooth: true
 	})
 }
