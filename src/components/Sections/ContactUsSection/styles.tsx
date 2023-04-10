@@ -39,6 +39,7 @@ export const TitleWrapper = styled.div`
 export const Content = styled.div`
 	display: flex;
 	flex-direction: row;
+	margin-top: 64px;
 	width: 62.5%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 63.3%;

@@ -54,13 +54,14 @@ const Footer = () => (
 			</S.RightElement>
 		</S.ContentWrapper>
 		<S.SignatureWrapper>
-			Todos os direitos reservados. © 2023 Arquitetura Local. Desenvolvido por
-			Pedro Dardengo
+			<span>
+				Todos os direitos reservados. © 2023 Arquitetura Local. Desenvolvido por
+				Pedro Dardengo.
+			</span>
 			<S.IconDiv>
 				<FaGithubSquare onClick={redirectToDevGitHub} />
 				<FaLinkedin onClick={redirectToDevLinkedin} />
 			</S.IconDiv>
-			.
 		</S.SignatureWrapper>
 	</S.Wrapper>
 )

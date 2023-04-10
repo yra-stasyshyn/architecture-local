@@ -5,14 +5,14 @@ import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 import Statement from '@/components/Statement'
 
-const PhilosophySection = () => {
+const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [imageIndex, setImageIndex] = React.useState(1)
 	useOnInterval(
 		() => setImageIndex(imageIndex + 1 > 5 ? 1 : imageIndex + 1),
 		1000
 	)
 	return (
-		<S.Wrapper>
+		<S.Wrapper ref={ref}>
 			<S.StatementDiv>
 				<Statement>Prática criativa comprometida com o contexto.</Statement>
 			</S.StatementDiv>
@@ -86,6 +86,7 @@ const PhilosophySection = () => {
 			</S.StatementDiv>
 		</S.Wrapper>
 	)
-}
+})
+PhilosophySection.displayName = 'Philosophy Section'
 
 export default PhilosophySection

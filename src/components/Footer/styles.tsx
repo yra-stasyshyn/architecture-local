@@ -23,10 +23,14 @@ export const SignatureWrapper = styled.div`
 	width: 100%;
 	position: absolute;
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	bottom: 0;
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		flex-direction: column;
+	}
 `
 export const ContentWrapper = styled.div`
 	height: 186px;
@@ -82,7 +86,7 @@ export const RightElement = styled.div`
 	}
 `
 
-export const IconDiv = styled.div`
+export const IconDiv = styled.span`
 	display: flex;
 	flex-direction: row;
 	gap: 4px;

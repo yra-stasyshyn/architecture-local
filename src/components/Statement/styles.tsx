@@ -10,13 +10,13 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100lvh - 64px);
-	margin-bottom: 64px;
+	height: calc(100svh - 64px);
+	margin-top: 64px;
 	> div {
 		display: flex;
 		justify-content: center;
 		> h1 {
-			opacity: ${(props) => (props.isVisible ? 1 : 0)};
+			opacity: ${(props) => (props.isVisible ? '1' : '0')};
 			transition: opacity 1s ease-in;
 			animation: ${(props) =>
 				props.isVisible
@@ -36,7 +36,7 @@ export const ChevronDiv = styled.div<{ isEntireBoxVisible: boolean }>`
 	justify-content: center;
 	align-items: center;
 	bottom: 0;
-	left: 50%;
+	left: calc(50% - 25px);
 	opacity: ${(props) => (props.isEntireBoxVisible ? '1' : '0')};
 	transition: opacity 0.5s ease;
 	> svg {

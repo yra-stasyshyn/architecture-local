@@ -17,7 +17,12 @@ const ProjectsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
 			<ProjectsGrid>
-				<NextImage src={img08} alt={'casa local 8'} quality={quality} />
+				<NextImage
+					src={img08}
+					alt={'casa local 8'}
+					quality={quality}
+					placeholder={'empty'}
+				/>
 				<NextImage src={img01} alt={'casa local 3'} quality={quality} />
 				<NextImage src={img02} alt={'casa local 4'} quality={quality} />
 				<NextImage src={img04} alt={'casa local 5'} quality={quality} />
