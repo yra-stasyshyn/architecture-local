@@ -47,6 +47,7 @@ export const StatementDiv = styled.div`
 export const ParagraphWrapper = styled.div`
 	width: 60%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	padding-left: 80px;
 	@media (max-width: ${THEME.screenSize.tablet}px) {

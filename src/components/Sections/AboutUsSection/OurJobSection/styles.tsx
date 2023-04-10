@@ -54,7 +54,6 @@ export const TitleWrapper = styled.div`
 	flex-direction: column;
 	gap: 40px;
 	width: 40%;
-	margin-bottom: 60px;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: 100%;
 	}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Text from '@/components/Text'
 import useOnScreen from '@/utils/useOnScreen'
 import * as S from './styles'
 import useOnEntireBoxVisible from '@/utils/useOnEntireBoxVisible'
@@ -26,9 +25,7 @@ const Statement = ({
 
 	return (
 		<S.Wrapper isVisible={alreadyBeenSeen} style={style} ref={statementBoxRef}>
-			<Text>
-				<h1 ref={statementRef}>{children}</h1>
-			</Text>
+			<h1 ref={statementRef}>{children}</h1>
 			<S.ChevronDiv
 				isEntireBoxVisible={isEntireBoxVisible}
 				onClick={scrollOneScreenHeight}

@@ -52,8 +52,10 @@ export const ContentWrapper = styled.div`
 
 export const CenterElement = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 	margin: 20px;
 	width: 33.3333%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
@@ -77,6 +79,7 @@ export const RightElement = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: right;
+	text-align: right;
 	margin: 20px;
 	width: 33.3333%;
 	@media (max-width: ${THEME.screenSize.tablet}px) {
