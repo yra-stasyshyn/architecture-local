@@ -3,10 +3,10 @@ import THEME from '@/styles/theme'
 
 export const Overlay = styled.div<{ loaded: boolean }>`
 	position: fixed;
-	top: ${({ loaded }) => (loaded ? '-100vh' : '0')};
+	top: ${({ loaded }) => (loaded ? '-100lvh' : '0')};
 	left: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 100lvh;
 	background-color: ${THEME.colors.primaryColor};
 	z-index: 9999;
 	transition: top 0.75s ease 0.5s;

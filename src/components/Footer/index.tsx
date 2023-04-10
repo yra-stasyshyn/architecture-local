@@ -3,6 +3,12 @@ import NextImage from 'next/image'
 import ContactUsIconBox from '@/components/ContactUsIconBox'
 import Text from '@/components/Text'
 import THEME from '@/styles/theme'
+import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
+import {
+	redirectToDevGitHub,
+	redirectToDevLinkedin
+} from '@/utils/redirectToPage'
+
 const Footer = () => (
 	<S.Wrapper>
 		<S.ContentWrapper>
@@ -49,7 +55,12 @@ const Footer = () => (
 		</S.ContentWrapper>
 		<S.SignatureWrapper>
 			Todos os direitos reservados. © 2023 Arquitetura Local. Desenvolvido por
-			Pedro Dardengo.
+			Pedro Dardengo
+			<S.IconDiv>
+				<FaGithubSquare onClick={redirectToDevGitHub} />
+				<FaLinkedin onClick={redirectToDevLinkedin} />
+			</S.IconDiv>
+			.
 		</S.SignatureWrapper>
 	</S.Wrapper>
 )

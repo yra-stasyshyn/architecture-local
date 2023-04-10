@@ -15,9 +15,13 @@ export const HeaderDiv = styled.div`
 export const NumberSpan = styled.div`
 	padding: 4px;
 	border-bottom: 1px solid ${THEME.colors.accentColor};
+	font-size: ${THEME.fontSize.title3Desktop}px;
+	font-weight: ${THEME.fontWeight.semiBold};
 `
 export const TitleSpan = styled.div`
 	padding: 4px;
+	font-size: ${THEME.fontSize.title3Desktop}px;
+	font-weight: ${THEME.fontWeight.semiBold};
 `
 
 export const ImageDiv = styled.div`

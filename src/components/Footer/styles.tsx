@@ -81,3 +81,15 @@ export const RightElement = styled.div`
 		width: 100%;
 	}
 `
+
+export const IconDiv = styled.div`
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	margin-left: 4px;
+	> svg {
+		&:hover {
+			color: ${THEME.colors.accentColor};
+		}
+	}
+`

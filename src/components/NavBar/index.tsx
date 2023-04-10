@@ -32,6 +32,10 @@ const NavBar = ({
 	const [backgroundColor, setBackgroundColor] = React.useState('transparent')
 	const [navBarStyle, setNavBarStyle] = React.useState({})
 	const [navBarShadow, setNavBarShadow] = React.useState(true)
+	const [logoColors, setLogoColors] = React.useState({
+		color: THEME.colors.secondaryColor,
+		highLightColor: THEME.colors.accentColor
+	})
 
 	const navBarButtons = (
 		<>
@@ -98,11 +102,19 @@ const NavBar = ({
 				setBackgroundColor(THEME.colors.secondaryColor)
 				setNavBarStyle({ top: 0, position: 'fixed' })
 				setNavBarShadow(false)
+				setLogoColors({
+					color: THEME.colors.accentColor,
+					highLightColor: THEME.colors.primaryColor
+				})
 			} else {
 				setElementsColor(THEME.colors.secondaryColor)
 				setNavBarStyle({})
 				setBackgroundColor('transparent')
 				setNavBarShadow(true)
+				setLogoColors({
+					color: THEME.colors.secondaryColor,
+					highLightColor: THEME.colors.accentColor
+				})
 			}
 		}
 		return handleScroll()
@@ -117,10 +129,10 @@ const NavBar = ({
 		>
 			<S.ContentWrapper>
 				<InstitutionalLogo
-					color={elementsColor}
+					color={logoColors.color}
 					sizeMultiplier={windowWidth < THEME.screenSize.mobile ? 0.9 : 1}
 					onClick={scrollToStart}
-					highlightColorOnHover={THEME.colors.accentColor}
+					highlightColorOnHover={logoColors.highLightColor}
 				/>
 				{toRender}
 			</S.ContentWrapper>

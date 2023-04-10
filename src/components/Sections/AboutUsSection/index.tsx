@@ -10,8 +10,8 @@ const AboutUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 		<S.Wrapper ref={ref}>
 			<PhilosophySection />
 			<TeamSection />
-			<CreativeStepsSection />
 			<OurJobSection />
+			<CreativeStepsSection />
 		</S.Wrapper>
 	)
 })
