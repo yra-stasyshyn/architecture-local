@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ isBellowHeroSection: boolean }>`
 	position: relative;
+	opacity: ${(props) => (props.isBellowHeroSection ? '0' : '1')};
 	height: 100%;
 	overflow: hidden;
 	z-index: -10;

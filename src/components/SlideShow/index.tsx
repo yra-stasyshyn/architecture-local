@@ -1,6 +1,7 @@
 import * as S from './styles'
 import React, { ReactElement } from 'react'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
+import { useIsBellowHeroSection } from '@/utils/useIsBellowHeroSection'
 
 const SlideShow = ({
 	children
@@ -9,6 +10,7 @@ const SlideShow = ({
 }) => {
 	const numberOfImages = children.length
 	const [currentImageIndex, setCurrentImageIndex] = React.useState(0)
+	const isBellowHeroSection = useIsBellowHeroSection()
 
 	const windowDimensions = useWindowDimensions()
 	function nextImageIndex() {
@@ -33,7 +35,7 @@ const SlideShow = ({
 		windowDimensions.windowWidth / windowDimensions.windowHeight
 
 	return (
-		<S.Wrapper>
+		<S.Wrapper isBellowHeroSection={isBellowHeroSection}>
 			{React.Children.map(children, (child, index) => {
 				const opacity = index === currentImageIndex ? '1' : '0'
 				const imageStyle: React.CSSProperties = { opacity }
