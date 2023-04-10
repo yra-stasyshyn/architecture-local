@@ -12,7 +12,7 @@ export const Wrapper = styled.div<{
 	padding: 12px;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	left: -50px;
+	left: -70px;
 	border: none;
 	position: absolute;
 	${(props) =>

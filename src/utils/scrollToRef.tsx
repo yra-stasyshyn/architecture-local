@@ -7,7 +7,7 @@ export function scrollToRef(ref: React.RefObject<any>, topOffset = 0) {
 		const start = window.scrollY
 		const scrollDistance = Math.abs(targetOffset - start)
 		const duration = Math.max(1000, scrollDistance)
-		const scrollPosition = targetOffset + window.innerHeight + topOffset
+		const scrollPosition = targetOffset + window.innerHeight + topOffset - 64
 		animateScroll.scrollTo(scrollPosition, {
 			duration: duration,
 			smooth: true
