@@ -17,3 +17,14 @@ export function redirectTolinkedin() {
 export function redirectToPinterest() {
 	window.open('https://br.pinterest.com/arquiteturalocal/', '_blank')
 }
+
+export function redirectToDevLinkedin() {
+	window.open(
+		'https://www.linkedin.com/in/pedro-dardengo-mesquita-02b57820a/',
+		'_blank'
+	)
+}
+
+export function redirectToDevGitHub() {
+	window.open('https://github.com/pedrodardengo', '_blank')
+}
