@@ -70,7 +70,7 @@ export const ImagesWrapper = styled.div`
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		padding: 0;
 		width: 100%;
-		margin-top: 170px;
+		margin-top: 120px;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		width: 100%;
