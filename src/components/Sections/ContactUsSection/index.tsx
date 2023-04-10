@@ -19,7 +19,9 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 					<Text style={{ margin: 0 }}>
 						<h2>Vamos juntos realizar o seu projeto?</h2>
 					</Text>
-					<ContactButton style={{ marginTop: 20 }} />
+					<ContactButton style={{ marginTop: 20 }}>
+						Fale com a gente!
+					</ContactButton>
 				</S.ActionContainer>
 				<S.FormContainer>
 					<Text>

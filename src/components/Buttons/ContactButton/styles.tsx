@@ -14,9 +14,10 @@ export const Button = styled.div`
 	justify-content: center;
 	align-items: center;
 	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.3s ease, color 0.3s ease;
 	&:hover {
 		color: ${THEME.colors.secondaryColor};
 		background-color: ${THEME.colors.accentColor};
 	}
-	width: 180px;
+	max-width: 200px;
 `
