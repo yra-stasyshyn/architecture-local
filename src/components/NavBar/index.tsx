@@ -42,7 +42,6 @@ const NavBar = ({
 			<NavBarButton
 				textColor={elementsColor}
 				sectionRef={projectsRef}
-				scrollOffset={-120}
 				addUnderLineIfOnSection={true}
 			>
 				projetos
@@ -50,7 +49,6 @@ const NavBar = ({
 			<NavBarButton
 				textColor={elementsColor}
 				sectionRef={researchRef}
-				scrollOffset={-120}
 				addUnderLineIfOnSection={true}
 			>
 				pesquisa
