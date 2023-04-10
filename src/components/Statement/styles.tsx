@@ -6,6 +6,12 @@ const showText = keyframes`
 `
 
 export const Wrapper = styled.div<{ isVisible: boolean }>`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: calc(100lvh - 64px);
+	margin-bottom: 64px;
 	> div {
 		display: flex;
 		justify-content: center;
@@ -18,6 +24,27 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 							${showText} 0.6s ease-out forwards
 					  `
 					: 'none'};
+		}
+	}
+`
+
+export const ChevronDiv = styled.div<{ isEntireBoxVisible: boolean }>`
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 0;
+	left: 50%;
+	opacity: ${(props) => (props.isEntireBoxVisible ? '1' : '0')};
+	transition: opacity 0.5s ease;
+	> svg {
+		opacity: 0.5;
+		transition: height 0.5s ease;
+		&:hover {
+			height: 40px;
+			width: 40px;
 		}
 	}
 `

@@ -19,10 +19,7 @@ export const Wrapper = styled.div`
 	}
 `
 
-export const StatementWrapper = styled.div`
-	display: flex;
-	align-items: center;
-	height: 100svh;
+export const StatementDiv = styled.div`
 	width: 62.5%;
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {

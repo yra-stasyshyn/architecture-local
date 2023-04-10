@@ -13,9 +13,9 @@ const PhilosophySection = () => {
 	)
 	return (
 		<S.Wrapper>
-			<S.TitleWrapper>
+			<S.StatementDiv>
 				<Statement>Prática criativa comprometida com o contexto.</Statement>
-			</S.TitleWrapper>
+			</S.StatementDiv>
 			<S.Content>
 				<S.ImagesWrapper>
 					<NextImage
@@ -78,12 +78,12 @@ const PhilosophySection = () => {
 					</Text>
 				</S.ParagraphWrapper>
 			</S.Content>
-			<S.TitleWrapper>
+			<S.StatementDiv>
 				<Statement>
 					Uma lente focada na demanda específica e outra com vista panorâmica do
 					lugar, do contexto e da atualidade.
 				</Statement>
-			</S.TitleWrapper>
+			</S.StatementDiv>
 		</S.Wrapper>
 	)
 }
