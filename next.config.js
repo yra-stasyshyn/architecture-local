@@ -13,12 +13,15 @@ module.exports = withPWA({
 		forceSwcTransforms: true
 	},
 	images: {
+		domains: ['scontent.cdninstagram.com', 'graph.instagram.com'],
 		minimumCacheTTL: 600,
 		remotePatterns: [
 			{
+				protocol: 'https',
 				hostname: 'scontent.cdninstagram.com'
 			},
 			{
+				protocol: 'https',
 				hostname: 'graph.instagram.com'
 			}
 		]

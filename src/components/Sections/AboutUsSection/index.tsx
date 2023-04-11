@@ -7,8 +7,8 @@ import CreativeStepsSection from '@/components/Sections/AboutUsSection/CreativeS
 
 const AboutUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
-		<S.Wrapper>
-			<PhilosophySection ref={ref} />
+		<S.Wrapper ref={ref}>
+			<PhilosophySection />
 			<TeamSection />
 			<OurJobSection />
 			<CreativeStepsSection />
