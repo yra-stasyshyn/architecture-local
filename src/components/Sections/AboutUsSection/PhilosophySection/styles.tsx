@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
-	margin-top: 50px;
-	margin-bottom: 50px;
 	position: relative;
 	width: 100%;
 	left: 12.5%;
