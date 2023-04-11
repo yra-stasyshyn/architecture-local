@@ -11,6 +11,7 @@ import img08 from '../../../../public/img/08.jpg'
 import img09 from '../../../../public/img/09.png'
 import img10 from '../../../../public/img/10.png'
 import img11 from '../../../../public/img/11.png'
+import InstagramFeed from '@/components/InstagramFeed'
 
 const ProjectsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const quality = 30
@@ -32,6 +33,9 @@ const ProjectsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 				<NextImage src={img05} alt={'casa local 1'} quality={quality} />
 				<NextImage src={img09} alt={'casa local 2'} quality={quality} />
 			</ProjectsGrid>
+			<S.InstaFeedDiv>
+				<InstagramFeed />
+			</S.InstaFeedDiv>
 		</S.Wrapper>
 	)
 })
