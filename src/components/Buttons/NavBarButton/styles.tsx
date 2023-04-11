@@ -10,8 +10,9 @@ export const Wrapper = styled.button<{
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom: ${(props) =>
-		props.underline ? `1px solid ${THEME.colors.accentColor}` : 'none'};
+	border-bottom: 1px solid
+		${(props) => (props.underline ? THEME.colors.accentColor : 'transparent')};
+
 	font-size: ${THEME.fontSize.buttons}px;
 	padding: 8px 8px 3px 8px;
 	text-align: center;

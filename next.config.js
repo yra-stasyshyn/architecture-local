@@ -13,6 +13,14 @@ module.exports = withPWA({
 		forceSwcTransforms: true
 	},
 	images: {
-		minimumCacheTTL: 600
+		minimumCacheTTL: 600,
+		remotePatterns: [
+			{
+				hostname: 'scontent.cdninstagram.com'
+			},
+			{
+				hostname: 'graph.instagram.com'
+			}
+		]
 	}
 })
