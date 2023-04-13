@@ -14,7 +14,7 @@ export const Wrapper = styled.div<{ isBellowHeroSection: boolean }>`
 	}
 `
 
-export const ImageWrapper = styled.div<{ windowToImageRatio: number }>`
+export const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	img {
@@ -23,9 +23,9 @@ export const ImageWrapper = styled.div<{ windowToImageRatio: number }>`
 		transition: opacity 400ms ease;
 		bottom: 0;
 		z-index: -10;
-		max-width: ${(props) => (props.windowToImageRatio < 1 ? 'none' : '100%')};
-		max-height: ${(props) => (props.windowToImageRatio < 1 ? '100%' : 'none')};
-		height: ${(props) => (props.windowToImageRatio < 1 ? '100%' : 'auto')};
-		width: ${(props) => (props.windowToImageRatio < 1 ? 'auto' : '100%')};
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 100%;
 	}
 `

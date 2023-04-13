@@ -18,69 +18,15 @@ const HeroSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
 			<SlideShow>
-				<NextImage
-					src={img01}
-					alt={''}
-					width={2678}
-					height={1800}
-					quality={quality}
-				/>
-				<NextImage
-					src={img02}
-					alt={''}
-					width={3840}
-					height={3840}
-					quality={quality}
-				/>
-				<NextImage
-					src={img04}
-					alt={''}
-					width={2678}
-					height={1800}
-					quality={quality}
-				/>
-				<NextImage
-					src={img05}
-					alt={''}
-					width={2678}
-					height={1800}
-					quality={quality}
-				/>
-				<NextImage
-					src={img12}
-					alt={''}
-					width={3840}
-					height={2160}
-					quality={quality}
-				/>
-				<NextImage
-					src={img08}
-					alt={''}
-					width={3840}
-					height={2160}
-					quality={quality}
-				/>
-				<NextImage
-					src={img09}
-					alt={''}
-					width={3840}
-					height={2160}
-					quality={quality}
-				/>
-				<NextImage
-					src={img10}
-					alt={''}
-					width={1607}
-					height={1080}
-					quality={quality}
-				/>
-				<NextImage
-					src={img11}
-					alt={''}
-					width={3200}
-					height={1800}
-					quality={quality}
-				/>
+				<NextImage src={img01} alt={''} quality={quality} />
+				<NextImage src={img02} alt={''} quality={quality} />
+				<NextImage src={img04} alt={''} quality={quality} />
+				<NextImage src={img05} alt={''} quality={quality} />
+				<NextImage src={img12} alt={''} quality={quality} />
+				<NextImage src={img08} alt={''} quality={quality} />
+				<NextImage src={img09} alt={''} quality={quality} />
+				<NextImage src={img10} alt={''} quality={quality} />
+				<NextImage src={img11} alt={''} quality={quality} />
 			</SlideShow>
 		</S.Wrapper>
 	)
