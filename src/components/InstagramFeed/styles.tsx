@@ -15,6 +15,11 @@ export const Wrapper = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		&:hover {
+			filter: brightness(1.2);
+		}
+
 		img {
 			object-fit: cover;
 		}
