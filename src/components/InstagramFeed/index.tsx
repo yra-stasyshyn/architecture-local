@@ -1,7 +1,6 @@
 import * as S from './styles'
 import React from 'react'
 import axios from 'axios'
-import NextImage from 'next/image'
 
 type MediaType = 'IMAGE' | 'VIDEO' | 'CAROUSEL_ALBUM'
 
@@ -32,14 +31,7 @@ const InstagramFeed = () => {
 				</video>
 			)
 		}
-		return (
-			<NextImage
-				src={mediaUrl}
-				alt={'Instagram Post Arq Local'}
-				height={250}
-				width={250}
-			/>
-		)
+		return <img src={mediaUrl} alt={'Instagram Post Arq Local'} />
 	}
 	return (
 		<S.Wrapper>
