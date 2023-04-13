@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
       }
 
       ::-webkit-scrollbar-thumb:hover {
-        background: lightgray;
+        background: darkgrey;
       }
 
       p {

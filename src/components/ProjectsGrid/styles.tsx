@@ -55,12 +55,10 @@ export const ImageContainer = styled.div<{
 		}
 	}
 	img {
-		position: absolute;
-		top: 0;
-		left: 0;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: 50% 100%;
 	}
 	@media (max-width: ${THEME.screenSize.tablet}px) {
 		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;
