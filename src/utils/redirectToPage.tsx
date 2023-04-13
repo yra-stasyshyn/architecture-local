@@ -19,10 +19,7 @@ export function redirectToPinterest() {
 }
 
 export function redirectToDevLinkedin() {
-	window.open(
-		'https://www.linkedin.com/in/pedro-dardengo-mesquita-02b57820a/',
-		'_blank'
-	)
+	window.open('https://www.linkedin.com/in/pedro-dardengo/', '_blank')
 }
 
 export function redirectToDevGitHub() {

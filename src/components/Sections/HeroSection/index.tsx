@@ -13,10 +13,10 @@ import img10 from '../../../../public/img/10.png'
 import img11 from '../../../../public/img/11.png'
 import img12 from '../../../../public/img/12.jpg'
 
-const HeroSection = () => {
+const HeroSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const quality = 40
 	return (
-		<S.Wrapper>
+		<S.Wrapper ref={ref}>
 			<SlideShow>
 				<NextImage
 					src={img01}
@@ -84,6 +84,8 @@ const HeroSection = () => {
 			</SlideShow>
 		</S.Wrapper>
 	)
-}
+})
+
+HeroSection.displayName = 'Hero Section'
 
 export default HeroSection

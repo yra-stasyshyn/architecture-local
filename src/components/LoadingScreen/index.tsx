@@ -4,27 +4,33 @@ import LoadingBar from '@/components/LoadingBar'
 import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 
-const LoadingScreen = () => {
+const LoadingScreen = ({
+	toWaitLoad
+}: {
+	toWaitLoad: React.RefObject<HTMLDivElement>
+}) => {
 	const [loaded, setLoaded] = useState(false)
 	const [progress, setProgress] = useState(0)
+
 	function updateProgress() {
 		if (loaded) return
-		const images: NodeListOf<HTMLImageElement> = document.querySelectorAll(
-			'img:not([src$=".svg"])'
-		)
-		const numImages = images.length
-		let loadedImages = 0
-		images.forEach((image) => {
-			if (image.complete) {
-				loadedImages++
+		const images: NodeListOf<HTMLImageElement> | undefined =
+			toWaitLoad.current?.querySelectorAll(':scope img')
+		if (images) {
+			const numImages = images.length
+			let loadedImages = 0
+			images.forEach((image) => {
+				if (image.complete) {
+					loadedImages++
+				}
+			})
+			const imagesLoadingProgress = Math.floor((loadedImages / numImages) * 100)
+			if (imagesLoadingProgress >= progress + 10) {
+				setProgress(progress + 10)
 			}
-		})
-		const imagesLoadingProgress = Math.floor((loadedImages / numImages) * 100)
-		if (imagesLoadingProgress >= progress + 10) {
-			setProgress(progress + 10)
-		}
-		if (progress >= 100) {
-			setLoaded(true)
+			if (progress >= 100) {
+				setLoaded(true)
+			}
 		}
 	}
 

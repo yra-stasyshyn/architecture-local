@@ -18,10 +18,11 @@ export default function Home() {
 	const aboutUsRef = React.useRef(null)
 	const contactUsRef = React.useRef(null)
 	const researchRef = React.useRef(null)
+	const heroSectionRef = React.useRef(null)
 	return (
 		<>
-			<LoadingScreen />
-			<HeroSection />
+			<LoadingScreen toWaitLoad={heroSectionRef} />
+			<HeroSection ref={heroSectionRef} />
 			<NavBar
 				projectsRef={projectsRef}
 				aboutUsRef={aboutUsRef}
