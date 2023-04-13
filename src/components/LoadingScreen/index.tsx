@@ -14,6 +14,7 @@ const LoadingScreen = ({
 
 	function updateProgress() {
 		if (loaded) return
+		document.body.style.overflowY = progress < 100 ? 'hidden' : ''
 		const images: NodeListOf<HTMLImageElement> | undefined =
 			toWaitLoad.current?.querySelectorAll(':scope img')
 		if (images) {
