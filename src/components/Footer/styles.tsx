@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 export const SignatureWrapper = styled.div`
 	font-size: ${THEME.fontSize.smallText}px;
 	border: none;
-	border-top: 1px solid ${THEME.colors.secondaryColor};
+	border-top: 1px solid ${THEME.colors.darkGrey};
 	height: 64px;
 	padding: 8px;
 	width: 100%;
