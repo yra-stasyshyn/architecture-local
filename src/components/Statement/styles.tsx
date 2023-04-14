@@ -11,7 +11,6 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 	flex-direction: column;
 	justify-content: center;
 	height: calc(100svh - 64px);
-	margin-top: 68px;
 	> h1 {
 		opacity: ${(props) => (props.isVisible ? '1' : '0')};
 		transition: opacity 1s ease-in;
@@ -38,6 +37,7 @@ export const ChevronDiv = styled.div<{ isEntireBoxVisible: boolean }>`
 	> svg {
 		opacity: 0.5;
 		transition: height 0.5s ease;
+		margin-bottom: 100px;
 		&:hover {
 			height: 40px;
 			width: 40px;
