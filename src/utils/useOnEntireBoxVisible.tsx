@@ -12,8 +12,8 @@ export default function useOnEntireBoxVisible(
 			return
 		}
 		const { top, bottom } = ref.current.getBoundingClientRect()
-		const isVisibleTop = top >= 0 && top <= window.innerHeight
-		const isVisibleBottom = bottom >= 0 && bottom <= window.innerHeight
+		const isVisibleTop = top >= 0 && top <= window.innerHeight + 200
+		const isVisibleBottom = bottom >= 0 && bottom <= window.innerHeight + 200
 		setIsVisible(isVisibleTop && isVisibleBottom)
 	}, 100)
 
