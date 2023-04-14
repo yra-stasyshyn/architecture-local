@@ -13,7 +13,11 @@ module.exports = withPWA({
 		forceSwcTransforms: true
 	},
 	images: {
-		domains: ['scontent.cdninstagram.com', 'graph.instagram.com'],
+		domains: [
+			'scontent.cdninstagram.com',
+			'graph.instagram.com',
+			'images.prismic.io'
+		],
 		minimumCacheTTL: 600,
 		remotePatterns: [
 			{
@@ -23,6 +27,10 @@ module.exports = withPWA({
 			{
 				protocol: 'https',
 				hostname: 'graph.instagram.com'
+			},
+			{
+				protocol: 'https',
+				hostname: 'images.prismic.io'
 			}
 		]
 	}
