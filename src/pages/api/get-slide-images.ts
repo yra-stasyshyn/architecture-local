@@ -5,7 +5,7 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse
 ) {
-	const endpoint = process.env.NEXT_PUBLIC_PRISMIC_API_URL || ''
+	const endpoint = process.env.PRISMIC_API_URL || ''
 	const prismicClient = prismic.createClient(endpoint)
 	const response = await prismicClient.getAllByType('slide_images')
 	const imageObjects = response[0].data.images.map(
