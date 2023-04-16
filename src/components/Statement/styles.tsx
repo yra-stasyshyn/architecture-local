@@ -10,7 +10,7 @@ export const Wrapper = styled.div<{ isVisible: boolean }>`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: calc(100svh - 64px);
+	height: 60vh;
 	> h1 {
 		opacity: ${(props) => (props.isVisible ? '1' : '0')};
 		transition: opacity 1s ease-in;
