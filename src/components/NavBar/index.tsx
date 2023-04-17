@@ -44,28 +44,28 @@ const NavBar = ({
 				sectionRef={projectsRef}
 				addUnderLineIfOnSection={true}
 			>
-				projetos
+				PROJETOS
 			</NavBarButton>
 			<NavBarButton
 				textColor={elementsColor}
 				sectionRef={researchRef}
 				addUnderLineIfOnSection={true}
 			>
-				pesquisa
+				PESQUISA
 			</NavBarButton>
 			<NavBarButton
 				textColor={elementsColor}
 				sectionRef={aboutUsRef}
 				addUnderLineIfOnSection={true}
 			>
-				sobre
+				SOBRE
 			</NavBarButton>
 			<NavBarButton
 				textColor={elementsColor}
 				sectionRef={contactUsRef}
 				addUnderLineIfOnSection={true}
 			>
-				contato
+				CONTATO
 			</NavBarButton>
 		</>
 	)

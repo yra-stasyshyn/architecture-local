@@ -83,20 +83,20 @@ export const DropDownBurgerButton = ({
 					sectionRef={projectsRef}
 					scrollOffset={-120}
 				>
-					projetos
+					PROJETOS
 				</NavBarButton>
 				<NavBarButton
 					textColor={elementsColor}
 					sectionRef={researchRef}
 					scrollOffset={-120}
 				>
-					pesquisa
+					PESQUISA
 				</NavBarButton>
 				<NavBarButton textColor={elementsColor} sectionRef={aboutUsRef}>
-					sobre
+					SOBRE
 				</NavBarButton>
 				<NavBarButton textColor={elementsColor} sectionRef={contactUsRef}>
-					contato
+					CONTATO
 				</NavBarButton>
 			</DropdownMenu>
 		</div>
