@@ -14,7 +14,7 @@ export const Wrapper = styled.button<{
 		${(props) => (props.underline ? THEME.colors.accentColor : 'transparent')};
 
 	font-size: ${THEME.fontSize.buttons}px;
-	padding: 8px 8px 3px 8px;
+	padding: 8px 8px 1px 8px;
 	text-align: center;
 	align-items: center;
 	cursor: pointer;
