@@ -1,28 +1,21 @@
 import styled from 'styled-components'
-import THEME from '@/styles/theme'
 
 export const Wrapper = styled.div`
 	width: 100%;
 	display: grid;
-	gap: 3px;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
-	@media (min-width: ${THEME.screenSize.desktop}px) {
-		grid-template-columns: repeat(4, minmax(250px, 1fr));
-	}
+	gap: 20px;
+	grid-template-columns: repeat(4, minmax(0px, 600px));
 
 	a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		&:hover {
-			filter: brightness(1.2);
-		}
-
 		img {
 			width: 100%;
 			height: 100%;
+			max-height: 250px;
+			max-width: 250px;
 			aspect-ratio: 1;
 			object-fit: cover;
 		}
@@ -30,6 +23,8 @@ export const Wrapper = styled.div`
 		video {
 			width: 100%;
 			height: 100%;
+			max-height: 250px;
+			max-width: 250px;
 			aspect-ratio: 1;
 			object-fit: cover;
 		}
