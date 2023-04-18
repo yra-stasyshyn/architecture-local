@@ -23,8 +23,8 @@ const CreativeStep = ({
 				<NextImage
 					src={stepImageSrc}
 					alt={`Passo criativo ${stepNumber}: ${stepTitle}`}
-					height={250}
-					width={250}
+					height={200}
+					width={200}
 				/>
 				<div>
 					<p>{children}</p>
