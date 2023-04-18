@@ -5,7 +5,9 @@ import InstagramFeed from '@/components/InstagramFeed'
 const InstagramFeedSection = () => {
 	return (
 		<S.Wrapper>
-			<InstagramFeed />
+			<S.Content>
+				<InstagramFeed />
+			</S.Content>
 		</S.Wrapper>
 	)
 }
