@@ -24,7 +24,6 @@ export const StepsGrid = styled.div`
 	left: 12.5%;
 	width: 62.5%;
 	display: grid;
-	gap: 0;
 	grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
 
 	@media (max-width: ${THEME.screenSize.tablet}px) {
