@@ -9,7 +9,8 @@ const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 		<S.Wrapper ref={ref}>
 			<S.StatementDiv>
 				<Statement>
-					Estamos aqui para te ajudar a concretizar uma ideia.
+					Estamos aqui para te ajudar a<br />
+					concretizar uma ideia.
 				</Statement>
 			</S.StatementDiv>
 
