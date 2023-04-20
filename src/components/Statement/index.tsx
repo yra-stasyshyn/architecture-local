@@ -5,7 +5,6 @@ import useOnEntireBoxVisible from '@/utils/useOnEntireBoxVisible'
 import { RxChevronDown } from 'react-icons/rx'
 import { scrollOneScreenHeight } from '@/utils/scrollToRef'
 import { Textfit } from 'react-textfit'
-import THEME from '@/styles/theme'
 
 const Statement = ({
 	children,
