@@ -13,7 +13,7 @@ export const Wrapper = styled.button<{
 	border-bottom: 1px solid
 		${(props) => (props.underline ? THEME.colors.accentColor : 'transparent')};
 
-	font-size: ${THEME.fontSize.buttons}px;
+	font-size: ${THEME.fontSize.navBarButtons}px;
 	padding: 8px 8px 1px 8px;
 	text-align: center;
 	align-items: center;
