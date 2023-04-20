@@ -16,6 +16,7 @@ const THEME = {
 		textMobile: 16,
 		textTablet: 16,
 		textDesktop: 16,
+		navBarButtons: 14,
 		buttons: 17,
 		title3Mobile: 17,
 		title3Tablet: 17,
