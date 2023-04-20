@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
 	> div {
 		position: relative;
 		left: 12.5%;
-		max-width: 1000px;
 		width: 75%;
 		@media (max-width: ${THEME.screenSize.tablet}px) {
 			width: 63.3%;

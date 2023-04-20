@@ -4,6 +4,8 @@ import * as S from './styles'
 import useOnEntireBoxVisible from '@/utils/useOnEntireBoxVisible'
 import { RxChevronDown } from 'react-icons/rx'
 import { scrollOneScreenHeight } from '@/utils/scrollToRef'
+import { Textfit } from 'react-textfit'
+import THEME from '@/styles/theme'
 
 const Statement = ({
 	children,
@@ -25,7 +27,9 @@ const Statement = ({
 
 	return (
 		<S.Wrapper isVisible={alreadyBeenSeen} style={style} ref={statementBoxRef}>
-			<h1 ref={statementRef}>{children}</h1>
+			<h1 ref={statementRef}>
+				<Textfit mode="single">{children}</Textfit>
+			</h1>
 			<S.ChevronDiv
 				isEntireBoxVisible={isEntireBoxVisible}
 				onClick={scrollOneScreenHeight}

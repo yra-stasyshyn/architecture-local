@@ -13,7 +13,10 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	return (
 		<S.Wrapper ref={ref}>
 			<S.StatementDiv>
-				<Statement>Prática criativa comprometida com o contexto.</Statement>
+				<Statement>
+					Prática criativa comprometida <br />
+					com o contexto.
+				</Statement>
 			</S.StatementDiv>
 			<S.Content>
 				<S.ImagesWrapper>
@@ -77,8 +80,10 @@ const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 			</S.Content>
 			<S.StatementDiv>
 				<Statement>
-					Uma lente focada na demanda específica e outra com vista panorâmica do
-					lugar, do contexto e da atualidade.
+					Uma lente focada na demanda <br />
+					específica e outra com vista
+					<br /> panorâmica do lugar, do contexto
+					<br /> e da atualidade.
 				</Statement>
 			</S.StatementDiv>
 		</S.Wrapper>

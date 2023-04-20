@@ -43,6 +43,7 @@
     "react-email": "^1.9.0",
     "react-icons": "^4.8.0",
     "react-scroll": "^1.8.9",
+    "react-textfit": "^1.1.1",
     "styled-components": "^5.3.6",
     "typescript": "4.9.4"
   },
@@ -64,6 +65,7 @@
     "@types/lodash.throttle": "^4.1.7",
     "@types/nodemailer": "^6.4.7",
     "@types/react-scroll": "^1.8.6",
+    "@types/react-textfit": "^1.1.0",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
