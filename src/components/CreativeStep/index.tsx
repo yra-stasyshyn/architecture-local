@@ -11,7 +11,7 @@ const CreativeStep = ({
 	stepNumber: number
 	stepTitle: string
 	stepImageSrc: string
-	children: string
+	children: React.ReactNode
 }) => {
 	return (
 		<S.Wrapper>
@@ -26,9 +26,7 @@ const CreativeStep = ({
 					height={200}
 					width={200}
 				/>
-				<div>
-					<p>{children}</p>
-				</div>
+				<div>{children}</div>
 			</S.ImageDiv>
 		</S.Wrapper>
 	)
