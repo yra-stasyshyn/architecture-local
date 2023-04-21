@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 	border: none;
 	height: 200px;
 	width: 100%;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		height: auto;
 	}
 `
@@ -22,7 +22,7 @@ export const ContentWrapper = styled.div`
 	flex-direction: row;
 	padding-right: 60px;
 	padding-left: 60px;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		height: 300px;
 		align-items: center;
 		justify-content: flex-start;
@@ -38,7 +38,7 @@ export const LeftElement = styled.div`
 	text-align: left;
 	margin: 20px;
 	width: 50%;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -53,7 +53,7 @@ export const RightElement = styled.div`
 	text-align: right;
 	margin: 20px;
 	width: 50%;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		justify-content: center;
 		align-items: center;
 		height: 80px;
@@ -87,7 +87,7 @@ export const SignatureWrapper = styled.div`
 	align-items: center;
 	text-align: center;
 	bottom: 0;
-	@media (max-width: ${THEME.screenSize.tablet}px) {
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		flex-direction: column;
 		height: auto;
 	}
