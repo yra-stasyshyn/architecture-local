@@ -3,14 +3,14 @@ import * as S from './styles'
 import ProjectsGrid from '@/components/ProjectsGrid'
 import NextImage from 'next/image'
 
-import img01 from '../../../../public/img/01.png'
-import img02 from '../../../../public/img/02.jpg'
-import img04 from '../../../../public/img/04.png'
-import img05 from '../../../../public/img/05.png'
-import img08 from '../../../../public/img/08.jpg'
-import img09 from '../../../../public/img/09.png'
-import img10 from '../../../../public/img/10.png'
-import img11 from '../../../../public/img/11.png'
+import img01 from '../../../public/img/01.png'
+import img02 from '../../../public/img/02.jpg'
+import img04 from '../../../public/img/04.png'
+import img05 from '../../../public/img/05.png'
+import img08 from '../../../public/img/08.jpg'
+import img09 from '../../../public/img/09.png'
+import img10 from '../../../public/img/10.png'
+import img11 from '../../../public/img/11.png'
 
 const ProjectsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const quality = 30
