@@ -75,7 +75,7 @@ export const DropDownBurgerButton = ({
 				backgroundColor={
 					renderPosition == 'above'
 						? THEME.colors.shadow
-						: THEME.colors.lightGrey
+						: THEME.colors.faintGrey
 				}
 			>
 				<NavBarButton
