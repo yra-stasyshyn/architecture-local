@@ -13,7 +13,7 @@ export type DropdownMenuProps = {
 export const DropdownMenu = ({
 	isOpen = false,
 	renderPosition = 'below' as 'above' | 'below',
-	backgroundColor = THEME.colors.lightGrey,
+	backgroundColor = THEME.colors.faintGrey,
 	children
 }: DropdownMenuProps) => {
 	return (

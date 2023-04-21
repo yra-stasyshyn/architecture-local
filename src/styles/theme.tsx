@@ -3,7 +3,8 @@ const THEME = {
 		primaryColor: '#000000',
 		secondaryColor: '#ffffff',
 		accentColor: '#E04F2E',
-		lightGrey: 'rgb(235, 235, 235)',
+		faintGrey: 'rgb(235, 235, 235)',
+		lightGrey: 'rgb(100, 100, 100)',
 		darkGrey: 'rgb(60, 60, 60)',
 		shadow: 'rgba(0,0,0,0.2)'
 	},
@@ -16,7 +17,7 @@ const THEME = {
 		textMobile: 16,
 		textTablet: 16,
 		textDesktop: 16,
-		navBarButtons: 14,
+		navBarButtons: 13,
 		buttons: 17,
 		title3Mobile: 17,
 		title3Tablet: 17,
