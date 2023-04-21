@@ -3,15 +3,35 @@ import * as S from './styles'
 import EmailForm from '@/components/EmailForm'
 import Statement from '@/components/Statement'
 import ContactButton from '@/components/Buttons/ContactButton'
+import { useWindowDimensions } from '@/utils/useWindowDimensions'
+import THEME from '@/styles/theme'
 
 const ContactUsSection = React.forwardRef<HTMLDivElement>((props, ref) => {
+	const [statement, setStatement] = React.useState(<></>)
+	const windowDimension = useWindowDimensions()
+
+	React.useEffect(() => {
+		if (windowDimension.windowWidth < THEME.screenSize.mobile) {
+			setStatement(
+				<>
+					Estamos aqui para <br />
+					te ajudar aconcretizar <br />
+					uma ideia.
+				</>
+			)
+		} else {
+			setStatement(
+				<>
+					Estamos aqui para te ajudar a<br />
+					concretizar uma ideia.
+				</>
+			)
+		}
+	}, [windowDimension])
 	return (
 		<S.Wrapper ref={ref}>
 			<S.StatementDiv>
-				<Statement>
-					Estamos aqui para te ajudar a<br />
-					concretizar uma ideia.
-				</Statement>
+				<Statement>{statement}</Statement>
 			</S.StatementDiv>
 
 			<S.Content>
