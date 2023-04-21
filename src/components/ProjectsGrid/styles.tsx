@@ -24,9 +24,8 @@ export const ImageContainer = styled.div<{
 	fontSize?: number
 }>`
 	position: relative;
-	width: ${(props) => (props.windowWidth - 3 * 6 - 2 * props.gap) / 4}px;
-	height: ${(props) =>
-		((props.windowWidth - 3 * 6 - 2 * props.gap) / 4) * (3 / 4)}px;
+	width: ${(props) => (props.windowWidth - 2 * props.gap) / 4}px;
+	height: ${(props) => ((props.windowWidth - 2 * props.gap) / 4) * (9 / 16)}px;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -61,13 +60,13 @@ export const ImageContainer = styled.div<{
 		object-position: 50% 100%;
 	}
 	@media (max-width: ${THEME.screenSize.tablet}px) {
-		width: ${(props) => (props.windowWidth - 2 * 6 - 2 * props.gap) / 3}px;
+		width: ${(props) => (props.windowWidth - 2 * props.gap) / 3}px;
 		height: ${(props) =>
-			((props.windowWidth - 2 * 6 - 2 * props.gap) / 3) * (3 / 4)}px;
+			((props.windowWidth - 2 * props.gap) / 3) * (9 / 16)}px;
 	}
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		width: ${(props) => (props.windowWidth - 6 - 2 * props.gap) / 2}px;
+		width: ${(props) => (props.windowWidth - 2 * props.gap) / 2}px;
 		height: ${(props) =>
-			((props.windowWidth - 6 - 2 * props.gap) / 2) * (3 / 4)}px;
+			((props.windowWidth - 2 * props.gap) / 2) * (9 / 16)}px;
 	}
 `
