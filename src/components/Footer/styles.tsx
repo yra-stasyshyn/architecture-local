@@ -6,27 +6,48 @@ export const Wrapper = styled.div`
 	color: ${THEME.colors.primaryColor};
 	margin-top: 100px;
 	border: none;
-	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		height: auto;
-	}
 `
-export const ContentWrapper = styled.div`
-	height: 186px;
-	width: 100%;
-	gap: 0;
+export const UpperContent = styled.div`
+	margin-bottom: 40px;
+	min-height: 80px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	flex-direction: row;
-	padding-right: 60px;
-	padding-left: 60px;
+	justify-content: center;
+
 	@media (max-width: ${THEME.screenSize.mobile}px) {
-		height: 300px;
+		margin-bottom: 0;
+	}
+`
+
+export const MiddleContent = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	@media (max-width: ${THEME.screenSize.mobile}px) {
 		align-items: center;
 		justify-content: flex-start;
 		flex-direction: column;
+		gap: 20px;
+	}
+`
+export const ContentWrapper = styled.div`
+	width: 75%;
+	gap: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	@media (max-width: ${THEME.screenSize.tablet}px) {
+		width: 66%;
+	}
+	@media (max-width: ${THEME.screenSize.mobile}px) {
+		width: 75%;
 	}
 `
 
@@ -36,7 +57,6 @@ export const LeftElement = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	text-align: left;
-	margin: 20px;
 	width: 50%;
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		justify-content: center;
@@ -51,7 +71,6 @@ export const RightElement = styled.div`
 	align-items: center;
 	justify-content: right;
 	text-align: right;
-	margin: 20px;
 	width: 50%;
 	@media (max-width: ${THEME.screenSize.mobile}px) {
 		justify-content: center;
@@ -62,8 +81,8 @@ export const RightElement = styled.div`
 `
 
 export const IconDiv = styled.span`
-	display: flex;
-	flex-direction: row;
+	display: inline-block;
+	vertical-align: middle;
 	gap: 4px;
 	margin-left: 4px;
 	> svg {
@@ -73,22 +92,17 @@ export const IconDiv = styled.span`
 	}
 `
 export const SignatureWrapper = styled.div`
-	font-size: ${THEME.fontSize.smallText}px;
 	border: none;
 	color: ${THEME.colors.lightGrey};
-	height: auto;
 	padding: 8px;
 	width: 100%;
 	margin-bottom: 10px;
-	position: absolute;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	bottom: 0;
-	@media (max-width: ${THEME.screenSize.mobile}px) {
-		flex-direction: column;
-		height: auto;
+	> p {
+		font-size: ${THEME.fontSize.smallText}px;
 	}
 `

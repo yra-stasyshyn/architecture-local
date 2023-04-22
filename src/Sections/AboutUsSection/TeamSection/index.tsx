@@ -30,15 +30,13 @@ const TeamSection = () => {
 					<AccordionTab
 						title={'Marcos Lourenço . Fundador, Coordenador Criativo'}
 					>
-						Nasceu em Belo Horizonte, em 1996 e formou-se em Arquitetura e
-						Urbanismo na Escola de Arquitetura da Universidade Federal de Minas
-						Gerais. Em seu premiado trabalho final de graduação, dedicou-se a
-						investigar os exemplares arquitetônicos e o contexto urbano de sua
-						cidade natal, que culminou no livro Os Lugares e as Lições – Guia de
-						Arquitetura de Belo Horizonte. Iniciou sua carreira em escritórios
-						de arquitetura renomados, como Arquitetos Associados, BCMF
-						Arquitetos e Gustavo Penna Arquiteto & Associados, antes de fundar
-						sua firma, a Arquitetura Local, em 2021.
+						Natural de Marataízes/ES, vive em Belo Horizonte/MG, onde formou-se
+						em Arquitetura e Urbanismo pela Escola de Arquitetura da
+						Universidade Federal de Minas Gerais (UFMG). É também sócio do
+						escritório Arquitetos Associados, onde atua desde 2017 e é coautor
+						de projetos de projeção nacional, como a Pina Contemporânea, em São
+						Paulo. Em 2021, com Mariana Lima, fundou o escritório Arquitetura
+						Local.
 					</AccordionTab>
 					<AccordionTab title={'Colaboradores'}>Fulano & Beltrano</AccordionTab>
 				</S.AccordionWrapper>

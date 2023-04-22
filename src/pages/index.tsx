@@ -11,7 +11,6 @@ import ResearchSection from '@/Sections/ResearchSection'
 import AboutUsSection from '@/Sections/AboutUsSection'
 import useBeforeRefresh from '@/utils/useBeforeRefresh'
 import { scrollToStart } from '@/utils/scrollToRef'
-import InstagramFeedSection from '@/Sections/InstagramFeedSection'
 import StatementSection2 from '@/Sections/StatementSection2'
 
 export default function Home() {
@@ -38,7 +37,6 @@ export default function Home() {
 				<StatementSection2 />
 				<AboutUsSection ref={aboutUsRef} />
 				<ContactUsSection ref={contactUsRef} />
-				<InstagramFeedSection />
 				<Footer />
 			</S.SectionsContentWrapper>
 		</>
