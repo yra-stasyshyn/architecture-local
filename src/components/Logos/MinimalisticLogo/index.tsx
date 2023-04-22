@@ -22,24 +22,26 @@ const MinimalisticLogo = ({
 	const spacingBetweenLetters = 8 * sizeMultiplier
 	const circlesOffset = 36 * sizeMultiplier
 	const [isHovered, setIsHovered] = React.useState(false)
-	color = isHovered ? highlightColorOnHover : color
+	const logoColor = isHovered ? highlightColorOnHover : color
 	return (
 		<S.Wrapper
-			style={style}
+			style={{
+				...style,
+				cursor: onClick ? 'pointer' : 'default'
+			}}
 			onClick={onClick}
-			color={color}
 			onMouseOver={() => setIsHovered(true)}
 			onMouseOut={() => setIsHovered(false)}
 		>
-			<Rectangle sizeMultiplier={sizeMultiplier} color={color} />
+			<Rectangle sizeMultiplier={sizeMultiplier} color={logoColor} />
 			<Circle
 				sizeMultiplier={sizeMultiplier}
-				color={color}
+				color={logoColor}
 				style={{ marginLeft: spacingBetweenLetters, marginTop: circlesOffset }}
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
-				color={color}
+				color={logoColor}
 				style={{
 					marginRight: spacingBetweenLetters,
 					marginLeft: spacingBetweenLetters,
@@ -48,10 +50,10 @@ const MinimalisticLogo = ({
 			/>
 			<Circle
 				sizeMultiplier={sizeMultiplier}
-				color={color}
+				color={logoColor}
 				style={{ marginRight: spacingBetweenLetters, marginTop: circlesOffset }}
 			/>
-			<Rectangle sizeMultiplier={sizeMultiplier} color={color} />
+			<Rectangle sizeMultiplier={sizeMultiplier} color={logoColor} />
 		</S.Wrapper>
 	)
 }
