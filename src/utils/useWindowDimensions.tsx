@@ -9,24 +9,19 @@ export function useWindowDimensions(): {
 		windowHeight: 0
 	})
 	useEffect(() => {
+		setWindowDimensions({
+			windowWidth: window.innerWidth,
+			windowHeight: window.innerHeight
+		})
 		function handleResize() {
 			setWindowDimensions({
 				windowWidth: window.innerWidth,
 				windowHeight: window.innerHeight
 			})
 		}
-
-		const windowDimensionsInterval = setInterval(() => {
-			setWindowDimensions({
-				windowWidth: window.innerWidth,
-				windowHeight: window.innerHeight
-			})
-		}, 100)
-
 		window.addEventListener('resize', handleResize)
 		return () => {
 			window.removeEventListener('resize', handleResize)
-			clearInterval(windowDimensionsInterval)
 		}
 	}, [])
 	return windowDimension
