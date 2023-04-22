@@ -1,20 +1,19 @@
 import React from 'react'
 import * as S from './styles'
-import { useOnInterval } from '@/utils/useOnInterval'
 import NextImage from 'next/image'
 import Statement from '@/components/Statement'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 import THEME from '@/styles/theme'
+import { useOnInterval } from '@/utils/useOnInterval'
 
 const PhilosophySection = React.forwardRef<HTMLDivElement>((props, ref) => {
 	const [imageIndex, setImageIndex] = React.useState(1)
+	const [statement, setStatement] = React.useState(<></>)
+	const windowDimension = useWindowDimensions()
 	useOnInterval(
 		() => setImageIndex(imageIndex + 1 > 5 ? 1 : imageIndex + 1),
 		1000
 	)
-	const [statement, setStatement] = React.useState(<></>)
-	const windowDimension = useWindowDimensions()
-
 	React.useEffect(() => {
 		if (windowDimension.windowWidth < THEME.screenSize.mobile) {
 			setStatement(
