@@ -19,7 +19,7 @@
     ]
   },
   "dependencies": {
-    "@next/font": "13.1.6",
+    "@next/font": "13.4.11",
     "@prismicio/client": "^6.7.3",
     "@react-email/button": "0.0.8",
     "@react-email/container": "^0.0.8",
